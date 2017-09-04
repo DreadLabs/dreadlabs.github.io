@@ -1,0 +1,14 @@
+{
+    "name": "dreadlabs/website",
+    "description": "DreadLabs freelancer website",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Thomas Juhnke",
+            "email": "dev@dreadlabs.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
