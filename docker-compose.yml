@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  sculpin:
+    image: dreadlabs/php-base:7.0
+    environment:
+      - SCULPIN_ENV=${SCULPIN_ENV:-dev}
+    volumes:
+      - ./:/app
+    ports:
+      - 8000:8000
+    # see https://github.com/docker/compose/issues/4088#issuecomment-256811279
+    command: ["sh", "-c", "/app/vendor/bin/sculpin generate --env=$${SCULPIN_ENV} --watch --server --port=8000"]
