@@ -7,7 +7,7 @@ layout: default
 
 ![Thomas Juhnke Softwareentwickler](/img/Thomas-Juhnke_portrait-business.jpg)
 
-### Leitbild
+### Leitbild {#mission-statement}
 
 Ich entwickle **Software nach Ihren Wünschen** mit hohen Anforderungen an 
 **Qualität, Sicherheit und Zuverlässigkeit**, testgetrieben und unter 
@@ -25,7 +25,7 @@ es sinnvoll ist** und es die Anforderungen zulassen.
   - …der Pflege und Weiterentwicklung Ihrer bestehenden Softwarelösungen
   - …der Verbesserung der Softwarequalität und -stabilität
   
-### Über mich
+### Über mich {#about-me}
 
 Bereits seit 1999 entwickle ich Software in verschiedenen Programmiersprachen.
 Durch mein Studium der Informatik und Wirtschaftsinformatik und meine **langjährige
@@ -38,7 +38,7 @@ gut ab:
   - Profiling und statische Codeanalyse
   - infrastrukturnahe Tätigkeiten ("DevOps")
 
-### Kontakt
+### Kontakt {#contact}
 
 Rüdigerstraße 43<br>
 10365 Berlin<br>
@@ -47,7 +47,7 @@ Rüdigerstraße 43<br>
 
 **[TODO Kontaktformular]**
 
-### Netzwerk
+### Netzwerk {#network}
 
 **[Michael Gerstmann](http://micha.seiler-gerstmann.de/)**
 
