@@ -41,7 +41,7 @@
         <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--no-desktop-drawer-button">
             <header class="mdl-layout__header mdl-color--white">
                 <div class="mdl-layout__header-row">
-                    <div class="mdl-layout__title"><img src="/img/DreadLabs-Logo-2017.png"></div>
+                    <div class="mdl-layout__title"><a href="/"><img src="/img/DreadLabs-Logo-2017.png"></a></div>
                     <div class="mdl-layout-spacer mdl-layout--large-screen-only"></div>
                     <nav class="mdl-navigation mdl-layout--large-screen-only">
                         <a class="mdl-navigation__link" href="#mission-statement">Leitbild</a>
@@ -62,7 +62,7 @@
             </div>
 
             <main class="mdl-layout__content">
-                <div class="page-content">
+                <div id="top" class="page-content">
                     {% block content %}{% endblock %}
                 </div>
             </main>
@@ -76,6 +76,9 @@
                 </div>
 
                 <div class="mdl-mini-footer__right-section">
+                    <a class="mdl-button mdl-js-button mdl-button--icon" href="#top" title="nach oben">
+                        <i class="fa fa-angle-up material-icons"></i>
+                    </a>
                     <a class="mdl-button mdl-js-button mdl-button--icon" href="https://www.xing.com/profile/Thomas_Juhnke" title="Xing">
                         <i class="fa fa-xing material-icons"></i>
                     </a>
