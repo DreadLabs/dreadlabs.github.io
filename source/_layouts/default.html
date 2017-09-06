@@ -38,19 +38,12 @@
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body class="mdl-demo mdl-base">
-        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-            <header class="mdl-layout__header mdl-layout__header--scroll">
-                <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-                </div>
-                <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-                    <a href="/"><img src="/img/DreadLabs-Logo-2017.png"></a>
-                </div>
-                <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-                </div>
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--no-desktop-drawer-button">
+            <header class="mdl-layout__header mdl-color--white">
                 <div class="mdl-layout__header-row">
-                    <div class="mdl-layout__title">DreadLabs Softwareentwicklung</div>
-                    <div class="mdl-layout-spacer"></div>
-                    <nav class="mdl-navigation">
+                    <div class="mdl-layout__title"><img src="/img/DreadLabs-Logo-2017.png"></div>
+                    <div class="mdl-layout-spacer mdl-layout--large-screen-only"></div>
+                    <nav class="mdl-navigation mdl-layout--large-screen-only">
                         <a class="mdl-navigation__link" href="#mission-statement">Leitbild</a>
                         <a class="mdl-navigation__link" href="#about-me">Über mich</a>
                         <a class="mdl-navigation__link" href="#contact">Kontakt</a>
@@ -58,11 +51,22 @@
                     </nav>
                 </div>
             </header>
+            <div class="mdl-layout__drawer">
+                <span class="mdl-layout__title mdl-color--white"><img src="/img/DreadLabs-Logo-2017.png"></span>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="#mission-statement">Leitbild</a>
+                    <a class="mdl-navigation__link" href="#about-me">Über mich</a>
+                    <a class="mdl-navigation__link" href="#contact">Kontakt</a>
+                    <a class="mdl-navigation__link" href="#network">Netzwerk</a>
+                </nav>
+            </div>
+
             <main class="mdl-layout__content">
                 <div class="page-content">
                     {% block content %}{% endblock %}
                 </div>
             </main>
+
             <footer class="mdl-mini-footer">
                 <div class="mdl-mini-footer__left-section">
                     <ul class="mdl-mini-footer__link-list">
