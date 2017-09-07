@@ -1,0 +1,73 @@
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/*
+Note: any .css or .scss files included in the 'styles' directory
+will be correctly compiled during `gulp serve` and `gulp`
+ */
+
+html, body {
+  font-family: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Slab', serif;
+}
+h2#mission-statement {
+  margin-top: 0;
+}
+cite::before {
+  content: '\2014 \0020';
+}
+
+.mdl-dreadlabs section.section--center {
+  max-width: 860px;
+}
+.mdl-dreadlabs .mdl-layout__title img {
+  height: 64px;
+}
+.mdl-dreadlabs .mdl-layout__drawer .mdl-layout__title {
+  height: 160px;
+}
+.mdl-dreadlabs .mdl-layout__drawer .mdl-layout__title img {
+  position: absolute;
+  bottom: 16px;
+}
+@media screen and (max-width:1024px) {
+  .mdl-dreadlabs .mdl-layout__title img {
+    height: 56px;
+  }
+}
+.mdl-dreadlabs section .section__vcard__avatar-container > .section__vcard_avatar-container__avatar,
+.mdl-dreadlabs section .section__avatar-container > .section__avatar-container__avatar {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+.mdl-dreadlabs section .section__vcard__avatar-container > .section__vcard_avatar-container__avatar {
+  border-radius: 50%;
+  margin: 8px 0;
+}
+.mdl-dreadlabs .section__vcard__header,
+.mdl-dreadlabs .section__vcard__header small {
+  font-family: 'Roboto Slab', serif;
+  line-height: 1;
+  opacity: 1;
+}
+
+@import "timeline";
