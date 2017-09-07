@@ -24,39 +24,33 @@ html, body {
   margin: 0;
   padding: 0;
 }
-.mdl-demo section.section--center {
-  max-width: 860px;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Slab', serif;
 }
 h2#mission-statement {
   margin-top: 0;
 }
-.mdl-layout__title img {
+cite::before {
+  content: '\2014 \0020';
+}
+
+.mdl-demo section.section--center {
+  max-width: 860px;
+}
+.mdl-demo .mdl-layout__title img {
   height: 64px;
 }
-.mdl-layout__drawer .mdl-layout__title {
+.mdl-demo .mdl-layout__drawer .mdl-layout__title {
   height: 160px;
 }
-.mdl-layout__drawer .mdl-layout__title img {
+.mdl-demo .mdl-layout__drawer .mdl-layout__title img {
   position: absolute;
   bottom: 16px;
 }
 @media screen and (max-width:1024px) {
-  .mdl-layout__title img {
+  .mdl-demo .mdl-layout__title img {
     height: 56px;
   }
-}
-blockquote {
-}
-cite {
-}
-cite::before {
-  content: '\2014 \0020';
-}
-.section__vcard {
-
-}
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto Slab', serif;
 }
 .mdl-demo section .section__vcard__avatar-container > .section__vcard_avatar-container__avatar,
 .mdl-demo section .section__avatar-container > .section__avatar-container__avatar {
