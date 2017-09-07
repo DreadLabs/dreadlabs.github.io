@@ -13,3 +13,7 @@ else
     echo "==> No composer.json found in root directory. Please run script/init."
     exit 1
 fi
+
+if [ -f package.json ]; then
+    docker run --rm --env LOCAL_USER_ID="$(id -u "$USER")" --volume "$(pwd)":/app dreadlabs/node-yarn:6.11 yarn install
+fi
