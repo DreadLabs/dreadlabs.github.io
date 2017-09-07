@@ -1,2 +1,3 @@
 sculpin:
   permalink: pretty
+  ignore: ["images/**/*", "scripts/**/*", "styles/**/*", "**/favicon.ico", "**/humans.txt", "**/manifest.json", "**/manifest.webapp", "**/robots.txt", "**/service-worker.js"]
