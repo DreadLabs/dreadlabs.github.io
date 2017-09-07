@@ -14,10 +14,10 @@ layout: default
       <img class="section__vcard_avatar-container__avatar" src="/img/Thomas-Juhnke_portrait-business.jpg" alt="Thomas Juhnke Softwareentwickler">
     </div>
     <div class="mdl-cell mdl-cell--8-col">
-      <h1 class="section__vcard__header">
+      <h1 class="section__vcard__header mdl-typography--text-uppercase">
         <small>Thomas</small><br>
         Juhnke<br>
-        <small>Softwareentwickler</small>
+        <small>Software&shy;entwickler</small>
       </h1>
     </div>
   </section>
@@ -38,11 +38,8 @@ layout: default
   </section>
 
   <section class="section--center mdl-grid">
-    <div class="mdl-cell mdl-cell--4-col">
-      <h3 class="dreadlabs__header-marginal-note">Mein Angebot</h3>
-    </div>
+    <h3 class="mdl-cell mdl-cell--4-col">Mein Angebot</h3>
     <div class="mdl-cell mdl-cell--8-col">
-      <br>
       <p>Ich unterstütze Sie bei…</p>
       <ul>
         <li>…der Konzeption &amp; Planung von kleinen bis mittelgroßen Softwareprojekten</li>
@@ -54,12 +51,9 @@ layout: default
   </section>
 
   <section class="section--center mdl-grid">
-    <div class="mdl-cell mdl-cell--4-col">
-      <h3 id="about-me" class="dreadlabs__header-marginal-note">Über mich</h3>
-    </div>
+    <h3 id="about-me" class="mdl-cell mdl-cell--4-col">Über mich</h3>
 
     <div class="mdl-cell mdl-cell--8-col">
-      <br>
       <p>Bereits seit 1999 entwickle ich Software in verschiedenen Programmiersprachen.
       Durch mein Studium der Informatik und Wirtschaftsinformatik und meine <strong>langjährige
           Erfahrung</strong> in Unternehmen unterschiedlicher Größe und Aufgabengebieten decke
@@ -74,16 +68,16 @@ layout: default
       </ul>
     </div>
 
-    <div class="mdl-cell mdl-cell--12-col">
-      <h4>Berufserfahrung</h4>
-    </div>
-
-    <div class="mdl-color--grey-100">
-      <div class="mdl-cell mdl-cell--12-col">
-        {% include 'timeline.twig' %}
-      </div>
-    </div>
+    <h4 class="mdl-cell mdl-cell--12-col">Berufserfahrung</h4>
   </section>
+
+  <div class="mdl-color--grey-100">
+    <section class="section--center mdl-grid">
+      <div class="mdl-cell mdl-cell--12-col">
+          {% include 'timeline.twig' %}
+      </div>
+    </section>
+  </div>
 
   <section class="section--center mdl-grid">
     <h2 id="contact" class="mdl-cell mdl-cell--12-col">Kontakt</h2>
@@ -123,67 +117,101 @@ layout: default
     </div>
   </section>
 
-  <section class="section--center mdl-grid">
-    <h2 id="network" class="mdl-cell mdl-cell--12-col">Netzwerk</h2>
+  <div class="mdl-color--grey-50">
+    <section class="section--center section__network mdl-grid">
+      <h2 id="network" class="mdl-cell mdl-cell--12-col">Netzwerk</h2>
+    </section>
 
-    <div class="mdl-cell mdl-cell--3-col">
-      <p><strong><a href="http://micha.seiler-gerstmann.de/">Michael Gerstmann</a></strong></p>
+    <section class="section__network mdl-grid">
+      <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp">
+        <p class="mdl-card__title">
+          <strong class="mdl-card__title-text">Michael Gerstmann</strong>
+        </p>
 
-      <div class="section__avatar-container">
-        <img class="section__avatar-container__avatar" src="img/network-micha.jpg">
+        <div class="section__avatar-container mdl-card__media mdl-color--white">
+          <img class="section__avatar-container__avatar" src="img/network-micha.jpg" alt="Porträt: Michael Gerstmann">
+        </div>
+
+        <p class="mdl-card__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ultrices,
+        libero id dapibus porttitor, risus nisi interdum risus, et congue erat ipsum
+          id mi. Curabitur consectetur metus sit amet enim blandit efficitur ac ac nisi.</p>
+
+        <div class="mdl-card__actions mdl-card--border">
+          <a class="mdl-button mdl-button--colored" href="http://micha.seiler-gerstmann.de/">Weitere Informationen</a>
+        </div>
       </div>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ultrices,
-      libero id dapibus porttitor, risus nisi interdum risus, et congue erat ipsum
-        id mi. Curabitur consectetur metus sit amet enim blandit efficitur ac ac nisi.</p>
-    </div>
+      <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp">
+        <p class="mdl-card__title">
+          <strong class="mdl-card__title-text">Christophe Maurice</strong>
+        </p>
 
-    <div class="mdl-cell mdl-cell--3-col">
-      <p><strong><a href="https://www.xing.com/profile/Christophe_Maurice2">Christophe Maurice</a></strong></p>
+        <div class="section__avatar-container mdl-card__media mdl-color--white">
+          <img class="section__avatar-container__avatar" src="img/network-christophe.jpg" alt="Porträt: Christophe Maurice">
+        </div>
 
-      <div class="section__avatar-container">
-        <img class="section__avatar-container__avatar" src="img/network-christophe.jpg">
+        <p class="mdl-card__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ultrices,
+        libero id dapibus porttitor, risus nisi interdum risus, et congue erat ipsum
+          id mi. Curabitur consectetur metus sit amet enim blandit efficitur ac ac nisi.</p>
+
+        <div class="mdl-card__actions mdl-card--border">
+          <a class="mdl-button mdl-button--colored" href="https://www.xing.com/profile/Christophe_Maurice2">Weitere Informationen</a>
+        </div>
       </div>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ultrices,
-      libero id dapibus porttitor, risus nisi interdum risus, et congue erat ipsum
-        id mi. Curabitur consectetur metus sit amet enim blandit efficitur ac ac nisi.</p>
-    </div>
+      <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp">
+        <p class="mdl-card__title">
+          <strong class="mdl-card__title-text">amarantus</strong>
+        </p>
 
-    <div class="mdl-cell mdl-cell--3-col">
-      <p><strong><a href="https://amarantus.de/">amarantus</a></strong></p>
+        <div class="section__avatar-container mdl-card__media mdl-color--white">
+          <img class="section__avatar-container__avatar" src="img/network-amarantus.jpg" alt="Logo: amarantus">
+        </div>
 
-      <div class="section__avatar-container">
-        <img class="section__avatar-container__avatar" src="img/network-amarantus.jpg">
+        <p class="mdl-card__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ultrices,
+        libero id dapibus porttitor, risus nisi interdum risus, et congue erat ipsum
+          id mi. Curabitur consectetur metus sit amet enim blandit efficitur ac ac nisi.</p>
+
+        <div class="mdl-card__actions mdl-card--border">
+          <a class="mdl-button mdl-button--colored" href="https://amarantus.de/">Weitere Informationen</a>
+        </div>
       </div>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ultrices,
-      libero id dapibus porttitor, risus nisi interdum risus, et congue erat ipsum
-        id mi. Curabitur consectetur metus sit amet enim blandit efficitur ac ac nisi.</p>
-    </div>
+      <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp">
+        <p class="mdl-card__title">
+          <strong class="mdl-card__title-text">Robert Schönthal</strong>
+        </p>
 
-    <div class="mdl-cell mdl-cell--3-col">
-      <p><strong><a href="https://digitalkaoz.net/">Robert Schönthal</a></strong></p>
+        <div class="section__avatar-container mdl-card__media mdl-color--white">
+          <img class="section__avatar-container__avatar" src="img/network-robert.jpg" alt="Porträt: Robert Schönthal">
+        </div>
 
-      <div class="section__avatar-container">
-        <img class="section__avatar-container__avatar" src="img/network-robert.jpg">
+        <p class="mdl-card__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ultrices,
+        libero id dapibus porttitor, risus nisi interdum risus, et congue erat ipsum
+          id mi. Curabitur consectetur metus sit amet enim blandit efficitur ac ac nisi.</p>
+
+        <div class="mdl-card__actions mdl-card--border">
+          <a class="mdl-button mdl-button--colored" href="https://digitalkaoz.net/">Weitere Informationen</a>
+        </div>
       </div>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ultrices,
-      libero id dapibus porttitor, risus nisi interdum risus, et congue erat ipsum
-        id mi. Curabitur consectetur metus sit amet enim blandit efficitur ac ac nisi.</p>
-    </div>
+      <div class="mdl-cell mdl-cell--3-col mdl-card mdl-shadow--2dp">
+        <p class="mdl-card__title">
+          <strong class="mdl-card__title-text">Jana Eger</strong>
+        </p>
 
-    <div class="mdl-cell mdl-cell--3-col">
-      <p><strong><a href="http://jana-eger.com/">Jana Eger</a></strong></p>
+        <div class="section__avatar-container mdl-card__media mdl-color--white">
+          <img class="section__avatar-container__avatar" src="img/network-jana.jpg" alt="Porträt: Jana Eger">
+        </div>
 
-      <div class="section__avatar-container">
-        <img class="section__avatar-container__avatar" src="img/network-jana.jpg">
+        <p class="mdl-card__supporting-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ultrices,
+        libero id dapibus porttitor, risus nisi interdum risus, et congue erat ipsum
+          id mi. Curabitur consectetur metus sit amet enim blandit efficitur ac ac nisi.</p>
+
+        <div class="mdl-card__actions mdl-card--border">
+          <a class="mdl-button mdl-button--colored" href="http://jana-eger.com/">Weitere Informationen</a>
+        </div>
       </div>
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ultrices,
-      libero id dapibus porttitor, risus nisi interdum risus, et congue erat ipsum
-        id mi. Curabitur consectetur metus sit amet enim blandit efficitur ac ac nisi.</p>
-    </div>
-  </section>
+    </section>
+  </div>
 {% endblock %}

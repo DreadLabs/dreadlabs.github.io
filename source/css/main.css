@@ -54,24 +54,22 @@ cite::before {
 }
 .mdl-demo section .section__vcard__avatar-container > .section__vcard_avatar-container__avatar,
 .mdl-demo section .section__avatar-container > .section__avatar-container__avatar {
-  margin: 8px 0;
   max-width: 100%;
   height: auto;
   display: inline-block;
   vertical-align: middle;
+}
+.mdl-demo section .section__vcard__avatar-container > .section__vcard_avatar-container__avatar {
   border-radius: 50%;
+  margin: 8px 0;
 }
 .mdl-demo .section__vcard__header,
 .mdl-demo .section__vcard__header small {
   font-family: 'Roboto Slab', serif;
-  text-transform: uppercase;
   line-height: 1;
   opacity: 1;
 }
 .dreadlabs__header-marginal-note {
-  text-transform: uppercase;
-  font-size: 23px;
-  margin-top: 12px;
 }
 
 /* Timeline */
@@ -79,15 +77,13 @@ cite::before {
 .section__timeline {
   position: relative;
   padding: 2em 0;
-  margin-top: 2em;
-  margin-bottom: 2em;
 }
 .section__timeline::before {
   /* this is the vertical line */
   content: '';
   position: absolute;
   top: 0;
-  left: 18px;
+  left: 8px;
   height: 100%;
   width: 4px;
   background: #eee;
@@ -133,7 +129,7 @@ cite::before {
 .section__timeline__block__image {
   position: absolute;
   top: 19px;
-  left: 16px;
+  left: 6px;
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -155,11 +151,12 @@ cite::before {
 
 .section__timeline__block__content {
   position: relative;
-  margin-left: 44px;
+  margin-left: 34px;
+  margin-right: 17px;
   background: white;
   border-radius: 0.25em;
   padding: 1em;
-  box-shadow: 0 3px 0 #eee;
+  box-shadow: 0 3px 3px #eee;
 }
 .section__timeline__block__content:after {
   content: "";
@@ -190,6 +187,7 @@ cite::before {
 @media only screen and (min-width: 1170px) {
   .section__timeline__block__content {
     margin-left: 0;
+    margin-right: 0;
     padding: 1.6em;
     width: 40%;
   }
