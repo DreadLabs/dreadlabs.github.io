@@ -86,7 +86,7 @@ cite::before {
   left: 8px;
   height: 100%;
   width: 4px;
-  background: #eee;
+  background: #e0e0e0;
 }
 @media only screen and (min-width: 1170px) {
   .section__timeline {
@@ -133,7 +133,7 @@ cite::before {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  box-shadow: 0 0 0 4px white, 0 0 0 6px rgb(0,188,212), 0 2px 0 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 0 4px white, 0 0 0 6px #cfd8dc, 0 2px 0 6px rgba(33, 33, 33, 0.05);
 }
 @media only screen and (min-width: 1170px) {
   .section__timeline__block__image {
@@ -142,7 +142,7 @@ cite::before {
     left: 50%;
     top: 24px;
     margin-left: -8px;
-    box-shadow: 0 0 0 4px white, 0 0 0 8px rgb(0,188,212), 0 3px 0 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 0 4px white, 0 0 0 8px #cfd8dc, 0 3px 0 8px rgba(33, 33, 33, 0.05);
     /* Force Hardware Acceleration in WebKit */
     -webkit-transform: translateZ(0);
     -webkit-backface-visibility: hidden;
@@ -156,7 +156,7 @@ cite::before {
   background: white;
   border-radius: 0.25em;
   padding: 1em;
-  box-shadow: 0 3px 3px #eee;
+  box-shadow: 0 3px 3px #e0e0e0;
 }
 .section__timeline__block__content:after {
   content: "";
