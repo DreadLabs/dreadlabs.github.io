@@ -177,7 +177,7 @@ gulp.task('serve', ['scripts', 'styles'], () => {
     //       will present a certificate warning in the browser.
     // https: true,
     server: ['.tmp', 'app'],
-    port: 3000
+    port: 8000
   });
 
   gulp.watch([htmlSource + '/**/*.html'], reload);
@@ -198,9 +198,25 @@ gulp.task('serve:dist', ['default'], () =>
     //       will present a certificate warning in the browser.
     // https: true,
     server: 'dist',
-    port: 3001
+    port: 8000
   })
 );
+
+// Build and serve the output from the dist build; Watch files for changes & reload
+gulp.task('serve:dist:watch', ['default'], () => {
+  browserSync({
+      notify: false,
+      logPrefix: 'WSK',
+      scollElementMapping: ['main', '.mdl-layout'],
+      server: 'dist',
+      port: 8000
+  });
+
+  gulp.watch([htmlSource + '/**/*.html'], ['html', reload]);
+  gulp.watch(['source-assets/styles/**/*.{scss,css}'], ['styles', reload]);
+  gulp.watch(['source-assets/scripts/**/*.js'], ['lint', 'scripts', reload]);
+  gulp.watch(['source-assets/images/**/*'], ['images', reload]);
+});
 
 // Build production files, the default task
 gulp.task('default', ['clean'], cb =>
@@ -225,7 +241,7 @@ gulp.task('pagespeed', cb =>
 
 // Copy over the scripts that are used in importScripts as part of the generate-service-worker task.
 gulp.task('copy-sw-scripts', () => {
-  return gulp.src(['node_modules/sw-toolbox/sw-toolbox.js', 'app/scripts/sw/runtime-caching.js'])
+  return gulp.src(['node_modules/sw-toolbox/sw-toolbox.js', 'source-assets/scripts/sw/runtime-caching.js'])
     .pipe(gulp.dest('dist/scripts/sw'));
 });
 

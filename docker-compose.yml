@@ -7,7 +7,15 @@ services:
       - SCULPIN_ENV=${SCULPIN_ENV:-dev}
     volumes:
       - ./:/app
+    # see https://github.com/docker/compose/issues/4088#issuecomment-256811279
+    command: ["sh", "-c", "/app/vendor/bin/sculpin generate --env=$${SCULPIN_ENV} --watch"]
+
+  gulp:
+    image: dreadlabs/node-yarn:6.11
+    volumes:
+      - ./:/app
     ports:
       - 8000:8000
-    # see https://github.com/docker/compose/issues/4088#issuecomment-256811279
-    command: ["sh", "-c", "/app/vendor/bin/sculpin generate --env=$${SCULPIN_ENV} --watch --server --port=8000"]
+      - 3001:3001
+      - 35729:35729
+    command: ["sh", "-c", "$$(yarn bin)/gulp serve:dist:watch"]
