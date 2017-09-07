@@ -1,6 +1,5 @@
 sculpin:
   permalink: pretty
-  ignore: ["images/**/*", "scripts/**/*", "styles/**/*", "**/favicon.ico", "**/humans.txt", "**/manifest.json", "**/manifest.webapp", "**/robots.txt", "**/service-worker.js"]
 
   source_dir: "%sculpin.project_dir%/source"
   output_dir: "%sculpin.project_dir%/output_%kernel.environment%"
