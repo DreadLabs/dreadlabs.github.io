@@ -73,12 +73,13 @@
   }
 
   // Your custom JavaScript goes here
-  var d = document.querySelector('.mdl-layout'),
-      links = document.querySelectorAll('.mdl-layout__drawer .mdl-navigation__link');
+  var d = document.querySelector('.mdl-layout');
+  var linksSelector = '.mdl-layout__drawer .mdl-navigation__link';
+  var links = document.querySelectorAll(linksSelector);
 
-  [].map.call(links, function (link) {
-    link.addEventListener('click', function () {
-        d.MaterialLayout.toggleDrawer();
+  [].map.call(links, function(link) {
+    link.addEventListener('click', function() {
+      d.MaterialLayout.toggleDrawer();
     });
   });
 })();

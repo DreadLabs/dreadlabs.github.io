@@ -166,3 +166,7 @@ typings/
 
 # Sculpin
 output_*/
+# WSK
+.tmp
+dist
+

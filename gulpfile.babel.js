@@ -36,10 +36,11 @@ import pkg from './package.json';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
+const htmlSource = 'output_prod';
 
 // Lint JavaScript
 gulp.task('lint', () =>
-  gulp.src(['app/scripts/**/*.js','!node_modules/**'])
+  gulp.src(['source-assets/scripts/**/*.js','!node_modules/**'])
     .pipe($.eslint())
     .pipe($.eslint.format())
     .pipe($.if(!browserSync.active, $.eslint.failAfterError()))
@@ -47,7 +48,7 @@ gulp.task('lint', () =>
 
 // Optimize images
 gulp.task('images', () =>
-  gulp.src('app/images/**/*')
+  gulp.src('source-assets/images/**/*')
     .pipe($.cache($.imagemin({
       progressive: true,
       interlaced: true
@@ -59,13 +60,20 @@ gulp.task('images', () =>
 // Copy all files at the root level (app)
 gulp.task('copy', () =>
   gulp.src([
-    'app/*',
-    '!app/*.html',
+    'source-assets/*',
+    '!source-assets/*.html',
     'node_modules/apache-server-configs/dist/.htaccess'
   ], {
     dot: true
   }).pipe(gulp.dest('dist'))
     .pipe($.size({title: 'copy'}))
+);
+
+gulp.task('copy-fonts', () =>
+    gulp.src([
+        'node_modules/font-awesome/fonts/**'
+    ]).pipe(gulp.dest('dist/fonts'))
+      .pipe($.size({title: 'fonts'}))
 );
 
 // Compile and automatically prefix stylesheets
@@ -84,8 +92,9 @@ gulp.task('styles', () => {
 
   // For best performance, don't add Sass partials to `gulp.src`
   return gulp.src([
-    'app/styles/**/*.scss',
-    'app/styles/**/*.css'
+    'node_modules/font-awesome/scss/font-awesome.scss',
+    'source-assets/styles/**/*.scss',
+    'source-assets/styles/**/*.css'
   ])
     .pipe($.newer('.tmp/styles'))
     .pipe($.sourcemaps.init())
@@ -110,7 +119,7 @@ gulp.task('scripts', () =>
       // Note: Since we are not using useref in the scripts build pipeline,
       //       you need to explicitly list your scripts here in the right order
       //       to be correctly concatenated
-      './app/scripts/main.js'
+      './source-assets/scripts/main.js'
       // Other scripts
     ])
       .pipe($.newer('.tmp/scripts'))
@@ -129,9 +138,9 @@ gulp.task('scripts', () =>
 
 // Scan your HTML for assets & optimize them
 gulp.task('html', () => {
-  return gulp.src('app/**/*.html')
+  return gulp.src(htmlSource + '/**/*.html')
     .pipe($.useref({
-      searchPath: '{.tmp,app}',
+      searchPath: '{.tmp,' + htmlSource + '}',
       noAssets: true
     }))
 
@@ -171,10 +180,10 @@ gulp.task('serve', ['scripts', 'styles'], () => {
     port: 3000
   });
 
-  gulp.watch(['app/**/*.html'], reload);
-  gulp.watch(['app/styles/**/*.{scss,css}'], ['styles', reload]);
-  gulp.watch(['app/scripts/**/*.js'], ['lint', 'scripts', reload]);
-  gulp.watch(['app/images/**/*'], reload);
+  gulp.watch([htmlSource + '/**/*.html'], reload);
+  gulp.watch(['source-assets/styles/**/*.{scss,css}'], ['styles', reload]);
+  gulp.watch(['source-assets/scripts/**/*.js'], ['lint', 'scripts', reload]);
+  gulp.watch(['source-assets/images/**/*'], reload);
 });
 
 // Build and serve the output from the dist build
@@ -197,7 +206,7 @@ gulp.task('serve:dist', ['default'], () =>
 gulp.task('default', ['clean'], cb =>
   runSequence(
     'styles',
-    ['lint', 'html', 'scripts', 'images', 'copy'],
+    ['lint', 'html', 'scripts', 'images', 'copy', 'copy-fonts'],
     'generate-service-worker',
     cb
   )
@@ -206,7 +215,7 @@ gulp.task('default', ['clean'], cb =>
 // Run PageSpeed Insights
 gulp.task('pagespeed', cb =>
   // Update the below URL to the public URL of your site
-  pagespeed('example.com', {
+  pagespeed('dreadlabs.com', {
     strategy: 'mobile'
     // By default we use the PageSpeed Insights free (no API key) tier.
     // Use a Google Developer API key if you have one: http://goo.gl/RkN0vE
