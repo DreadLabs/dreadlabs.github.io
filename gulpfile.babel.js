@@ -148,11 +148,18 @@ gulp.task('copy', () =>
     .pipe($.size({title: 'copy'}))
 );
 
-gulp.task('copy-fonts', () =>
+gulp.task('copy:fonts', () =>
     gulp.src([
         'node_modules/font-awesome/fonts/**'
     ]).pipe(gulp.dest('dist/fonts'))
       .pipe($.size({title: 'fonts'}))
+);
+
+gulp.task('copy:lazyload', () =>
+  gulp.src([
+    'node_modules/vanilla-lazyload/dist/lazyload.es2015.js'
+  ]).pipe(gulp.dest('dist/scripts'))
+    .pipe($.size({title: 'lazyload'}))
 );
 
 // Compile and automatically prefix stylesheets
@@ -301,7 +308,7 @@ gulp.task('serve:dist:watch', ['default'], () => {
 gulp.task('default', ['clean'], cb =>
   runSequence(
     'styles',
-    ['lint', 'html', 'scripts', 'images', 'copy', 'copy-fonts'],
+    ['lint', 'html', 'scripts', 'images', 'copy', 'copy:fonts', 'copy:lazyload'],
     'generate-service-worker',
     cb
   )
