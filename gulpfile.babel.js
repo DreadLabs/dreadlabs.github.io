@@ -43,10 +43,12 @@ const responsiveConfig = {
     {
       width: 271,
       format: 'jpeg',
+      progressive: true
     },
     {
       width: 271 * 2,
       format: 'jpeg',
+      progressive: true,
       // @NOTE: gulp-rename
       rename: {
         suffix: '@2x'
@@ -55,6 +57,7 @@ const responsiveConfig = {
     {
       width: 185,
       format: 'jpeg',
+      progressive: true,
       rename: {
         suffix: '-185x185'
       }
@@ -62,6 +65,7 @@ const responsiveConfig = {
     {
       width: 185 * 2,
       format: 'jpeg',
+      progressive: true,
       rename: {
         suffix: '-185x185@2x'
       }
@@ -71,6 +75,7 @@ const responsiveConfig = {
     {
       width: 480,
       format: 'jpeg',
+      progressive: true,
       rename: {
         dirname: 'network',
       }
@@ -78,6 +83,7 @@ const responsiveConfig = {
     {
       width: 480 * 2,
       format: 'jpeg',
+      progressive: true,
       rename: {
         dirname: 'network',
         suffix: '@2x'
@@ -86,6 +92,7 @@ const responsiveConfig = {
     {
       width: 396,
       format: 'jpeg',
+      progressive: true,
       rename: {
         dirname: 'network',
         suffix: '-396x396'
@@ -94,6 +101,7 @@ const responsiveConfig = {
     {
       width: 396 * 2,
       format: 'jpeg',
+      progressive: true,
       rename: {
         dirname: 'network',
         suffix: '-396x396@2x'
