@@ -34,40 +34,66 @@ cite::before {
   content: '\2014 \0020';
 }
 
-.mdl-dreadlabs section.section--center {
-  max-width: 860px;
-}
-.mdl-dreadlabs .mdl-layout__title img {
-  height: 64px;
-}
-.mdl-dreadlabs .mdl-layout__drawer .mdl-layout__title {
-  height: 160px;
-}
-.mdl-dreadlabs .mdl-layout__drawer .mdl-layout__title img {
-  position: absolute;
-  bottom: 16px;
+.mdl-dreadlabs {
+  .section--center {
+    max-width: 860px;
+  }
+  .mdl-layout__title img {
+    height: 64px;
+  }
+  .mdl-layout__drawer {
+    .mdl-layout__title {
+      height: 160px;
+
+      img {
+        position: absolute;
+        bottom: 16px;
+      }
+    }
+  }
+
+  /** @NOTE: next two blocks duplicate */
+  .section__vcard__avatar-container {
+    .section__vcard_avatar-container__avatar {
+      max-width: 100%;
+      height: auto;
+      display: inline-block;
+      vertical-align: middle;
+
+      border-radius: 50%;
+      margin: 8px 0;
+    }
+  }
+  .section__avatar-container {
+    .section__avatar-container__avatar {
+      max-width: 100%;
+      height: auto;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  .section__vcard__header, .section__vcard__header small {
+    font-family: 'Roboto Slab', serif;
+    line-height: 1;
+    opacity: 1;
+  }
+
+  .section__network {
+    .mdl-card__supporting-text {
+      height: auto;
+      padding-bottom: 56px;
+    }
+    .mdl-card__actions {
+      position: absolute;
+      bottom: 0;
+    }
+  }
 }
 @media screen and (max-width:1024px) {
   .mdl-dreadlabs .mdl-layout__title img {
     height: 56px;
   }
-}
-.mdl-dreadlabs section .section__vcard__avatar-container .section__vcard_avatar-container__avatar,
-.mdl-dreadlabs section .section__avatar-container .section__avatar-container__avatar {
-  max-width: 100%;
-  height: auto;
-  display: inline-block;
-  vertical-align: middle;
-}
-.mdl-dreadlabs section .section__vcard__avatar-container .section__vcard_avatar-container__avatar {
-  border-radius: 50%;
-  margin: 8px 0;
-}
-.mdl-dreadlabs .section__vcard__header,
-.mdl-dreadlabs .section__vcard__header small {
-  font-family: 'Roboto Slab', serif;
-  line-height: 1;
-  opacity: 1;
 }
 
 @import "timeline";
