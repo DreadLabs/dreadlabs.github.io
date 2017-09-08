@@ -50,6 +50,12 @@ cite::before {
         bottom: 16px;
       }
     }
+
+    .dreadlabs-layout__drawer-separator {
+      height: 1px;
+      background-color: #dcdcdc;
+      margin: 8px 0;
+    }
   }
 
   /** @NOTE: next two blocks duplicate */
@@ -88,6 +94,13 @@ cite::before {
       position: absolute;
       bottom: 0;
     }
+  }
+
+  .dreadlabs-timeline-tags {
+    display: none;
+  }
+  .dreadlabs-timeline-tags--on {
+    display: block;
   }
 }
 @media screen and (max-width:1024px) {

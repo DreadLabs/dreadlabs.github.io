@@ -82,4 +82,22 @@
       d.MaterialLayout.toggleDrawer();
     });
   });
+
+  var tagState = 'off';
+  var tags = document.querySelectorAll('.dreadlabs-timeline-tags');
+  var tagToggle = document.querySelector('ul[for="timeline-tags-toggle"] li');
+  var tagToggleState = tagToggle.querySelector('.dreadlabs__toggle-tags--state');
+
+  tagToggle.addEventListener('click', function() {
+    [].map.call(tags, function(tag) {
+      tag.classList.toggle('dreadlabs-timeline-tags--on');
+    });
+    if (tagState === 'off') {
+      tagToggleState.innerHTML = 'deaktivieren';
+      tagState = 'on';
+    } else if (tagState === 'on') {
+      tagToggleState.innerHTML = 'aktivieren';
+      tagState = 'off';
+    }
+  })
 })();

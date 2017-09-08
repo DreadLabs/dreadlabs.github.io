@@ -79,6 +79,18 @@ layout: default
     </section>
 
     <div class="mdl-color--grey-100">
+        <div class="mdl-grid">
+            <div class="mdl-cell--12-col mdl-typography--text-right">
+                <button id="timeline-tags-toggle" class="mdl-button mdl-js-button mdl-button--icon">
+                    <i class="material-icons">more_vert</i>
+                </button>
+                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="timeline-tags-toggle">
+                    <li class="mdl-menu__item">
+                        Recruiter-Modus <strong><span class="dreadlabs__toggle-tags--state">aktivieren</span></strong>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <section class="section--center mdl-grid">
             <div class="mdl-cell mdl-cell--12-col">
                 {% include 'timeline.twig' %}
