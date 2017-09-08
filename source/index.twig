@@ -10,11 +10,16 @@ layout: default
     </section>
 
     <section class="section--center section__vcard mdl-grid">
-        <div class="mdl-cell mdl-cell--4-col section__vcard__avatar-container">
-            <img class="section__vcard_avatar-container__avatar" src="/images/Thomas-Juhnke_portrait-{{ site.portrait_style }}.jpg"
-                 alt="Thomas Juhnke Softwareentwickler">
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-cell--middle section__vcard__avatar-container">
+            <picture>
+                <source media="(min-width: 840px)" srcset="/images/Thomas-Juhnke_portrait-{{ site.portrait_style }}.jpg, /images/Thomas-Juhnke_portrait-{{ site.portrait_style }}@2x.jpg 2x">
+                <source media="(min-width: 480px)" srcset="/images/Thomas-Juhnke_portrait-{{ site.portrait_style }}-185x185.jpg, /images/Thomas-Juhnke_portrait-{{ site.portrait_style }}-185x185@2x.jpg 2x">
+                <img class="section__vcard_avatar-container__avatar" src="/images/Thomas-Juhnke_portrait-{{ site.portrait_style }}.jpg"
+                     srcset="/images/Thomas-Juhnke_portrait-{{ site.portrait_style }}@2x.jpg 2x"
+                     alt="Thomas Juhnke Softwareentwickler">
+            </picture>
         </div>
-        <div class="mdl-cell mdl-cell--8-col mdl-cell--4-col-tablet mdl-cell--middle">
+        <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-cell--middle">
             <h1 class="section__vcard__header mdl-typography--text-uppercase">
                 <small>Thomas</small>
                 <br>

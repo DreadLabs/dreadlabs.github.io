@@ -32,11 +32,75 @@ import browserSync from 'browser-sync';
 import swPrecache from 'sw-precache';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import {output as pagespeed} from 'psi';
+import responsive from 'gulp-responsive';
 import pkg from './package.json';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 const htmlSource = 'output_prod';
+const responsiveConfig = {
+  'Thomas-Juhnke_*.jpg': [
+    {
+      width: 271,
+      format: 'jpeg',
+    },
+    {
+      width: 271 * 2,
+      format: 'jpeg',
+      // @NOTE: gulp-rename
+      rename: {
+        suffix: '@2x'
+      }
+    },
+    {
+      width: 185,
+      format: 'jpeg',
+      rename: {
+        suffix: '-185x185'
+      }
+    },
+    {
+      width: 185 * 2,
+      format: 'jpeg',
+      rename: {
+        suffix: '-185x185@2x'
+      }
+    }
+  ],
+  '**/network/*.jpg': [
+    {
+      width: 480,
+      format: 'jpeg',
+      rename: {
+        dirname: 'network',
+      }
+    },
+    {
+      width: 480 * 2,
+      format: 'jpeg',
+      rename: {
+        dirname: 'network',
+        suffix: '@2x'
+      }
+    },
+    {
+      width: 396,
+      format: 'jpeg',
+      rename: {
+        dirname: 'network',
+        suffix: '-396x396'
+      }
+    },
+    {
+      width: 396 * 2,
+      format: 'jpeg',
+      rename: {
+        dirname: 'network',
+        suffix: '-396x396@2x'
+      }
+    }
+  ]
+};
 
 // Lint JavaScript
 gulp.task('lint', () =>
@@ -49,12 +113,19 @@ gulp.task('lint', () =>
 // Optimize images
 gulp.task('images', () =>
   gulp.src('source-assets/images/**/*')
+    .pipe(responsive(responsiveConfig, { errorOnUnusedImage: false, passThroughUnused: true }))
     .pipe($.cache($.imagemin({
       progressive: true,
       interlaced: true
     })))
     .pipe(gulp.dest('dist/images'))
     .pipe($.size({title: 'images'}))
+);
+
+gulp.task('images:responsify', () =>
+  gulp.src('source-assets/images/**/*')
+    .pipe(responsive(responsiveConfig, { errorOnUnusedImage: false, passThroughUnused: false }))
+    .pipe(gulp.dest('dist/images'))
 );
 
 // Copy all files at the root level (app)
