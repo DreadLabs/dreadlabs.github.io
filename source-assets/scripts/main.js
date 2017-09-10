@@ -86,7 +86,8 @@
   var tagState = 'off';
   var tags = document.querySelectorAll('.dreadlabs-timeline-tags');
   var tagToggle = document.querySelector('ul[for="timeline-tags-toggle"] li');
-  var tagToggleState = tagToggle.querySelector('.dreadlabs__toggle-tags--state');
+  var tagToggleStateSelector = '.dreadlabs__toggle-tags--state';
+  var tagToggleState = tagToggle.querySelector(tagToggleStateSelector);
 
   tagToggle.addEventListener('click', function() {
     [].map.call(tags, function(tag) {
@@ -99,5 +100,5 @@
       tagToggleState.innerHTML = 'aktivieren';
       tagState = 'off';
     }
-  })
+  });
 })();
