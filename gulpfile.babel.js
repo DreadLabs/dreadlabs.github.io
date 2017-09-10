@@ -120,7 +120,7 @@ gulp.task('lint', () =>
 
 // Optimize images
 gulp.task('images', () =>
-  gulp.src('source-assets/images/**/*')
+  gulp.src(['source-assets/images/**/*', '!source-assets/images/DreadLabs-Logo.svg'])
     .pipe(responsive(responsiveConfig, { errorOnUnusedImage: false, passThroughUnused: true }))
     .pipe($.cache($.imagemin({
       progressive: true,
@@ -160,6 +160,12 @@ gulp.task('copy:lazyload', () =>
     'node_modules/vanilla-lazyload/dist/lazyload.es2015.js'
   ]).pipe(gulp.dest('dist/scripts'))
     .pipe($.size({title: 'lazyload'}))
+);
+
+gulp.task('copy:logo', () =>
+    gulp.src(['source-assets/images/DreadLabs-Logo.svg'])
+      .pipe(gulp.dest('dist/images'))
+      .pipe($.size({title: 'logo'}))
 );
 
 // Compile and automatically prefix stylesheets
@@ -308,7 +314,7 @@ gulp.task('serve:dist:watch', ['default'], () => {
 gulp.task('default', ['clean'], cb =>
   runSequence(
     'styles',
-    ['lint', 'html', 'scripts', 'images', 'copy', 'copy:fonts', 'copy:lazyload'],
+    ['lint', 'html', 'scripts', 'images', 'copy', 'copy:fonts', 'copy:lazyload', 'copy:logo'],
     'generate-service-worker',
     cb
   )

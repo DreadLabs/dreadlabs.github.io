@@ -38,6 +38,7 @@ cite::before {
   .section--center {
     max-width: 860px;
   }
+  .mdl-layout__title object,
   .mdl-layout__title img {
     height: 64px;
   }
@@ -45,7 +46,7 @@ cite::before {
     .mdl-layout__title {
       height: 160px;
 
-      img {
+      object, img {
         position: absolute;
         bottom: 16px;
       }
@@ -104,6 +105,7 @@ cite::before {
   }
 }
 @media screen and (max-width:1024px) {
+  .mdl-dreadlabs .mdl-layout__title object,
   .mdl-dreadlabs .mdl-layout__title img {
     height: 56px;
   }
