@@ -30,38 +30,69 @@ h1, h2, h3, h4, h5, h6 {
 #mission-statement h2 {
   margin-top: 0;
 }
+blockquote {
+  font-family: inherit;
+  font-size: 1rem;
+}
 cite::before {
   content: '\2014 \0020';
 }
+p, ul, ol {
+  font-size: 1.15rem;
+  line-height: 26px;
+}
 
 .mdl-dreadlabs {
-  .section--center {
-    max-width: 860px;
+  .mdl-mini-footer__link-list {
+    font-size: 14px;
   }
-  .mdl-layout__title object,
-  .mdl-layout__title img {
-    height: 64px;
+
+  .mdl-layout__header-row .mdl-layout__title {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+
+    a {
+      width: 44px;
+      display: block;
+    }
+
+    .logo {
+      display: block;
+      clip-path: inset(0 20% 0 0);
+      margin-top: 10px;
+      height: 44px;
+
+      img {
+        height: 44px;
+      }
+    }
   }
   .mdl-layout__drawer {
     .mdl-layout__title {
       height: 160px;
 
-      object, img {
+      .logo {
         position: absolute;
-        bottom: 16px;
-      }
-    }
+        bottom: 4px;
+        left: 5px;
+        height: 54px;
 
-    .dreadlabs-layout__drawer-separator {
-      height: 1px;
-      background-color: #dcdcdc;
-      margin: 8px 0;
+        img {
+          height: 54px;
+        }
+      }
     }
   }
 
+  .section--center {
+    max-width: 860px;
+  }
+
   /** @NOTE: next two blocks duplicate */
-  .section__vcard__avatar-container {
-    .section__vcard_avatar-container__avatar {
+  .vcard {
+    &__avatar {
       max-width: 100%;
       height: auto;
       display: inline-block;
@@ -70,23 +101,21 @@ cite::before {
       border-radius: 50%;
       margin: 8px 0;
     }
-  }
-  .section__avatar-container {
-    .section__avatar-container__avatar {
-      max-width: 100%;
-      height: auto;
-      display: inline-block;
-      vertical-align: middle;
+
+    &__header, &__header--small {
+      font-family: 'Roboto Slab', serif;
+      line-height: 1;
+      opacity: 1;
+      margin: 0;
     }
   }
 
-  .section__vcard__header, .section__vcard__header small {
-    font-family: 'Roboto Slab', serif;
-    line-height: 1;
-    opacity: 1;
-  }
+  .network {
+    &__avatar {
+      max-width: 100%;
+      height: auto;
+    }
 
-  .section__network {
     .mdl-card__supporting-text {
       height: auto;
       padding-bottom: 56px;
@@ -96,19 +125,46 @@ cite::before {
       bottom: 0;
     }
   }
-
-  .dreadlabs-timeline-tags {
-    display: none;
-  }
-  .dreadlabs-timeline-tags--on {
-    display: block;
-  }
-}
-@media screen and (max-width:1024px) {
-  .mdl-dreadlabs .mdl-layout__title object,
-  .mdl-dreadlabs .mdl-layout__title img {
-    height: 56px;
-  }
 }
 
-@import "timeline";
+@media screen and (min-width:480px) {
+  blockquote {
+  }
+  .mdl-dreadlabs .mdl-layout__header-row .mdl-layout__title {
+    a {
+      width: auto;
+      display: inline;
+    }
+
+    .logo {
+      clip-path: none;
+      margin: auto;
+      height: 56px;
+
+      img {
+        height: 56px;
+      }
+    }
+  }
+}
+@media screen and (min-width:1024px) {
+  blockquote {
+    font-size: 1.5rem;
+  }
+  .mdl-dreadlabs .mdl-layout__header-row .mdl-layout__title {
+    left: auto;
+    top: auto;
+    transform: none;
+    position: relative;
+
+    .logo {
+      height: 64px;
+
+      img {
+        height: 64px;
+      }
+    }
+  }
+}
+
+@import "resume";

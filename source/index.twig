@@ -4,27 +4,27 @@ layout: default
 {% block content %}
     <section class="section--center mdl-grid">
         <div class="mdl-cell mdl-cell--12-col">
-            <blockquote>The function of good software is to make the complex appear to be simple.
+            <blockquote class="mdl-color-text--grey-300">The function of good software is to make the complex appear to be simple.
                 <cite>Grady Booch</cite></blockquote>
         </div>
     </section>
 
-    <section class="section--center section__vcard mdl-grid">
-        <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-cell--middle mdl-typography--text-center section__vcard__avatar-container">
+    <section class="section--center mdl-grid vcard">
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-cell--middle mdl-typography--text-center vcard__avatar-container">
             <picture>
                 <source media="(min-width: 840px)" srcset="/images/Thomas-Juhnke_portrait-{{ site.portrait_style }}.jpg, /images/Thomas-Juhnke_portrait-{{ site.portrait_style }}@2x.jpg 2x">
                 <source media="(min-width: 480px)" srcset="/images/Thomas-Juhnke_portrait-{{ site.portrait_style }}-185x185.jpg, /images/Thomas-Juhnke_portrait-{{ site.portrait_style }}-185x185@2x.jpg 2x">
-                <img class="section__vcard_avatar-container__avatar" src="/images/Thomas-Juhnke_portrait-{{ site.portrait_style }}.jpg"
+                <img class="vcard__avatar" src="/images/Thomas-Juhnke_portrait-{{ site.portrait_style }}.jpg"
                      srcset="/images/Thomas-Juhnke_portrait-{{ site.portrait_style }}@2x.jpg 2x"
                      alt="Thomas Juhnke Softwareentwickler">
             </picture>
         </div>
         <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-cell--middle">
-            <h1 class="section__vcard__header mdl-typography--text-uppercase">
-                <small>Thomas</small>
+            <h1 class="vcard__header mdl-typography--text-uppercase">
+                <small class="vcard__header--small">Thomas</small>
                 <br>
                 Juhnke<br>
-                <small>Software&shy;entwickler</small>
+                <small class="vcard__header--small">Software&shy;entwickler</small>
             </h1>
         </div>
     </section>
@@ -80,20 +80,19 @@ layout: default
 
     <div class="mdl-color--grey-100">
         <div class="mdl-grid">
-            <div class="mdl-cell--12-col mdl-typography--text-right">
-                <button id="timeline-tags-toggle" class="mdl-button mdl-js-button mdl-button--icon">
+            <div class="mdl-cell--12-col mdl-typography--text-right resume-tags-toggle">
+                <button id="resume-tags-toggle__button" class="mdl-button mdl-js-button mdl-button--icon">
                     <i class="material-icons">more_vert</i>
                 </button>
-                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="timeline-tags-toggle">
-                    <li class="mdl-menu__item">
-                        Recruiter-Modus <strong><span class="dreadlabs__toggle-tags--state">aktivieren</span></strong>
+                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="resume-tags-toggle__button">
+                    <li class="mdl-menu__item">Recruiter-Modus <strong><span class="resume-tags-toggle__state">aktivieren</span></strong>
                     </li>
                 </ul>
             </div>
         </div>
         <section class="section--center mdl-grid">
             <div class="mdl-cell mdl-cell--12-col">
-                {% include 'timeline.twig' %}
+                {% include 'resume.twig' %}
             </div>
         </section>
     </div>
