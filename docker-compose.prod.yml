@@ -1,0 +1,13 @@
+version: '3'
+
+networks:
+  dreadlabs:
+    external: true
+
+services:
+  app:
+    image: dreadlabs/website:current
+    env_file: .env
+    networks:
+      - dreadlabs
+    restart: always
