@@ -14,7 +14,7 @@ Rüdigerstraße 43<br>
 10365 Berlin
 
 Telefon: +49 178 54 56 492<br>
-E-Mail: [contact@dreadlabs.com](mailto:contact@dreadlabs.com)
+E-Mail: [contact@dreadlabs.de](mailto:contact@dreadlabs.de)
 
 USt-IdNr.: DE310513755
 
