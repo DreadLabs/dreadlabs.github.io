@@ -84,14 +84,13 @@
   });
 
   var tagState = 'off';
-  var tags = document.querySelectorAll('.dreadlabs-timeline-tags');
-  var tagToggle = document.querySelector('ul[for="timeline-tags-toggle"] li');
-  var tagToggleStateSelector = '.dreadlabs__toggle-tags--state';
-  var tagToggleState = tagToggle.querySelector(tagToggleStateSelector);
+  var tags = document.querySelectorAll('.resume__position-tags');
+  var tagToggle = document.querySelector('ul[for="resume-tags-toggle__button"] li');
+  var tagToggleState = tagToggle.querySelector('.resume-tags-toggle__state');
 
   tagToggle.addEventListener('click', function() {
     [].map.call(tags, function(tag) {
-      tag.classList.toggle('dreadlabs-timeline-tags--on');
+      tag.classList.toggle('resume__position-tags--on');
     });
     if (tagState === 'off') {
       tagToggleState.innerHTML = 'deaktivieren';
