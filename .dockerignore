@@ -1,6 +1,6 @@
 .tmp
 app
-docker
+docker/docker-node-yarn
 node_modules
 output_*
 res
