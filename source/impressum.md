@@ -13,10 +13,10 @@ Thomas Juhnke<br>
 Rüdigerstraße 43<br>
 10365 Berlin
 
-**Kontakt**
+Telefon: +49 178 54 56 492<br>
+E-Mail: [contact@dreadlabs.com](mailto:contact@dreadlabs.com)
 
-+49 178 54 56 492<br>
-[thomas.juhnke@dreadlabs.com](mailto:thomas.juhnke@dreadlabs.com)
+USt-IdNr.: DE310513755
 
 **Rechtliches**
 
