@@ -13,5 +13,8 @@
     "sass-loader": "^7.1.0",
     "webpack": "3",
     "webpack-dev-server": "2"
+  },
+  "scripts": {
+    "start": "webpack-dev-server"
   }
 }
