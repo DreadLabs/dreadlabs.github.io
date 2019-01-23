@@ -15,5 +15,5 @@ else
 fi
 
 if [ -f package.json ]; then
-    docker run --rm --env LOCAL_USER_ID="$(id -u "$USER")" --volume "$(pwd)":/app dreadlabs/node-yarn:6.11 yarn install
+    docker run --rm --env LOCAL_USER_ID="$(id -u "$USER")" --volume "$(pwd)":/app --workdir /app dreadlabs/node-yarn:lts-alpine yarn install
 fi
