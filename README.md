@@ -4,6 +4,13 @@
 
 Contains the sources for my freelance website.
 
+## How to install MDC
+
+    yarn init
+    # delete "main" section in package json
+    
+    yarn add --dev webpack@3 webpack-dev-server@2 css-loader sass-loader node-sass extract-loader file-loader
+
 ## How to build and deploy
   
     docker build -t dreadlabs/website:current .
