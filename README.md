@@ -24,12 +24,16 @@ Contains the sources for my freelance website.
 
          yarn add --dev autoprefixer postcss-loader
 
-  5. Add supplemental components
+  5. Enable ES2015 JavaScript support for webpack
+
+         yarn add --dev babel-core@6 babel-loader@7 babel-preset-es2015 babel-plugin-transform-object-assign
+
+  6. Add supplemental components
 
          yarn add --dev vanilla-lazyload@~10.0.1 font-awesome@~4.7.0
     
-  6. (TODO) Replace `gulp-responsive`
-  7. ...
+  7. (TODO) Replace `gulp-responsive`
+  8. ...
 
 ### Used components
 
