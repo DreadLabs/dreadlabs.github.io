@@ -1,0 +1,8 @@
+{
+  "name": "dreadlabs",
+  "version": "1.0.0",
+  "description": "Frontend assets / build application for dreadlabs.de",
+  "author": "Thomas Juhnke",
+  "license": "MIT",
+  "private": true
+}
