@@ -13,8 +13,7 @@ module.exports = [{
                     {
                         loader: 'file-loader',
                         options: {
-                            // TODO: change file name to "main.css"
-                            name: './dist/styles/main-mdc.css',
+                            name: './dist/styles/main.css',
                         },
                     },
                     {loader: 'extract-loader'},
