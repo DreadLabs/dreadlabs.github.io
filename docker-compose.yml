@@ -25,4 +25,7 @@ services:
     image: dreadlabs/node-yarn:lts-alpine
     volumes:
       - ./:/app
-    command: ["sh", "-c", "$$(yarn --version)"]
+    working_dir: /app
+    ports:
+      - 8000:8000
+    command: ["sh", "-c", "yarn start"]
