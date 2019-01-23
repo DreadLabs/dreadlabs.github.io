@@ -10,6 +10,22 @@ Contains the sources for my freelance website.
     # delete "main" section in package json
     
     yarn add --dev webpack@3 webpack-dev-server@2 css-loader sass-loader node-sass extract-loader file-loader
+    
+    yarn add --dev @material/drawer @material/layout-grid @material/button @material/fab @material/chips @material/card @material/menu @material/top-app-bar
+
+### Used components
+
+  * Material Design
+    * drawer ✓
+    * navigation ✓
+    * footer ✗ (unavailable currently, see [Migrating from Material Design Lite](https://material.io/develop/web/docs/migrating-from-mdl/)
+    * grid ✓
+    * menu ✓
+    * button ✓
+    * (form)
+    * card ✓
+    * chips ✓
+  * FontAwesome (consider using `material-design-icons`)
 
 ## How to build and deploy
   
