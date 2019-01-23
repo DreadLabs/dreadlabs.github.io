@@ -7,12 +7,9 @@ res
 script
 source
 source-assets
-tests
 vendor
-.babelrc
 .editorconfig
 composer.*
-gulpfile.babel.js
 package.json
 phpunit.xml.dist
 README.md
