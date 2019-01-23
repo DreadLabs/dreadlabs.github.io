@@ -19,13 +19,17 @@ Contains the sources for my freelance website.
   3. Add components
 
          yarn add --dev @material/drawer @material/layout-grid @material/button @material/fab @material/chips @material/card @material/menu @material/top-app-bar
-    
-  4. Add supplemental components
+
+  4. Add `autprefixer` + `postcss-loader`
+
+         yarn add --dev autoprefixer postcss-loader
+
+  5. Add supplemental components
 
          yarn add --dev vanilla-lazyload@~10.0.1 font-awesome@~4.7.0
     
-  5. (TODO) Replace `gulp-responsive`
-  6. ...
+  6. (TODO) Replace `gulp-responsive`
+  7. ...
 
 ### Used components
 
