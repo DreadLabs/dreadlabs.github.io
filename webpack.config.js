@@ -35,11 +35,17 @@ module.exports = [{
             },
             {
                 test: /\.js$/,
-                loader: 'babel-loader',
-                query: {
-                    presets: ['es2015'],
-                    plugins: ['transform-object-assign']
-                }
+                exclude: /node_modules/,
+                use: [
+                    'eslint-loader',
+                    {
+                        loader: 'babel-loader',
+                        query: {
+                            presets: ['es2015'],
+                            plugins: ['transform-object-assign']
+                        }
+                    }
+                ]
             }
         ]
     },

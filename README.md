@@ -31,9 +31,6 @@ Contains the sources for my freelance website.
   6. Add supplemental components
 
          yarn add --dev vanilla-lazyload@~10.0.1 font-awesome@~4.7.0
-    
-  7. (TODO) Replace `gulp-responsive`
-  8. ...
 
 ### Used components
 
@@ -48,6 +45,20 @@ Contains the sources for my freelance website.
     * card ✓
     * chips ✓
   * FontAwesome (consider using `material-design-icons`)
+
+## Integrate additional components
+
+### eslint
+
+    yarn add --dev eslint eslint-config-google eslint-loader babel-eslint
+
+  * optimize images?
+  * copy fonts?
+  * font-awesome scss compilation?
+  * sourcemaps?
+  * service worker? (sw-toolbox)
+  * gulp-responsive? 
+  * copy lazyload?
 
 ## How to build and deploy
   
