@@ -37,14 +37,8 @@ module.exports = [{
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: [
-                    'eslint-loader',
-                    {
-                        loader: 'babel-loader',
-                        query: {
-                            presets: ['es2015'],
-                            plugins: ['transform-object-assign']
-                        }
-                    }
+                    'babel-loader',
+                    'eslint-loader'
                 ]
             }
         ]

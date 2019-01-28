@@ -1,6 +1,15 @@
 {
-    "presets": ["es2015"],
-    // Remove the line below to enable ES2015 support.
-    "only": "webpack.config.js",
+    "presets": [
+        [
+            "env",
+            {
+                "targets": {
+                    "browsers": ["last 2 versions"],
+                    "uglify": true
+                }
+            }
+        ]
+    ],
+    "plugins": ["transform-object-assign"],
     "retainLines": true
 }

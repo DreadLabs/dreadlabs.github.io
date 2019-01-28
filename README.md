@@ -20,13 +20,13 @@ Contains the sources for my freelance website.
 
          yarn add --dev @material/drawer @material/layout-grid @material/button @material/fab @material/chips @material/card @material/menu @material/top-app-bar
 
-  4. Add `autprefixer` + `postcss-loader`
+  4. Add `autoprefixer` + `postcss-loader`
 
          yarn add --dev autoprefixer postcss-loader
 
   5. Enable ES2015 JavaScript support for webpack
 
-         yarn add --dev babel-core@6 babel-loader@7 babel-preset-es2015 babel-plugin-transform-object-assign
+         yarn add --dev babel-core@6 babel-loader@7 babel-preset-env babel-plugin-transform-object-assign
 
   6. Add supplemental components
 
