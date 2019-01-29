@@ -1,5 +1,8 @@
-const autoprefixer = require('autoprefixer');
 const path = require('path');
+
+const autoprefixer = require('autoprefixer');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 
 module.exports = [{
     entry: ['./source-assets/styles/main.scss', './source-assets/scripts/main.js'],
@@ -49,5 +52,24 @@ module.exports = [{
         compress: false,
         host: '0.0.0.0',
         port: 8000
-    }
+    },
+
+    plugins: [
+        new CopyWebpackPlugin([{
+            from: './source-assets/images/**/*',
+            test: /.+\/source-assets\/images\/(.+)$/,
+            to: './dist/images/[1]',
+        }]),
+        // Make sure that the plugin is after any plugins that add images
+        new ImageminWebpackPlugin({
+            disable: process.env.NODE_ENV !== 'production', // Disable during development
+            test: /!DreadLabs-Logo\.svg$/,
+            jpegtran: {
+                progressive: true
+            },
+            gifsicle: {
+                interlaced: true
+            }
+        })
+    ]
 }];

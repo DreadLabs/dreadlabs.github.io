@@ -52,12 +52,21 @@ Contains the sources for my freelance website.
 
     yarn add --dev eslint eslint-config-google eslint-loader babel-eslint
 
-  * optimize images?
+### optimize images
+
+Install additional operating system level dependencies:
+    
+    apk add --no-cache autoconf automake build-base nasm
+
+Then install the following webpack plugins:
+    
+    yarn add --dev copy-webpack-plugin imagemin-webpack-plugin
+
+  * gulp-responsive? 
   * copy fonts?
   * font-awesome scss compilation?
   * sourcemaps?
   * service worker? (sw-toolbox)
-  * gulp-responsive? 
   * copy lazyload?
 
 ## How to build and deploy
