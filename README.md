@@ -66,11 +66,9 @@ Then install the following webpack plugins:
 
     yarn add --dev responsive-loader sharp
 
-  * copy fonts?
   * font-awesome scss compilation?
   * sourcemaps?
   * service worker? (sw-toolbox)
-  * copy lazyload?
 
 ## How to build and deploy
   

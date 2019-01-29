@@ -34,7 +34,7 @@
     "responsive-loader": "^1.2.0",
     "sass-loader": "^7.1.0",
     "sharp": "^0.21.3",
-    "vanilla-lazyload": "~10.0.1",
+    "vanilla-lazyload": "^8.17.0",
     "webpack": "3",
     "webpack-dev-server": "2"
   },

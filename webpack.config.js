@@ -25,33 +25,33 @@ module.exports = [{
                     {
                         loader: 'postcss-loader',
                         options: {
-                            plugins: () => [autoprefixer()]
-                        }
+                            plugins: () => [autoprefixer()],
+                        },
                     },
                     {
                         loader: 'sass-loader',
                         options: {
-                            includePaths: ['./node_modules']
-                        }
-                    }
-                ]
+                            includePaths: ['./node_modules'],
+                        },
+                    },
+                ],
             },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: [
                     'babel-loader',
-                    'eslint-loader'
-                ]
+                    'eslint-loader',
+                ],
             },
             {
                 test: /\.jpg$/,
                 loader: 'responsive-loader',
                 options: {
                     adapter: require('responsive-loader/sharp'),
-                    outputPath: './dist/images/'
-                }
-            }
+                    outputPath: './dist/images/',
+                },
+            },
         ]
     },
 
@@ -59,7 +59,7 @@ module.exports = [{
         contentBase: path.join(__dirname, 'dist'),
         compress: false,
         host: '0.0.0.0',
-        port: 8000
+        port: 8000,
     },
 
     plugins: [
@@ -73,11 +73,39 @@ module.exports = [{
             disable: process.env.NODE_ENV !== 'production', // Disable during development
             test: /!DreadLabs-Logo\.svg$/,
             jpegtran: {
-                progressive: true
+                progressive: true,
             },
             gifsicle: {
-                interlaced: true
+                interlaced: true,
             }
-        })
+        }),
+
+        // Copy all files at the root level (app)
+        new CopyWebpackPlugin([{
+            from: './source-assets/*',
+            test: /.+\/source-assets\/(.+)$/,
+            to: './dist/[1]',
+        }]),
+
+        // Copy font awesome fonts
+        new CopyWebpackPlugin([{
+            from: './node_modules/font-awesome/fonts/**',
+            test: /.+\/node_modules\/font-awesome\/fonts\/(.+)$/,
+            to: './dist/fonts/[1]',
+        }]),
+
+        // Copy lazyload module
+        new CopyWebpackPlugin([{
+            from: './node_modules/vanilla-lazyload/dist/lazyload.es2015.js',
+            to: './dist/scripts/lazyload.es2015.js',
+        }]),
+
+        // Copy logo
+        /*
+        new CopyWebpackPlugin([{
+            from: './source-assets/images/DreadLabs-Logo.svg',
+            to: './dist/images/DreadLabs-Logo.svg',
+        }]),
+        */
     ]
 }];
