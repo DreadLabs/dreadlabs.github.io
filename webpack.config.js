@@ -43,6 +43,14 @@ module.exports = [{
                     'babel-loader',
                     'eslint-loader'
                 ]
+            },
+            {
+                test: /\.jpg$/,
+                loader: 'responsive-loader',
+                options: {
+                    adapter: require('responsive-loader/sharp'),
+                    outputPath: './dist/images/'
+                }
             }
         ]
     },

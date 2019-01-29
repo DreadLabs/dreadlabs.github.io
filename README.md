@@ -62,7 +62,10 @@ Then install the following webpack plugins:
     
     yarn add --dev copy-webpack-plugin imagemin-webpack-plugin
 
-  * gulp-responsive? 
+### responsive images
+
+    yarn add --dev responsive-loader sharp
+
   * copy fonts?
   * font-awesome scss compilation?
   * sourcemaps?
