@@ -11,7 +11,7 @@ cd "$(dirname "$0")/.."
 
 if [ -n "$1" ]; then
     if [ "$1" = "composer" ]; then
-        docker run --interactive --tty --rm --env LOCAL_USER_ID="$(id -u "$USER")" --volume "$(pwd)":/app dreadlabs/composer:1.3.1 /bin/bash
+        docker run --interactive --tty --rm --env LOCAL_USER_ID="$(id -u "$USER")" --volume "$(pwd)":/app dreadlabs/php-lib:7.0-dev /bin/bash
     elif [ "$1" = "node" ]; then
         docker run --interactive --tty --rm --env LOCAL_USER_ID="$(id -u "$USER")" --volume "$(pwd)":/app --workdir /app dreadlabs/node-yarn:lts-alpine /bin/sh
     else
@@ -22,5 +22,5 @@ else
     # no argument provided, so just run the local console in the development
     # environment. Ensure the application is up to date first.
     script/update
-    docker run --interactive --tty --rm --env LOCAL_USER_ID="$(id -u "$USER")" --volume "$(pwd)":/app dreadlabs/composer:1.3.1 /bin/bash
+    docker run --interactive --tty --rm --env LOCAL_USER_ID="$(id -u "$USER")" --volume "$(pwd)":/app dreadlabs/php-lib:7.0-dev /bin/bash
 fi
