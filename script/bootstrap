@@ -7,6 +7,9 @@ set -e
 
 cd "$(dirname "$0")/.."
 
+echo "==> Pulling necessary docker images"
+docker-compose pull
+
 if [ -f composer.json ]; then
     docker run --rm --env LOCAL_USER_ID="$(id -u "$USER")" --volume "$(pwd)":/app --workdir /app dreadlabs/php-lib:7.0-dev composer install --optimize-autoloader --no-ansi --no-interaction
 else
