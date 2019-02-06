@@ -66,7 +66,20 @@ Then install the following webpack plugins:
 
     yarn add --dev responsive-loader sharp
 
-  * font-awesome scss compilation?
+### integration of FontAwesome
+
+Important package to resolve relative `url()` in SASS:
+
+    yarn add --dev resolve-url-loader
+
+@see: https://github.com/webpack-contrib/sass-loader#problems-with-url
+
+Up to Webpack v3:
+
+    yarn add --dev extract-text-webpack-plugin
+
+The loader `extract-loader` is buggy currently. See: https://github.com/peerigon/extract-loader/issues/54#issue-389324505
+
   * sourcemaps?
   * service worker? (sw-toolbox)
 

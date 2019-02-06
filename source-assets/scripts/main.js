@@ -111,9 +111,9 @@
   require('../images/Thomas-Juhnke_portrait-business.jpg?name=[name]-[width].[ext],sizes[]=271,sizes[]=542,sizes[]=185,sizes[]=370');
   require('../images/Thomas-Juhnke_portrait-casual.jpg?name=[name]-[width].[ext],sizes[]=271,sizes[]=542,sizes[]=185,sizes[]=370');
 
-  require('../images/network/christophe-maurice.jpg?outputPath=./dist/images/network/,name=[name]-[width].[ext],sizes[]=480,sizes[]=960,sizes[]=396,sizes[]=792');
-  require('../images/network/michael-gerstmann.jpg?outputPath=./dist/images/network/,name=[name]-[width].[ext],sizes[]=480,sizes[]=960,sizes[]=396,sizes[]=792');
-  require('../images/network/robert-schoenthal.jpg?outputPath=./dist/images/network/,name=[name]-[width].[ext],sizes[]=480,sizes[]=960,sizes[]=396,sizes[]=792');
+  require('../images/network/christophe-maurice.jpg?outputPath=images/network/,name=[name]-[width].[ext],sizes[]=480,sizes[]=960,sizes[]=396,sizes[]=792');
+  require('../images/network/michael-gerstmann.jpg?outputPath=images/network/,name=[name]-[width].[ext],sizes[]=480,sizes[]=960,sizes[]=396,sizes[]=792');
+  require('../images/network/robert-schoenthal.jpg?outputPath=images/network/,name=[name]-[width].[ext],sizes[]=480,sizes[]=960,sizes[]=396,sizes[]=792');
 
   /* eslint-enable */
 })();

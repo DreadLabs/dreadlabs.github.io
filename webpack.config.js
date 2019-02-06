@@ -3,6 +3,10 @@ const path = require('path');
 const autoprefixer = require('autoprefixer');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
+// @TODO: do not use with Webpack v4+
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+const mainCss = new ExtractTextPlugin({filename: 'style/main.css', allChunks: true});
 
 module.exports = [{
   entry: [
@@ -10,34 +14,67 @@ module.exports = [{
     './source-assets/scripts/main.js'
   ],
   output: {
-    filename: './dist/scripts/main.min.js',
+    publicPath: '',
+    path: path.resolve(__dirname, './dist'),
+    filename: 'scripts/main.min.js',
   },
   module: {
     rules: [
       {
-        test: /\.scss$/,
+        test: /fontawesome-webfont\.(eot|woff(2)?|ttf|svg?)$/,
         use: [
           {
             loader: 'file-loader',
             options: {
-              name: './dist/styles/main.css',
-            },
-          },
-          {loader: 'extract-loader'},
-          {loader: 'css-loader'},
-          {
-            loader: 'postcss-loader',
-            options: {
-              plugins: () => [autoprefixer()],
-            },
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              includePaths: ['./node_modules'],
+              name: 'fonts/[name].[ext]',
             },
           },
         ],
+      },
+      {
+        test: /\.scss$/,
+        use: mainCss.extract({
+          publicPath: '/',
+          use: [
+            /*
+            the following will work after extract-loader is fixed...
+            {
+              loader: 'file-loader',
+              options: {
+                name: 'styles/main.css',
+              },
+            },
+            {loader: 'extract-loader'},
+            */
+            {
+              loader: 'css-loader',
+              options: {
+                sourceMap: true,
+              },
+            },
+            {
+              loader: 'postcss-loader',
+              options: {
+                plugins: () => [autoprefixer()],
+                sourceMap: true,
+              },
+            },
+            {
+              loader: 'resolve-url-loader',
+              options: {
+                sourceMap: true,
+                keepQuery: true,
+              },
+            },
+            {
+              loader: 'sass-loader',
+              options: {
+                includePaths: ['./node_modules/'],
+                sourceMap: true,
+              },
+            },
+          ],
+        }),
       },
       {
         test: /\.js$/,
@@ -52,7 +89,7 @@ module.exports = [{
         loader: 'responsive-loader',
         options: {
           adapter: require('responsive-loader/sharp'),
-          outputPath: './dist/images/',
+          outputPath: 'images/',
         },
       },
     ]
@@ -66,10 +103,12 @@ module.exports = [{
   },
 
   plugins: [
+    mainCss,
+
     new CopyWebpackPlugin([{
       from: './source-assets/images/**/*',
       test: /.+\/source-assets\/images\/(.+)$/,
-      to: './dist/images/[1]',
+      to: 'images/[1]',
     }]),
     // Make sure that the plugin is after any plugins that add images
     new ImageminWebpackPlugin({
@@ -87,27 +126,20 @@ module.exports = [{
     new CopyWebpackPlugin([{
       from: './source-assets/*',
       test: /.+\/source-assets\/(.+)$/,
-      to: './dist/[1]',
-    }]),
-
-    // Copy font awesome fonts
-    new CopyWebpackPlugin([{
-      from: './node_modules/font-awesome/fonts/**',
-      test: /.+\/node_modules\/font-awesome\/fonts\/(.+)$/,
-      to: './dist/fonts/[1]',
+      to: '[1]',
     }]),
 
     // Copy lazyload module
     new CopyWebpackPlugin([{
       from: './node_modules/vanilla-lazyload/dist/lazyload.es2015.js',
-      to: './dist/scripts/lazyload.es2015.js',
+      to: 'scripts/lazyload.es2015.js',
     }]),
 
     // Copy logo
     /*
     new CopyWebpackPlugin([{
         from: './source-assets/images/DreadLabs-Logo.svg',
-        to: './dist/images/DreadLabs-Logo.svg',
+        to: 'images/DreadLabs-Logo.svg',
     }]),
     */
   ]
