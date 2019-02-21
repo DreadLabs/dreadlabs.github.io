@@ -29,7 +29,7 @@ echo "==> Running tests…"
 
 if [ -n "$1" ]; then
   # pass arguments to test call. This is useful for calling a single test.
-  docker run --rm --env LOCAL_USER_ID="$(id -u "$USER")" --volume "$(pwd)":/app --workdir /app dreadlabs/php-lib:7.0-dev composer test-ci -- "$1"
+  docker run --rm --env LOCAL_USER_ID="$(id -u "$USER")" --volume "$(pwd)":/app --workdir /app dreadlabs/node-yarn:6.1.1 yarn test -- "$1"
 else
-  docker run --rm --env LOCAL_USER_ID="$(id -u "$USER")" --volume "$(pwd)":/app --workdir /app dreadlabs/php-lib:7.0-dev composer test-ci
+  docker run --rm --env LOCAL_USER_ID="$(id -u "$USER")" --volume "$(pwd)":/app --workdir /app dreadlabs/node-yarn:6.1.1 yarn test
 fi

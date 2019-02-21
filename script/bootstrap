@@ -7,16 +7,6 @@ set -e
 
 cd "$(dirname "$0")/.."
 
-echo "==> Pulling necessary docker images"
-docker-compose pull
-
-if [ -f composer.json ]; then
-    docker run --rm --env LOCAL_USER_ID="$(id -u "$USER")" --volume "$(pwd)":/app --workdir /app dreadlabs/php-lib:7.0-dev composer install --optimize-autoloader --no-ansi --no-interaction
-else
-    echo "==> No composer.json found in root directory. Please run script/init."
-    exit 1
-fi
-
 if [ -f package.json ]; then
-    docker run --rm --env LOCAL_USER_ID="$(id -u "$USER")" --volume "$(pwd)":/app --workdir /app dreadlabs/node-yarn:lts-alpine yarn install
+    docker run --rm --env LOCAL_USER_ID="$(id -u "$USER")" --volume "$(pwd)":/app dreadlabs/node-yarn:6.11 yarn install
 fi

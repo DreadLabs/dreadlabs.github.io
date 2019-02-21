@@ -12,9 +12,6 @@ trap "docker-compose down" SIGHUP SIGINT SIGTERM
 # ensure everything in the app is up to date.
 script/update
 
-test -z "$SCULPIN_ENV" &&
-  SCULPIN_ENV='dev'
-
 # boot the app and any other necessary processes.
 docker-compose up -d
 docker-compose logs -f

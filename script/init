@@ -6,12 +6,5 @@ set -e
 
 cd "$(dirname "$0")/.."
 
-if [ ! -f composer.json ]; then
-    docker run --interactive --tty --rm --env LOCAL_USER_ID="$(id -u "$USER")" --volume "$(pwd)":/app --workdir /app dreadlabs/php-lib:7.0-dev composer init
-
-    mkdir -p src/ tests/
-    touch phpunit.xml.dist
-else
-    echo "==> Project already initialized."
-    exit 1
-fi
+echo "==> Project already initialized."
+exit 1
