@@ -1,9 +1,0 @@
-sculpin:
-  permalink: pretty
-
-  source_dir: "%sculpin.project_dir%/source"
-  output_dir: "%sculpin.project_dir%/output_%kernel.environment%"
-
-sculpin_content_types:
-  posts:
-    enabled: false
