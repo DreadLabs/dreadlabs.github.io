@@ -5,11 +5,14 @@ node_modules
 output_*
 res
 script
-source
-source-assets
+content
+assets
+tests
 vendor
+.babelrc
 .editorconfig
 composer.*
+gulpfile.babel.js
 package.json
 phpunit.xml.dist
 README.md
