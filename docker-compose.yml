@@ -2,11 +2,12 @@ version: '3'
 
 services:
   gatsby:
-    image: dreadlabs/node-yarn:6.11
+    image: dreadlabs/node:lts-debian
     volumes:
-      - ./:/app
+      - ./:/app:cached
+    working_dir: /app
     ports:
       - 8000:8000
       - 3001:3001
       - 35729:35729
-    command: ["sh", "-c", "yarn", "run", "develop"]
+    command: ["npm", "run", "develop", "--", "--host=0.0.0.0"]
