@@ -1,0 +1,149 @@
+html, body {
+  font-family: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Slab', serif;
+}
+#mission-statement h2 {
+  margin-top: 0;
+}
+blockquote {
+  font-family: inherit;
+  font-size: 1rem;
+}
+cite::before {
+  content: '\2014 \0020';
+}
+p, ul, ol {
+  font-size: 1.15rem;
+  line-height: 26px;
+}
+
+.mdl-dreadlabs {
+  .mdl-mini-footer__link-list {
+    font-size: 14px;
+  }
+
+  .mdl-layout__header-row .mdl-layout__title {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+
+    a {
+      width: 44px;
+      display: block;
+    }
+
+    .logo {
+      display: block;
+      clip-path: inset(0 20% 0 0);
+      margin-top: 10px;
+      height: 44px;
+
+      img {
+        height: 44px;
+      }
+    }
+  }
+  .mdl-layout__drawer {
+    .mdl-layout__title {
+      height: 160px;
+
+      .logo {
+        position: absolute;
+        bottom: 4px;
+        left: 5px;
+        height: 54px;
+
+        img {
+          height: 54px;
+        }
+      }
+    }
+  }
+
+  .section--center {
+    max-width: 860px;
+  }
+
+  /** @NOTE: next two blocks duplicate */
+  .vcard {
+    &__avatar {
+      max-width: 100%;
+      height: auto;
+      display: inline-block;
+      vertical-align: middle;
+
+      border-radius: 50%;
+      margin: 8px 0;
+    }
+
+    &__header, &__header--small {
+      font-family: 'Roboto Slab', serif;
+      line-height: 1;
+      opacity: 1;
+      margin: 0;
+    }
+  }
+
+  .network {
+    &__avatar {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .mdl-card__supporting-text {
+      height: auto;
+      padding-bottom: 56px;
+    }
+    .mdl-card__actions {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
+
+@media screen and (min-width:480px) {
+  blockquote {
+  }
+  .mdl-dreadlabs .mdl-layout__header-row .mdl-layout__title {
+    a {
+      width: auto;
+      display: inline;
+    }
+
+    .logo {
+      clip-path: none;
+      margin: auto;
+      height: 56px;
+
+      img {
+        height: 56px;
+      }
+    }
+  }
+}
+@media screen and (min-width:1024px) {
+  blockquote {
+    font-size: 1.5rem;
+  }
+  .mdl-dreadlabs .mdl-layout__header-row .mdl-layout__title {
+    left: auto;
+    top: auto;
+    transform: none;
+    position: relative;
+
+    .logo {
+      height: 64px;
+
+      img {
+        height: 64px;
+      }
+    }
+  }
+}
+
+@import "resume";

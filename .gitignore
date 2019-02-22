@@ -163,3 +163,15 @@ output_*/
 .tmp
 dist
 
+# project specific
+# gatsby files
+.cache/
+public
+
+# Mac files
+.DS_Store
+
+# Yarn
+yarn-error.log
+.pnp/
+.pnp.js

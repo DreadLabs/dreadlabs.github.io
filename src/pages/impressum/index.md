@@ -1,10 +1,6 @@
 ---
-layout: default
+path: /impressum
 ---
-<section class="section--center mdl-grid">
-
-<div class="mdl-cell mdl-cell--12-col" markdown="1">
-
 ## Impressum
 
 **Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV**<br>
@@ -137,7 +133,3 @@ dass Anfragen durch Google gespeichert werden.
 
 Nähere Informationen dazu können Sie dem Google Fonts FAQ unter [https://developers.google.com/fonts/faq#what-does-using-the-google-fonts-api-mean-for-the-privacy-of-my-users](https://developers.google.com/fonts/faq#what-does-using-the-google-fonts-api-mean-for-the-privacy-of-my-users) 
 bzw. den Google Datenschutzhinweisen unter [https://www.google.de/intl/de/policies/](https://www.google.de/intl/de/policies/) entnehmen.
-
-</div>
-
-</section>
