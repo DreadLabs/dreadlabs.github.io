@@ -6,5 +6,8 @@ set -e
 
 cd "$(dirname "$0")/.."
 
+# git config --global user.email "dev@dreadlabs.de"
+# git config --global user.name "Thomas Juhnke"
+
 echo "==> Project already initialized."
 exit 1
