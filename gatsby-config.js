@@ -6,7 +6,13 @@ module.exports = {
     contactStyle: `simple`,
   },
   plugins: [
-    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        includePaths: ['./node_modules/'],
+        sourceMap: true,
+      },
+    },
 
     {
       resolve: `gatsby-source-filesystem`,
