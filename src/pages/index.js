@@ -5,8 +5,8 @@ import {MDCMenu} from "@material/menu"
 import Contact from "../components/contact_simple"
 import Layout from "../components/layout"
 import Network from "../components/network"
-import Portrait from "../components/portrait"
 import Resume from "../components/resume"
+import Vcard from "../components/vcard"
 
 class Index extends React.Component {
   componentDidMount() {
@@ -48,22 +48,7 @@ class Index extends React.Component {
           </div>
         </section>
 
-        <section className="section--center mdc-layout-grid vcard">
-          <div className="mdc-layout-grid__inner">
-            <div
-              className="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--align-middle mdl-typography--text-center vcard__avatar-container">
-              <Portrait />
-            </div>
-            <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-8 mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--align-middle">
-              <h1 className="vcard__header mdl-typography--text-uppercase">
-                <small className="vcard__header--small">Thomas</small>
-                <br/>
-                Juhnke<br/>
-                <small className="vcard__header--small">Software&shy;entwickler</small>
-              </h1>
-            </div>
-          </div>
-        </section>
+        <Vcard />
 
         <section id="mission-statement"
                  className="section--center mdc-layout-grid mdl-shadow--4dp mdl-color--indigo-900 mdl-color-text--white">

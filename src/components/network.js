@@ -1,6 +1,6 @@
 import React from "react"
 import {useStaticQuery, graphql} from "gatsby"
-// 480, 396
+
 export default () => {
   const data = useStaticQuery(graphql`
     fragment network480 on File {
