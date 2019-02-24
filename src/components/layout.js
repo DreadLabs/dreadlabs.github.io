@@ -1,6 +1,7 @@
 import React from "react"
 import {MDCDrawer} from "@material/drawer";
 import {MDCTopAppBar} from "@material/top-app-bar";
+import Lazyload from "vanilla-lazyload/dist/lazyload.es2015"
 
 import Logo from "./logo"
 import SiteMetadata from "../components/site-metadata"
@@ -18,6 +19,8 @@ class Layout extends React.Component {
     listEl.addEventListener('click', (event) => {
       drawer.open = false;
     });
+
+    new Lazyload({elements_selector: '.lazy'});
   }
 
   render() {

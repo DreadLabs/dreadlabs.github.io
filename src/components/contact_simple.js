@@ -1,20 +1,23 @@
 import React from "react"
 
 export default () => (
-  <div className="mdl-cell mdl-cell--12-col">
-    <div className="mdl-cell mdl-cell--4-col">
-      <p>Rüdigerstraße 43<br />
-        10365 Berlin<br />
-        +49 (0) 178 54 56 492
-      </p>
-    </div>
+  <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+    <div className="mdc-layout-grid__inner">
+      <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+        <p>Rüdigerstraße 43<br />
+          10365 Berlin<br />
+          +49 (0) 178 54 56 492
+        </p>
+      </div>
 
-    <div className="mdl-cell mdl-cell--8-col">
-      <p>Ich bin für Sie per E-Mail erreichbar:</p>
-      <p>
-        <a href="mailto:contact@dreadlabs.de" className="mdl-button mdl-button--colored mdl-button--fab">
-          <i className="material-icons">email</i></a>
-      </p>
+      <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
+        <p>Ich bin für Sie per E-Mail erreichbar:</p>
+        <p>
+          <a href="mailto:contact@dreadlabs.de" className="mdc-fab mdl-button--colored">
+            <i className="mdc-fab__icon material-icons">email</i>
+          </a>
+        </p>
+      </div>
     </div>
   </div>
 )

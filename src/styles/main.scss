@@ -2,6 +2,7 @@
 
 @import "font-awesome/scss/font-awesome";
 
+@import "@material/theme/mdc-theme";
 // "layout" components
 @import "@material/drawer/mdc-drawer";
 @import "@material/layout-grid/mdc-layout-grid";
@@ -18,6 +19,7 @@
 @import "@material/fab/mdc-fab";
 @import "@material/icon-button/mdc-icon-button";
 @import "@material/list/mdc-list";
+@import "@material/menu-surface/mdc-menu-surface";
 @import "@material/menu/mdc-menu";
 
 html, body {
@@ -119,16 +121,29 @@ p, ul, ol {
   }
 
   .network {
+    &__avatar-container::before {
+      /* reset margins for background image, because a image / picture element is used */
+      margin: 0;
+    }
+
     &__avatar {
       max-width: 100%;
       height: auto;
     }
 
-    .mdl-card__supporting-text {
-      height: auto;
-      padding-bottom: 56px;
+    .mdc-card {
+      position: relative;
     }
-    .mdl-card__actions {
+
+    .network-card__primary {
+      padding: 1rem;
+    }
+    .network-card__secondary {
+      padding: 0 1rem 56px;
+      height: auto;
+    }
+
+    .mdc-card__actions {
       position: absolute;
       bottom: 0;
     }

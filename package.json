@@ -21,6 +21,7 @@
     "@material/layout-grid": "^0.41.0",
     "@material/menu": "^0.44.1",
     "@material/tab-bar": "^0.44.1",
+    "@material/theme": "^0.43.0",
     "@material/top-app-bar": "^0.44.1",
     "font-awesome": "^4.7.0",
     "gatsby": "^2.1.16",
