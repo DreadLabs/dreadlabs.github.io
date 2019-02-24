@@ -8,5 +8,5 @@ set -e
 cd "$(dirname "$0")/.."
 
 if [ -f package.json ]; then
-    docker run --rm --entrypoint=/usr/local/bin/entrypoint-suexec.sh --env LOCAL_USER_ID="$(id -u "$USER")" --volume "$(pwd)":/app dreadlabs/node:lts-debian npm install
+    docker run --rm --entrypoint=/usr/local/bin/entrypoint-suexec.sh --env LOCAL_USER_ID="$(id -u "$USER")" --volume "$(pwd)":/app --workdir /app dreadlabs/node:lts-debian npm install
 fi
