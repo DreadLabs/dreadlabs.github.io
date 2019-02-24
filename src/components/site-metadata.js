@@ -3,8 +3,7 @@ import { Helmet } from "react-helmet"
 
 export default () => (
   <Helmet defaultTitle="Thomas Juhnke — DreadLabs Softwareentwicklung"
-          titleTemplate={`%s | Thomas Juhnke — DreadLabs Softwareentwicklung`}
-          bodyAttributes={{class: 'mdl-dreadlabs mdl-base'}}>
+          titleTemplate={`%s | Thomas Juhnke — DreadLabs Softwareentwicklung`}>
     <html lang="de" />
     {/* Disable tap highlight on IE*/}
     <meta name="msapplication-tap-highlight" content="no" />
@@ -31,6 +30,6 @@ export default () => (
     <meta name="theme-color" content="#FFFFFF" />
 
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Source+Sans+Pro:400,700|Material+Icons" rel="stylesheet" />
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-blue.min.css" />
+    {/*<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-blue.min.css" />*/}
   </Helmet>
 )

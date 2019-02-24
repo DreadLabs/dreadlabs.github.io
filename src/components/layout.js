@@ -1,77 +1,157 @@
 import React from "react"
-import { Link } from "gatsby"
+import {MDCDrawer} from "@material/drawer";
+import {MDCTopAppBar} from "@material/top-app-bar";
 
 import Logo from "./logo"
 import SiteMetadata from "../components/site-metadata"
 
-const FooterLink = props => (
-  <li><Link to={props.to}>{props.children}</Link></li>
-)
+class Layout extends React.Component {
+  componentDidMount() {
+    const drawer = MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
+    const topAppBar = MDCTopAppBar.attachTo(document.getElementById('app-bar'));
+    const listEl = document.querySelector('.mdc-drawer .mdc-list');
 
-export default ({ children }) => (
-  <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--no-desktop-drawer-button">
-    <SiteMetadata />
-    <header className="mdl-layout__header mdl-color--white">
-      <div className="mdl-layout__header-row">
-        <div className="mdl-layout__title">
-          <a href="/">
-            <Logo />
-          </a>
+    topAppBar.setScrollTarget(document.getElementById('top'));
+    topAppBar.listen('MDCTopAppBar:nav', () => {
+      drawer.open = !drawer.open;
+    });
+    listEl.addEventListener('click', (event) => {
+      drawer.open = false;
+    });
+  }
+
+  render() {
+    const { children } = this.props
+
+    return (
+      <div className="mdl-dreadlabs">
+        <SiteMetadata />
+
+        <aside className="mdc-drawer mdc-drawer--modal">
+          <div className="mdc-drawer__header">
+            <span className="mdc-drawer__title">
+               <a href="/">
+                  <Logo />
+              </a>
+            </span>
+          </div>
+          <div className="mdc-drawer__content">
+            <nav className="mdc-list">
+              <a className="mdc-list-item" href="/#mission-statement">
+                <span className="mdc-list-item__text">Leitbild</span>
+              </a>
+              <a className="mdc-list-item" href="/#about-me">
+                <span className="mdc-list-item__text">Über mich</span>
+              </a>
+              <a className="mdc-list-item" href="/#contact">
+                <span className="mdc-list-item__text">Kontakt</span>
+              </a>
+              <a className="mdc-list-item" href="/#network">
+                <span className="mdc-list-item__text">Netzwerk</span>
+              </a>
+            </nav>
+          </div>
+        </aside>
+
+        <div className="mdc-drawer-scrim" />
+
+        <div>
+
+          <header id="app-bar" className="mdc-top-app-bar mdc-top-app-bar--fixed">
+            <div className="mdc-top-app-bar__row">
+              <section className="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                <button className="demo-menu material-icons mdc-top-app-bar__navigation-icon">menu</button>
+                <div className="mdc-top-app-bar__title">
+                  <a href="/">
+                    <Logo />
+                  </a>
+                </div>
+              </section>
+
+              <section className="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+                <div className="mdc-tab-bar" role="tablist">
+                  <div className="mdc-tab-scroller">
+                    <div className="mdc-tab-scroller__scroll-area">
+                      <div className="mdc-tab-scroller__scroll-content">
+                        <a className="mdc-tab mdc-tab--min-width" role="tab" tabIndex="0" href="/#mission-statement">
+                      <span className="mdc-tab__content">
+                        <span className="mdc-tab__text-label">Leitbild</span>
+                      </span>
+                        </a>
+                        <a className="mdc-tab mdc-tab--min-width" role="tab" href="/#about-me">
+                      <span className="mdc-tab__content">
+                        <span className="mdc-tab__text-label">Über mich</span>
+                      </span>
+                        </a>
+                        <a className="mdc-tab mdc-tab--min-width" role="tab" href="/#contact">
+                      <span className="mdc-tab__content">
+                        <span className="mdc-tab__text-label">Kontakt</span>
+                      </span>
+                        </a>
+                        <a className="mdc-tab mdc-tab--min-width" role="tab" href="/#network">
+                      <span className="mdc-tab__content">
+                        <span className="mdc-tab__text-label">Netzwerk</span>
+                      </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </header>
+
+          <main className="mdc-top-app-bar--fixed-adjust">
+            <div id="top" className="page-content">
+              {children}
+            </div>
+
+            <footer className="mdc-layout-grid">
+              <div className="mdc-layout-grid__inner">
+                <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-10">
+                  <div className="mdc-tab-bar" role="tablist">
+                    <div className="mdc-tab-scroller">
+                      <div className="mdc-tab-scroller__scroll-area">
+                        <div className="mdc-tab-scroller__scroll-content">
+                          <a className="mdc-tab mdc-tab--min-width" role="tab" href="/">
+                        <span className="mdc-tab__content">
+                          <span className="mdc-tab__text-label">Startseite</span>
+                        </span>
+                          </a>
+                          <a className="mdc-tab mdc-tab--min-width" role="tab" href="/impressum">
+                        <span className="mdc-tab__content">
+                          <span className="mdc-tab__text-label">Impressum</span>
+                        </span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mdc-layout-grid__cell--span-2">
+                  <a className="mdc-icon-button" href="#top" title="nach oben">
+                    <i className="fa fa-angle-up"></i>
+                  </a>
+                  <a className="mdc-icon-button" href="https://www.xing.com/profile/Thomas_Juhnke" title="Xing">
+                    <i className="fa fa-xing"></i>
+                  </a>
+                  <a className="mdc-icon-button" href="https://github.com/DreadLabs" title="GitHub">
+                    <i className="fa fa-github"></i>
+                  </a>
+                  <a className="mdc-icon-button" href="https://twitter.com/dreadwarrior" title="Twitter">
+                    <i className="fa fa-twitter"></i>
+                  </a>
+                </div>
+              </div>
+            </footer>
+
+          </main>
         </div>
-        <div className="mdl-layout-spacer mdl-layout--large-screen-only"></div>
-        <nav className="mdl-navigation mdl-layout--large-screen-only">
-          <a className="mdl-navigation__link" href="/#mission-statement">Leitbild</a>
-          <a className="mdl-navigation__link" href="/#about-me">Über mich</a>
-          <a className="mdl-navigation__link" href="/#contact">Kontakt</a>
-          <a className="mdl-navigation__link" href="/#network">Netzwerk</a>
-        </nav>
       </div>
-    </header>
+    )
+  }
+}
 
-    <div className="mdl-layout__drawer">
-      <span className="mdl-layout__title mdl-color--white">
-        <a href="/">
-            <Logo />
-        </a>
-      </span>
-      <nav className="mdl-navigation">
-        <a className="mdl-navigation__link" href="/#mission-statement">Leitbild</a>
-        <a className="mdl-navigation__link" href="/#about-me">Über mich</a>
-        <a className="mdl-navigation__link" href="/#contact">Kontakt</a>
-        <a className="mdl-navigation__link" href="/#network">Netzwerk</a>
-      </nav>
-    </div>
+export default Layout
 
-    <main className="mdl-layout__content">
-      <div id="top" className="page-content">
-        {children}
-      </div>
-
-      <footer className="mdl-mini-footer">
-        <div className="mdl-mini-footer__left-section">
-          <ul className="mdl-mini-footer__link-list">
-            <FooterLink to="/">Startseite</FooterLink>
-            <FooterLink to="/impressum">Impressum</FooterLink>
-          </ul>
-        </div>
-
-        <div className="mdl-mini-footer__right-section">
-          <a className="mdl-button mdl-js-button mdl-button--icon" href="#top" title="nach oben">
-            <i className="fa fa-angle-up material-icons"></i>
-          </a>
-          <a className="mdl-button mdl-js-button mdl-button--icon" href="https://www.xing.com/profile/Thomas_Juhnke"
-             title="Xing">
-            <i className="fa fa-xing material-icons"></i>
-          </a>
-          <a className="mdl-button mdl-js-button mdl-button--icon" href="https://github.com/DreadLabs" title="GitHub">
-            <i className="fa fa-github material-icons"></i>
-          </a>
-          <a className="mdl-button mdl-js-button mdl-button--icon" href="https://twitter.com/dreadwarrior"
-             title="Twitter">
-            <i className="fa fa-twitter material-icons"></i>
-          </a>
-        </div>
-      </footer>
-    </main>
-  </div>
-)
