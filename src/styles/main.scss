@@ -37,10 +37,25 @@ h1, h2, h3, h4, h5, h6 {
 #mission-statement h2 {
   margin-top: 0;
 }
+
 blockquote {
+  color: var(--mdc-theme-text-hint-on-light);
   font-family: inherit;
   font-size: 1rem;
+  font-style: italic;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    left: -.5em;
+    content: '“';
+  }
+  &::after {
+    content: '”';
+    margin-left: -.05em;
+  }
 }
+
 cite::before {
   content: '\2014 \0020';
 }

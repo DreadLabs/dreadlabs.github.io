@@ -41,9 +41,9 @@ class Index extends React.Component {
         <section className="section--center mdc-layout-grid">
           <div className="mdc-layout-grid__inner">
             <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-              <blockquote className="mdl-color-text--grey-400">The function of good software is to make the complex appear to
-                be simple.
-                <cite>Grady Booch</cite></blockquote>
+              <blockquote>
+                The function of good software is to make the complex appear to be simple. <cite>Grady Booch</cite>
+              </blockquote>
             </div>
           </div>
         </section>
