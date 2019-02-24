@@ -1,8 +1,12 @@
 @import "variables";
 
+// fonts
 @import "font-awesome/scss/font-awesome";
 
+// "global" components
 @import "@material/theme/mdc-theme";
+@import "@material/typography/mdc-typography";
+
 // "layout" components
 @import "@material/drawer/mdc-drawer";
 @import "@material/layout-grid/mdc-layout-grid";
@@ -115,8 +119,9 @@ p, ul, ol {
     &__header, &__header--small {
       font-family: 'Roboto Slab', serif;
       line-height: 1;
+      margin: 0 0 1rem 0;
       opacity: 1;
-      margin: 0;
+      text-transform: uppercase;
     }
   }
 
