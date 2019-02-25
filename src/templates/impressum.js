@@ -8,8 +8,10 @@ export default function Template({
   const {markdownRemark: page} = data
   return (
     <Layout>
-      <section className="section--center mdl-grid">
-        <div className="mdl-cell mdl-cell--12-col" dangerouslySetInnerHTML={{__html: page.html}}/>
+      <section className="section--center mdc-layout-grid">
+        <div className="mdc-layout-grid__inner">
+          <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" dangerouslySetInnerHTML={{__html: page.html}}/>
+        </div>
       </section>
     </Layout>
   )

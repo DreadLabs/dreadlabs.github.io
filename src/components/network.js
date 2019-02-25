@@ -43,8 +43,8 @@ export default () => {
   return (
     <section className="network mdc-layout-grid">
       <div className="mdc-layout-grid__inner">
-        <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-3 mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-12-phone mdc-card network-card mdl-shadow--2dp">
-          <div className="network__avatar-container mdc-card__media mdc-card__media--square mdl-color--white">
+        <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-3 mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-12-phone mdc-card">
+          <div className="network__avatar-container mdc-card__media mdc-card__media--square">
             <picture>
               <source media="(min-width: 840px)"
                       data-srcset={data.micha480.childImageSharp.fixed.srcSet} />
@@ -57,9 +57,7 @@ export default () => {
             </picture>
           </div>
 
-          <div className="network-card__primary">
-            <strong className="mdc-typography--headline6">Michael Gerstmann</strong>
-          </div>
+          <div className="network-card__primary">Michael Gerstmann</div>
 
           <p className="network-card__secondary mdc-typography--body2">
             Michael ist Spezialist für Webanwendungen mit HTML5, CSS3 und JavaScript.
@@ -67,9 +65,9 @@ export default () => {
             Suchmaschinenoptimierung bis hin zur Entwicklung von Content Management Systemen.
           </p>
 
-          <div className="mdc-card__actions mdl-card--border">
+          <div className="mdc-card__actions">
             <div className="mdc-card__action--buttons">
-              <a className="mdc-button mdc-card__action mdc-card__action--button mdl-button--colored" href="http://micha.seiler-gerstmann.de/">
+              <a className="mdc-button mdc-card__action mdc-card__action--button" href="http://micha.seiler-gerstmann.de/">
                 <span className="mdc-button__label">
                   Weitere Informationen
                 </span>
@@ -78,8 +76,8 @@ export default () => {
           </div>
         </div>
 
-        <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-3 mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-12-phone mdc-card network-card mdl-shadow--2dp">
-          <div className="network__avatar-container mdc-card__media mdc-card__media--square mdl-color--white">
+        <div className="network-card mdc-layout-grid__cell mdc-layout-grid__cell--span-3 mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-12-phone mdc-card">
+          <div className="network__avatar-container mdc-card__media mdc-card__media--square">
             <picture>
               <source media="(min-width: 840px)"
                       data-srcset={data.christophe480.childImageSharp.fixed.srcSet} />
@@ -92,9 +90,7 @@ export default () => {
             </picture>
           </div>
 
-          <div className="network-card__primary">
-            <strong className="mdc-typography--headline6">Christophe Maurice</strong>
-          </div>
+          <div className="network-card__primary">Christophe Maurice</div>
 
           <p className="network-card__secondary mdc-typography--body2">
             Christophe ist ein Produktstratege und Unternehmensberater. Er hilft Unternehmen
@@ -103,9 +99,9 @@ export default () => {
             bis hin zu Blue Chips.
           </p>
 
-          <div className="mdc-card__actions mdl-card--border">
+          <div className="mdc-card__actions">
             <div className="mdc-card__action--buttons">
-              <a className="mdc-button mdc-card__action mdc-card__action--button mdl-button--colored" href="https://www.linkedin.com/in/christophe-maurice/">
+              <a className="mdc-button mdc-card__action mdc-card__action--button" href="https://www.linkedin.com/in/christophe-maurice/">
                 <span className="mdc-button__label">
                   Weitere Informationen
                 </span>
@@ -114,8 +110,8 @@ export default () => {
           </div>
         </div>
 
-        <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-3 mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-12-phone mdc-card mdl-shadow--2dp">
-          <div className="network__avatar-container mdc-card__media mdc-card__media--square mdl-color--white">
+        <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-3 mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-12-phone mdc-card">
+          <div className="network__avatar-container mdc-card__media mdc-card__media--square">
             <picture>
               <source media="(min-width: 840px)"
                       data-srcset={data.robert480.childImageSharp.fixed.srcSet} />
@@ -128,9 +124,7 @@ export default () => {
             </picture>
           </div>
 
-          <div className="network-card__primary">
-            <strong className="mdc-typography--headline6">Robert Schönthal</strong>
-          </div>
+          <div className="network-card__primary">Robert Schönthal</div>
 
           <p className="network-card__secondary mdc-typography--body2">
             Robert ist ein erfahrener und qualitätsbewusster Softwareentwickler &amp; -architect
@@ -139,9 +133,9 @@ export default () => {
             durchgeführt und betreut hat.
           </p>
 
-          <div className="mdc-card__actions mdl-card--border">
+          <div className="mdc-card__actions">
             <div className="mdc-card__action--buttons">
-              <a className="mdc-button mdc-card__action mdc-card__action--button mdl-button--colored" href="https://digitalkaoz.net/">
+              <a className="mdc-button mdc-card__action mdc-card__action--button" href="https://digitalkaoz.net/">
                 <span className="mdc-button__label">
                   Weitere Informationen
                 </span>

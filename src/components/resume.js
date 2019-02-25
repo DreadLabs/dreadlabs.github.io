@@ -4,10 +4,10 @@ import Tags from "./resume__position-tags"
 export default() => (
   <section className="resume">
     <div className="resume__position">
-      <div className="resume__position-waypoint mdl-color--cyan-100" />
+      <div className="resume__position-waypoint" />
 
       <div className="resume__position-content">
-        <h5>Postcon Deutsch­land B.V.&nbsp;&amp;&nbsp;Co.&nbsp;KG</h5>
+        <h5 className="mdc-typography--headline6">Postcon Deutsch­land B.V.&nbsp;&amp;&nbsp;Co.&nbsp;KG</h5>
         <ul>
           <li>Entwicklung in einer verteilten Systemarchitektur</li>
           <li>Verwendung des Message queuing service RabbitMQ für den Nachrichtenaustausch</li>
@@ -24,10 +24,10 @@ export default() => (
     </div>
 
     <div className="resume__position">
-      <div className="resume__position-waypoint mdl-color--cyan-100" />
+      <div className="resume__position-waypoint" />
 
       <div className="resume__position-content">
-        <h5>McFIT Global&nbsp;Group&nbsp;GmbH</h5>
+        <h5 className="mdc-typography--headline6">McFIT Global&nbsp;Group&nbsp;GmbH</h5>
         <ul>
           <li>Planung &amp; Design von API-getriebenen, RESTful Webanwendungen</li>
           <li>Implementierung von CouchDB als API für Frontendanwendungen</li>
@@ -43,10 +43,10 @@ export default() => (
     </div>
 
     <div className="resume__position">
-      <div className="resume__position-waypoint mdl-color--cyan-100" />
+      <div className="resume__position-waypoint" />
 
       <div className="resume__position-content">
-        <h5>bytepark GmbH</h5>
+        <h5 className="mdc-typography--headline6">bytepark GmbH</h5>
         <ul>
           <li>Entwicklung von Content Management Lösungen mit Symfony 2, dem Java Content Repository und TYPO3</li>
           <li>Projektautomation mit Jenkins CI, Ansible/Phing</li>
@@ -62,10 +62,10 @@ export default() => (
     </div>
 
     <div className="resume__position">
-      <div className="resume__position-waypoint mdl-color--cyan-100" />
+      <div className="resume__position-waypoint" />
 
       <div className="resume__position-content">
-        <h5>K - New Media GmbH&nbsp;&amp;&nbsp;Co.&nbsp;KG</h5>
+        <h5 className="mdc-typography--headline6">K - New Media GmbH&nbsp;&amp;&nbsp;Co.&nbsp;KG</h5>
         <ul>
           <li>Wartung und Weiterentwicklung der E-Commerce Plattform MB3</li>
           <li>Rückportierung von Funktionen des aktuellen TYPO3-Kerns in den archaischen MB3-Kern</li>
@@ -78,10 +78,10 @@ export default() => (
     </div>
 
     <div className="resume__position">
-      <div className="resume__position-waypoint mdl-color--cyan-100" />
+      <div className="resume__position-waypoint" />
 
       <div className="resume__position-content">
-        <h5>profi.it internet&nbsp;technology</h5>
+        <h5 className="mdc-typography--headline6">profi.it internet&nbsp;technology</h5>
         <ul>
           <li>Entwicklung eines Baukastensystems für Hotelportale</li>
           <li>Entwicklung eines firmeninternen CRM-Systems</li>
@@ -101,10 +101,10 @@ export default() => (
     </div>
 
     <div className="resume__position">
-      <div className="resume__position-waypoint mdl-color--cyan-100" />
+      <div className="resume__position-waypoint" />
 
       <div className="resume__position-content">
-        <h5>Haus&nbsp;Neuer&nbsp;Medien GmbH</h5>
+        <h5 className="mdc-typography--headline6">Haus&nbsp;Neuer&nbsp;Medien GmbH</h5>
         <ul>
           <li>Implementierung von Webseiten und -anwendungen in TYPO3</li>
           <li>Unterstützung bei der Betreuung und Wartung von Root-Servern</li>
@@ -120,10 +120,10 @@ export default() => (
     </div>
 
     <div className="resume__position">
-      <div className="resume__position-waypoint mdl-color--cyan-100" />
+      <div className="resume__position-waypoint" />
 
       <div className="resume__position-content">
-        <h5>Contas&nbsp;GmbH / geist-nord&nbsp;gmbh</h5>
+        <h5 className="mdc-typography--headline6">Contas&nbsp;GmbH / geist-nord&nbsp;gmbh</h5>
         <ul>
           <li>Reportgenerierung mit Crystal Reports</li>
           <li>Programmierung einer Anwendung zur Berechnung der Wirtschaftlichkeit von Kreditsicherheiten</li>

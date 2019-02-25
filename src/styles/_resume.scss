@@ -26,13 +26,16 @@
   }
 
   &__position-waypoint {
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px white, 0 0 0 6px #cfd8dc, 0 2px 0 6px rgba(33, 33, 33, 0.05);
+    background-color: $mdl-theme-primary-contrast;
+
     position: absolute;
     top: 19px;
     left: 6px;
+
     width: 8px;
     height: 8px;
-    border-radius: 50%;
-    box-shadow: 0 0 0 4px white, 0 0 0 6px #cfd8dc, 0 2px 0 6px rgba(33, 33, 33, 0.05);
   }
 
   &__position-content {
@@ -78,6 +81,11 @@
     &--on {
       display: block;
     }
+
+    .mdc-chip {
+      background-color: $mdl-theme-primary-contrast;
+      color: $mdl-theme-on-primary-contrast;
+    }
   }
 
   &__position-date {
@@ -91,7 +99,6 @@
 }
 @media only screen and (min-width: 1170px) {
   .resume {
-    margin-top: 3em;
     margin-bottom: 3em;
 
     &::before {

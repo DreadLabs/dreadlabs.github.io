@@ -51,10 +51,10 @@ class Index extends React.Component {
         <Vcard />
 
         <section id="mission-statement"
-                 className="section--center mdc-layout-grid mdl-shadow--4dp mdl-color--indigo-900 mdl-color-text--white">
+                 className="mdl-mission-statement section--center mdc-layout-grid mdc-elevation--z4">
           <div className="mdc-layout-grid__inner">
             <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-              <h2>Leitbild</h2>
+              <h2 class="mdc-typography--headline3">Leitbild</h2>
 
               <p>Ich entwickle <strong>Software nach Ihren Wünschen</strong> mit hohen Anforderungen an
                 <strong>Qualität, Sicherheit und Zuverlässigkeit</strong>, testgetrieben und unter
@@ -70,7 +70,7 @@ class Index extends React.Component {
 
         <section className="section--center mdc-layout-grid">
           <div className="mdc-layout-grid__inner">
-            <h3 className="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">Mein Angebot</h3>
+            <h3 className="mdc-typography--headline4 mdc-layout-grid__cell mdc-layout-grid__cell--span-4">Mein Angebot</h3>
             <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
               <p>Ich unterstütze Sie bei …</p>
               <ul>
@@ -86,7 +86,7 @@ class Index extends React.Component {
 
         <section id="about-me" className="section--center mdc-layout-grid">
           <div className="mdc-layout-grid__inner">
-            <h3 className="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">Über mich</h3>
+            <h3 className="mdc-typography--headline4 mdc-layout-grid__cell mdc-layout-grid__cell--span-4">Über mich</h3>
 
             <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
               <p>Bereits seit 1999 entwickle ich Software in verschiedenen Programmiersprachen.
@@ -103,22 +103,22 @@ class Index extends React.Component {
               </ul>
             </div>
 
-            <h4 className="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">Berufserfahrung</h4>
+            <h4 className="mdc-typography--headline5 mdc-layout-grid__cell mdc-layout-grid__cell--span-12">Berufserfahrung</h4>
           </div>
         </section>
 
-        <div className="mdl-color--grey-100">
+        <div className="section--fullwidth">
+
           <div className="mdc-layout-grid">
             <div className="mdc-layout-grid__inner">
-              <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 mdc-menu-surface--anchor mdl-typography--text-right resume-tags-toggle">
+              <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-1 mdc-menu-surface--anchor mdl-typography--text-right resume-tags-toggle">
+
                 <button id="resume-tags-toggle__button" className="mdc-icon-button">
                   <i className="material-icons">more_vert</i>
                 </button>
+
                 <div id="resume-tags-toggle__menu" className="mdc-menu mdc-menu-surface" tabIndex="-1">
-                  <ul className="mdc-list mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
-                      role="menu"
-                      aria-hidden="true"
-                      aria-orientation="vertical">
+                  <ul className="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
                     <li className="mdc-list-item">
                       <span className="mdc-list-item__text">
                         Recruiter-Modus <strong><span className="resume-tags-toggle__state">aktivieren</span></strong>
@@ -126,9 +126,11 @@ class Index extends React.Component {
                     </li>
                   </ul>
                 </div>
+
               </div>
             </div>
           </div>
+
           <section className="section--center mdc-layout-grid">
             <div className="mdc-layout-grid__inner">
               <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
@@ -136,21 +138,22 @@ class Index extends React.Component {
               </div>
             </div>
           </section>
+
         </div>
 
         <section id="contact" className="section--center mdc-layout-grid">
           <div className="mdc-layout-grid__inner">
-            <h2 className="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">Kontakt</h2>
+            <h2 className="mdc-typography--headline3 mdc-layout-grid__cell mdc-layout-grid__cell--span-12">Kontakt</h2>
 
             <Contact/>
           </div>
         </section>
 
         <section id="network" className="section--center section__network mdc-layout-grid">
-          <h2 className="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">Netzwerk</h2>
+          <h2 className="mdc-typography--headline3 mdc-layout-grid__cell mdc-layout-grid__cell--span-12">Netzwerk</h2>
         </section>
 
-        <div className="mdl-color--grey-50">
+        <div className="section--fullwidth">
           <Network/>
         </div>
       </Layout>
