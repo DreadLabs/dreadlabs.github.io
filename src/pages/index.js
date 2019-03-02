@@ -2,7 +2,9 @@ import React from "react"
 
 import {MDCMenu} from "@material/menu"
 
+import CenteredSection from "../components/centered-section"
 import Contact from "../components/contact_simple"
+import FullWidthSection from "../components/fullwidth-section"
 import Layout from "../components/layout"
 import MissionStatement from "../components/mission-statement"
 import Network from "../components/network"
@@ -39,7 +41,7 @@ class Index extends React.Component {
   render() {
     return (
       <Layout>
-        <section className="section--center mdc-layout-grid">
+        <CenteredSection additionalClasses="mdc-layout-grid">
           <div className="mdc-layout-grid__inner">
             <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
               <blockquote>
@@ -47,13 +49,13 @@ class Index extends React.Component {
               </blockquote>
             </div>
           </div>
-        </section>
+        </CenteredSection>
 
         <Vcard />
 
         <MissionStatement />
 
-        <section className="section--center mdc-layout-grid">
+        <CenteredSection additionalClasses="mdc-layout-grid">
           <div className="mdc-layout-grid__inner">
             <h3 className="mdc-typography--headline4 mdc-layout-grid__cell mdc-layout-grid__cell--span-4">Mein Angebot</h3>
             <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
@@ -66,10 +68,10 @@ class Index extends React.Component {
               </ul>
             </div>
           </div>
-        </section>
+        </CenteredSection>
 
 
-        <section id="about-me" className="section--center mdc-layout-grid">
+        <CenteredSection id="about-me" additionalClasses="mdc-layout-grid">
           <div className="mdc-layout-grid__inner">
             <h3 className="mdc-typography--headline4 mdc-layout-grid__cell mdc-layout-grid__cell--span-4">Über mich</h3>
 
@@ -90,9 +92,9 @@ class Index extends React.Component {
 
             <h4 className="mdc-typography--headline5 mdc-layout-grid__cell mdc-layout-grid__cell--span-12">Berufserfahrung</h4>
           </div>
-        </section>
+        </CenteredSection>
 
-        <div className="section--fullwidth">
+        <FullWidthSection>
 
           <div className="mdc-layout-grid">
             <div className="mdc-layout-grid__inner">
@@ -116,31 +118,31 @@ class Index extends React.Component {
             </div>
           </div>
 
-          <section className="section--center mdc-layout-grid">
+          <CenteredSection additionalClasses="mdc-layout-grid">
             <div className="mdc-layout-grid__inner">
               <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
                 <Resume/>
               </div>
             </div>
-          </section>
+          </CenteredSection>
 
-        </div>
+        </FullWidthSection>
 
-        <section id="contact" className="section--center mdc-layout-grid">
+        <CenteredSection id="contact" additionalClasses="mdc-layout-grid">
           <div className="mdc-layout-grid__inner">
             <h2 className="mdc-typography--headline3 mdc-layout-grid__cell mdc-layout-grid__cell--span-12">Kontakt</h2>
 
             <Contact/>
           </div>
-        </section>
+        </CenteredSection>
 
-        <section id="network" className="section--center section__network mdc-layout-grid">
+        <CenteredSection id="network" additionalClasses="section__network mdc-layout-grid">
           <h2 className="mdc-typography--headline3 mdc-layout-grid__cell mdc-layout-grid__cell--span-12">Netzwerk</h2>
-        </section>
+        </CenteredSection>
 
-        <div className="section--fullwidth">
+        <FullWidthSection>
           <Network/>
-        </div>
+        </FullWidthSection>
       </Layout>
     )
   }

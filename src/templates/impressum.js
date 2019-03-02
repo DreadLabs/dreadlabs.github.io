@@ -1,5 +1,7 @@
 import React from "react"
 import {graphql} from "gatsby"
+
+import CenteredSection from "../components/centered-section"
 import Layout from "../components/layout"
 
 export default function Template({
@@ -8,11 +10,11 @@ export default function Template({
   const {markdownRemark: page} = data
   return (
     <Layout>
-      <section className="section--center mdc-layout-grid">
+      <CenteredSection additionalClassnames="mdc-layout-grid">
         <div className="mdc-layout-grid__inner">
           <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-12" dangerouslySetInnerHTML={{__html: page.html}}/>
         </div>
-      </section>
+      </CenteredSection>
     </Layout>
   )
 }
