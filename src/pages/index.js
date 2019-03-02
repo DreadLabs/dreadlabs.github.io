@@ -4,6 +4,7 @@ import {MDCMenu} from "@material/menu"
 
 import Contact from "../components/contact_simple"
 import Layout from "../components/layout"
+import MissionStatement from "../components/mission-statement"
 import Network from "../components/network"
 import Resume from "../components/resume"
 import Vcard from "../components/vcard"
@@ -50,23 +51,7 @@ class Index extends React.Component {
 
         <Vcard />
 
-        <section id="mission-statement"
-                 className="mdl-mission-statement section--center mdc-layout-grid mdc-elevation--z4">
-          <div className="mdc-layout-grid__inner">
-            <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-              <h2 class="mdc-typography--headline3">Leitbild</h2>
-
-              <p>Ich entwickle <strong>Software nach Ihren Wünschen</strong> mit hohen Anforderungen an
-                <strong>Qualität, Sicherheit und Zuverlässigkeit</strong>, testgetrieben und unter
-                Berücksichtigung Ihrer Geschäftsdomäne in Anlehnung an Domain Driven
-                Design-Praktiken.</p>
-
-              <p>Die <strong>Pflege und Weiterentwicklung Ihrer bestehenden Softwarelösungen</strong> sind
-                für mich ebenso bedeutsam wie die Integration von <strong>neuen Technologien, wenn
-                  es sinnvoll ist</strong> und es die Anforderungen zulassen.</p>
-            </div>
-          </div>
-        </section>
+        <MissionStatement />
 
         <section className="section--center mdc-layout-grid">
           <div className="mdc-layout-grid__inner">

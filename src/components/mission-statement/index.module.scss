@@ -1,0 +1,11 @@
+$mdl-theme-primary: #1a237e;
+$mdl-theme-on-primary: #ffffff;
+
+.missionStatement {
+  background-color: $mdl-theme-primary;
+  color: $mdl-theme-on-primary;
+
+  h2 {
+    margin-top: 0;
+  }
+}
