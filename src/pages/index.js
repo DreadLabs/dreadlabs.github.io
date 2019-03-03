@@ -1,7 +1,5 @@
 import React from "react"
 
-import {MDCMenu} from "@material/menu"
-
 import CenteredSection from "../components/centered-section"
 import Contact from "../components/contact_simple"
 import FullWidthSection from "../components/fullwidth-section"
@@ -13,29 +11,6 @@ import Vcard from "../components/vcard"
 
 class Index extends React.Component {
   componentDidMount() {
-    let tagState = 'off';
-    const tags = document.querySelectorAll('.resume__position-tags');
-    const tagToggle = document.querySelector('#resume-tags-toggle__menu ul li');
-    const tagToggleState = tagToggle.querySelector('.resume-tags-toggle__state');
-
-    const menu = new MDCMenu(document.getElementById('resume-tags-toggle__menu'));
-    const button = document.getElementById('resume-tags-toggle__button');
-    button.addEventListener('click', (event) => {
-      menu.open = true;
-    });
-
-    tagToggle.addEventListener('click', function() {
-      [].map.call(tags, function(tag) {
-        tag.classList.toggle('resume__position-tags--on');
-      });
-      if (tagState === 'off') {
-        tagToggleState.innerHTML = 'deaktivieren';
-        tagState = 'on';
-      } else if (tagState === 'on') {
-        tagToggleState.innerHTML = 'aktivieren';
-        tagState = 'off';
-      }
-    });
   }
 
   render() {
@@ -94,39 +69,7 @@ class Index extends React.Component {
           </div>
         </CenteredSection>
 
-        <FullWidthSection>
-
-          <div className="mdc-layout-grid">
-            <div className="mdc-layout-grid__inner">
-              <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-1 mdc-menu-surface--anchor mdl-typography--text-right resume-tags-toggle">
-
-                <button id="resume-tags-toggle__button" className="mdc-icon-button">
-                  <i className="material-icons">more_vert</i>
-                </button>
-
-                <div id="resume-tags-toggle__menu" className="mdc-menu mdc-menu-surface" tabIndex="-1">
-                  <ul className="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
-                    <li className="mdc-list-item">
-                      <span className="mdc-list-item__text">
-                        Recruiter-Modus <strong><span className="resume-tags-toggle__state">aktivieren</span></strong>
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-          <CenteredSection additionalClasses="mdc-layout-grid">
-            <div className="mdc-layout-grid__inner">
-              <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-                <Resume/>
-              </div>
-            </div>
-          </CenteredSection>
-
-        </FullWidthSection>
+        <Resume/>
 
         <CenteredSection id="contact" additionalClasses="mdc-layout-grid">
           <div className="mdc-layout-grid__inner">

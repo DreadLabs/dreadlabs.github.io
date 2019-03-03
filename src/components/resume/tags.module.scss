@@ -1,0 +1,17 @@
+$mdl-theme-primary-contrast: #b2ebf2;
+$mdl-theme-on-primary-contrast: #616161;
+
+.resume {
+  &__position-tags {
+    display: none;
+
+    &--on {
+      display: block;
+    }
+
+    &--mdc-chip {
+      background-color: $mdl-theme-primary-contrast;
+      color: $mdl-theme-on-primary-contrast;
+    }
+  }
+}
