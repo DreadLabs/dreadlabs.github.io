@@ -2,7 +2,6 @@ import React from "react"
 
 import CenteredSection from "../components/centered-section"
 import Contact from "../components/contact_simple"
-import FullWidthSection from "../components/fullwidth-section"
 import Layout from "../components/layout"
 import MissionStatement from "../components/mission-statement"
 import Network from "../components/network"
@@ -83,9 +82,7 @@ class Index extends React.Component {
           <h2 className="mdc-typography--headline3 mdc-layout-grid__cell mdc-layout-grid__cell--span-12">Netzwerk</h2>
         </CenteredSection>
 
-        <FullWidthSection>
-          <Network/>
-        </FullWidthSection>
+        <Network/>
       </Layout>
     )
   }

@@ -1,0 +1,35 @@
+@import "@material/typography/mdc-typography";
+
+.node {
+  position: relative;
+
+  &__actions {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.avatar {
+  &::before {
+    /* reset margins for background image, because a image / picture element is used */
+    margin: 0;
+  }
+
+  &__image {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.header {
+  &--primary {
+    @include mdc-typography(headline6);
+
+    font-family: 'Roboto Slab', serif;
+    padding: 1rem;
+  }
+  &--secondary {
+    padding: 0 1rem 56px;
+    height: auto;
+  }
+}

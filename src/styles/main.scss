@@ -114,38 +114,6 @@ p, ul, ol {
       }
     }
   }
-
-  .network {
-    &__avatar-container::before {
-      /* reset margins for background image, because a image / picture element is used */
-      margin: 0;
-    }
-
-    &__avatar {
-      max-width: 100%;
-      height: auto;
-    }
-
-    .mdc-card {
-      position: relative;
-    }
-
-    .network-card__primary {
-      @include mdc-typography(headline6);
-
-      font-family: 'Roboto Slab', serif;
-      padding: 1rem;
-    }
-    .network-card__secondary {
-      padding: 0 1rem 56px;
-      height: auto;
-    }
-
-    .mdc-card__actions {
-      position: absolute;
-      bottom: 0;
-    }
-  }
 }
 
 @media screen and (min-width:480px) {
