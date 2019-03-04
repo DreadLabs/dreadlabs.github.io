@@ -1,0 +1,11 @@
+.vcard {
+  &__avatar {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+
+    border-radius: 50%;
+    margin: 8px 0;
+  }
+}

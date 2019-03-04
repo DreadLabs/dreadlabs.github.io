@@ -1,6 +1,8 @@
 import React from "react"
 import {useStaticQuery, graphql} from "gatsby"
 
+import Styles from "./portrait.module.scss"
+
 export default () => {
   const data = useStaticQuery(graphql`
     query PortraitQuery {
@@ -32,7 +34,7 @@ export default () => {
               srcSet={data.portrait271.childImageSharp.fixed.srcSet}/>
       <source media="(min-width: 480px)"
               srcSet={data.portrait185.childImageSharp.fixed.srcSet}/>
-      <img className="vcard__avatar"
+      <img className={Styles.vcard__avatar}
            src={data.portrait271.childImageSharp.fixed.src}
            srcSet={data.portrait271.childImageSharp.fixed.srcSet}
            alt="Thomas Juhnke Softwareentwickler"/>

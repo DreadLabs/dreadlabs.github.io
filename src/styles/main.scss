@@ -115,27 +115,6 @@ p, ul, ol {
     }
   }
 
-  /** @NOTE: next two blocks duplicate */
-  .vcard {
-    &__avatar {
-      max-width: 100%;
-      height: auto;
-      display: inline-block;
-      vertical-align: middle;
-
-      border-radius: 50%;
-      margin: 8px 0;
-    }
-
-    &__header, &__header--small {
-      font-family: 'Roboto Slab', serif;
-      line-height: 1;
-      margin: 0 0 1rem 0;
-      opacity: 1;
-      text-transform: uppercase;
-    }
-  }
-
   .network {
     &__avatar-container::before {
       /* reset margins for background image, because a image / picture element is used */
