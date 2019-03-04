@@ -1,13 +1,12 @@
 import React from "react"
 
-import CenteredSection from "../centered-section"
-import FullWidthSection from "../fullwidth-section"
+import {Centered, Fullwidth} from "../sections"
 import Position from "./position"
 import Styles from "./index.module.scss"
 import Tags from "./tags"
 
 export default() => (
-  <FullWidthSection>
+  <Fullwidth>
 
     <div className="mdc-layout-grid">
       <div className="mdc-layout-grid__inner">
@@ -31,7 +30,7 @@ export default() => (
       </div>
     </div>
 
-    <CenteredSection additionalClasses="mdc-layout-grid">
+    <Centered additionalClasses="mdc-layout-grid">
       <div className="mdc-layout-grid__inner">
         <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
 
@@ -122,6 +121,6 @@ export default() => (
           </section>
         </div>
       </div>
-    </CenteredSection>
-  </FullWidthSection>
+    </Centered>
+  </Fullwidth>
 )

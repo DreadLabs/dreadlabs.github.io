@@ -1,11 +1,11 @@
 import React from "react"
 
-import CenteredSection from "../centered-section"
+import {Centered} from "../sections"
 import moduleStyles from "./index.module.scss"
 
 export default () => (
-  <CenteredSection id="mission-statement"
-           additionalClasses={`${moduleStyles.missionStatement} mdc-layout-grid mdc-elevation--z4`}>
+  <Centered id="mission-statement"
+            additionalClasses={`${moduleStyles.missionStatement} mdc-layout-grid mdc-elevation--z4`}>
     <div className="mdc-layout-grid__inner">
       <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2 className="mdc-typography--headline3">Leitbild</h2>
@@ -20,6 +20,6 @@ export default () => (
           wenn es sinnvoll ist</strong> und es die Anforderungen zulassen.</p>
       </div>
     </div>
-  </CenteredSection>
+  </Centered>
 )
 

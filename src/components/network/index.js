@@ -1,7 +1,7 @@
 import React from "react"
 import {useStaticQuery, graphql} from "gatsby"
 
-import FullWidthSection from "../fullwidth-section"
+import {Fullwidth} from "../sections"
 import Node from "./node"
 
 export default () => {
@@ -44,7 +44,7 @@ export default () => {
   `)
 
   return (
-    <FullWidthSection>
+    <Fullwidth>
       <section className="mdc-layout-grid">
         <div className="mdc-layout-grid__inner">
 
@@ -85,6 +85,6 @@ export default () => {
 
         </div>
       </section>
-    </FullWidthSection>
+    </Fullwidth>
   )
 }

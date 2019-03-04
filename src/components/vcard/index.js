@@ -1,11 +1,11 @@
 import React from "react"
 
-import CenteredSection from "../centered-section"
+import {Centered} from "../sections"
 import Portrait from "./portrait";
 import Styles from "./index.module.scss"
 
 export default () => (
-  <CenteredSection additionalClasses="mdc-layout-grid">
+  <Centered additionalClasses="mdc-layout-grid">
     <div className="mdc-layout-grid__inner">
       <div
         className="mdc-layout-grid__cell mdc-layout-grid__cell--span-4 mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--align-middle">
@@ -18,5 +18,5 @@ export default () => (
         <h2 className={`${Styles.vcard__headerSmall} mdc-typography--headline4`}>Software&shy;entwickler</h2>
       </div>
     </div>
-  </CenteredSection>
+  </Centered>
 )

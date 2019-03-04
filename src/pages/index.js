@@ -1,6 +1,6 @@
 import React from "react"
 
-import CenteredSection from "../components/centered-section"
+import {Centered} from "../components/sections"
 import Contact from "../components/contact_simple"
 import Layout from "../components/layout"
 import MissionStatement from "../components/mission-statement"
@@ -15,7 +15,7 @@ class Index extends React.Component {
   render() {
     return (
       <Layout>
-        <CenteredSection additionalClasses="mdc-layout-grid">
+        <Centered additionalClasses="mdc-layout-grid">
           <div className="mdc-layout-grid__inner">
             <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
               <blockquote>
@@ -23,13 +23,13 @@ class Index extends React.Component {
               </blockquote>
             </div>
           </div>
-        </CenteredSection>
+        </Centered>
 
         <Vcard />
 
         <MissionStatement />
 
-        <CenteredSection additionalClasses="mdc-layout-grid">
+        <Centered additionalClasses="mdc-layout-grid">
           <div className="mdc-layout-grid__inner">
             <h3 className="mdc-typography--headline4 mdc-layout-grid__cell mdc-layout-grid__cell--span-4">Mein Angebot</h3>
             <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
@@ -42,10 +42,10 @@ class Index extends React.Component {
               </ul>
             </div>
           </div>
-        </CenteredSection>
+        </Centered>
 
 
-        <CenteredSection id="about-me" additionalClasses="mdc-layout-grid">
+        <Centered id="about-me" additionalClasses="mdc-layout-grid">
           <div className="mdc-layout-grid__inner">
             <h3 className="mdc-typography--headline4 mdc-layout-grid__cell mdc-layout-grid__cell--span-4">Über mich</h3>
 
@@ -66,21 +66,21 @@ class Index extends React.Component {
 
             <h4 className="mdc-typography--headline5 mdc-layout-grid__cell mdc-layout-grid__cell--span-12">Berufserfahrung</h4>
           </div>
-        </CenteredSection>
+        </Centered>
 
         <Resume/>
 
-        <CenteredSection id="contact" additionalClasses="mdc-layout-grid">
+        <Centered id="contact" additionalClasses="mdc-layout-grid">
           <div className="mdc-layout-grid__inner">
             <h2 className="mdc-typography--headline3 mdc-layout-grid__cell mdc-layout-grid__cell--span-12">Kontakt</h2>
 
             <Contact/>
           </div>
-        </CenteredSection>
+        </Centered>
 
-        <CenteredSection id="network" additionalClasses="section__network mdc-layout-grid">
+        <Centered id="network" additionalClasses="section__network mdc-layout-grid">
           <h2 className="mdc-typography--headline3 mdc-layout-grid__cell mdc-layout-grid__cell--span-12">Netzwerk</h2>
-        </CenteredSection>
+        </Centered>
 
         <Network/>
       </Layout>
