@@ -5,6 +5,7 @@ import Contact from "../components/contact_simple"
 import Layout from "../components/layout"
 import MissionStatement from "../components/mission-statement"
 import Network from "../components/network"
+import Quote from "../components/quote"
 import Resume from "../components/resume"
 import Vcard from "../components/vcard"
 
@@ -15,15 +16,7 @@ class Index extends React.Component {
   render() {
     return (
       <Layout>
-        <Centered additionalClasses="mdc-layout-grid">
-          <div className="mdc-layout-grid__inner">
-            <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-              <blockquote>
-                The function of good software is to make the complex appear to be simple. <cite>Grady Booch</cite>
-              </blockquote>
-            </div>
-          </div>
-        </Centered>
+        <Quote />
 
         <Vcard />
 
