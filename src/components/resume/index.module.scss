@@ -3,6 +3,10 @@
   position: relative;
   padding: 2em 0;
 
+  &__toggle-aligned-right {
+    text-align: right;
+  }
+
   &::before {
     /* this is the vertical line */
     content: '';
@@ -14,6 +18,7 @@
     background: #e0e0e0;
   }
 }
+
 @media only screen and (min-width: 1170px) {
   .resume {
     margin-bottom: 3em;
