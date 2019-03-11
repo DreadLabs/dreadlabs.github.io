@@ -7,10 +7,10 @@ import Styles from "./index.module.scss"
 export default () => (
   <Centered additionalClasses="mdc-layout-grid">
     <div className="mdc-layout-grid__inner">
-      <div className={`${Styles.vcard__portraitContainer} mdc-layout-grid__cell mdc-layout-grid__cell--span-4 mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--align-middle`}>
+      <div className={`${Styles.vcard__portraitContainer} mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--align-middle`}>
         <Portrait />
       </div>
-      <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-8 mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--align-middle">
+      <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-8-desktop mdc-layout-grid__cell--span-6-tablet mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--align-middle">
         <h1 className={`${Styles.vcard__header} mdc-typography--headline3`}>
           <small className={`${Styles.vcard__headerSmall} mdc-typography--headline4`}>Thomas</small><br/>Juhnke
         </h1>
