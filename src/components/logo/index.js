@@ -2,10 +2,11 @@ import React from "react"
 
 import LogoSvg from "./DreadLabs-Logo.svg"
 import LogoPng from "./DreadLabs-Logo.png"
+import Styles from "./index.module.scss"
 
-export default () => (
-  <picture className="logo">
+export default (props) => (
+  <picture className={Styles[props.context]}>
     <source srcSet={LogoSvg} type="image/svg+xml" />
-    <img src={LogoPng} alt="Logo: DreadLabs Softwareentwicklung" />
+    <img className={Styles[props.context + '__image']} src={LogoPng} alt="Logo: DreadLabs Softwareentwicklung" />
   </picture>
 )

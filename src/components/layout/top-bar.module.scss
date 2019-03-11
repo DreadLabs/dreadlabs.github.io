@@ -1,0 +1,36 @@
+@import "@material/top-app-bar/mdc-top-app-bar";
+
+.elevated {
+  @include mdc-top-app-bar-fill-color(#fff);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.title {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+
+  &__link {
+    width: 44px;
+    display: block;
+  }
+}
+
+@media screen and (min-width:480px) {
+  .title {
+    &__link {
+      width: auto;
+      display: inline;
+    }
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .title {
+    left: auto;
+    top: auto;
+    transform: none;
+    position: relative;
+  }
+}
