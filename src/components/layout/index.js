@@ -68,7 +68,7 @@ class Layout extends React.Component {
                   </div>
                 </div>
 
-                <div className="mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-3-desktop">
+                <div className={`${Styles.footer__sectionAlignEnd} mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-3-desktop`}>
                   <a className="mdc-icon-button" href="#top" title="nach oben">
                     <i className={`${Styles.footer__icon} fa fa-angle-up`}></i>
                   </a>
