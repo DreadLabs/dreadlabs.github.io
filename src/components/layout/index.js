@@ -4,7 +4,7 @@ import {MDCTopAppBar} from "@material/top-app-bar";
 import Lazyload from "vanilla-lazyload/dist/lazyload.es2015"
 
 import Drawer from "./drawer"
-import SiteMetadata from "../site-metadata"
+import SiteMetadata from "./metadata"
 import Styles from "./index.module.scss"
 import TopBar from "./top-bar"
 
