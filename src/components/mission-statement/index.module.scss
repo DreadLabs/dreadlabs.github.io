@@ -1,9 +1,8 @@
-$mdl-theme-primary: #1a237e;
-$mdl-theme-on-primary: #ffffff;
+@import "../layout/variables";
 
 .missionStatement {
-  background-color: $mdl-theme-primary;
-  color: $mdl-theme-on-primary;
+  background-color: $dreadlabs-theme-primary;
+  color: $dreadlabs-theme-on-primary;
 
   h2 {
     margin-top: 0;

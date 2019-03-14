@@ -1,9 +1,12 @@
 $fa-font-path: '~font-awesome/fonts';
 
-$mdl-theme-primary: #1a237e;
-$mdl-theme-on-primary: #ffffff;
+$headline-styles: (
+  font-family: unquote("Roboto Slab, serif")
+);
 
-$mdl-theme-primary-contrast: #b2ebf2;
-$mdl-theme-on-primary-contrast: #616161;
-
-$mdl-theme-secondary-contrast: #f5f5f5;
+$mdc-typography-styles-headline1: $headline-styles;
+$mdc-typography-styles-headline2: $headline-styles;
+$mdc-typography-styles-headline3: $headline-styles;
+$mdc-typography-styles-headline4: $headline-styles;
+$mdc-typography-styles-headline5: $headline-styles;
+$mdc-typography-styles-headline6: $headline-styles;

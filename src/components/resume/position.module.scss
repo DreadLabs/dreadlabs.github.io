@@ -1,5 +1,4 @@
-$mdl-theme-primary-contrast: #b2ebf2;
-$mdl-theme-on-primary-contrast: #616161;
+@import "../layout/variables";
 
 .resume {
   &__position {
@@ -16,7 +15,7 @@ $mdl-theme-on-primary-contrast: #616161;
   &__position-waypoint {
     border-radius: 50%;
     box-shadow: 0 0 0 4px white, 0 0 0 6px #cfd8dc, 0 2px 0 6px rgba(33, 33, 33, 0.05);
-    background-color: $mdl-theme-primary-contrast;
+    background-color: $dreadlabs-theme-primary-contrast;
 
     position: absolute;
     top: 19px;

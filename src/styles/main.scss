@@ -16,6 +16,7 @@
 @import "@material/tab-indicator/mdc-tab-indicator";
 @import "@material/tab/mdc-tab";
 @import "@material/top-app-bar/mdc-top-app-bar";
+@import "@material/typography/mdc-typography";
 
 // "element" components
 @import "@material/button/mdc-button";
@@ -36,10 +37,4 @@ html, body {
 p, ul, ol {
   font-size: 1.15rem;
   line-height: 26px;
-}
-
-.mdl-dreadlabs {
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto Slab', serif;
-  }
 }

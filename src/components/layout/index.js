@@ -29,7 +29,7 @@ class Layout extends React.Component {
     const { children } = this.props
 
     return (
-      <div className="mdl-dreadlabs">
+      <>
         <SiteMetadata />
 
         <Drawer />
@@ -87,7 +87,7 @@ class Layout extends React.Component {
 
           </main>
         </div>
-      </div>
+      </>
     )
   }
 }
