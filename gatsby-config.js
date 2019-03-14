@@ -38,6 +38,23 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
 
-    `gatsby-plugin-react-helmet`
+    `gatsby-plugin-react-helmet`,
+
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `DreadLabs Softwareentwicklung`,
+        short_name: `dreadlabs`,
+        start_url: `/`,
+        background_color: `#3e4eb8`,
+        theme_color: `#2f3ba2`,
+        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
+        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
+        display: `standalone`,
+        // TODO: check on devices (android, ios, win)
+        icon: `src/images/touch/chrome-touch-icon-192x192.png`,
+        include_favicon: true
+      }
+    }
   ],
 };
