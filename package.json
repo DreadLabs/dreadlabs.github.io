@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "dreadlabs",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "dreadlabs.de - My freelance vcard website",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -29,6 +29,7 @@
     "gatsby": "^2.1.16",
     "gatsby-image": "^2.0.29",
     "gatsby-plugin-manifest": "^2.0.24",
+    "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-react-helmet": "^3.0.6",
     "gatsby-plugin-sass": "^2.0.10",
     "gatsby-plugin-sharp": "^2.0.22",

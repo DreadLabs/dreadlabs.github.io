@@ -55,6 +55,13 @@ module.exports = {
         icon: `src/images/touch/chrome-touch-icon-192x192.png`,
         include_favicon: true
       }
-    }
+    },
+
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        cacheId: `dreadlabs-offline`
+      }
+    },
   ],
 };
