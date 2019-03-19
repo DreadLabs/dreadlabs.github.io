@@ -95,7 +95,6 @@ The loader `extract-loader` is buggy currently. See: https://github.com/peerigon
     cd vantomas
     docker-compose up -d
     
-
 ## License
 
 MIT
