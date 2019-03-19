@@ -1,3 +1,15 @@
+const offlineCache = () => {
+  if (process.env.NODE_ENV === 'production') {
+    return {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        cacheId: `dreadlabs-offline`
+      }
+    }
+  }
+  return null
+}
+
 module.exports = {
   siteMetadata: {
     // or `casual`
@@ -57,11 +69,6 @@ module.exports = {
       }
     },
 
-    {
-      resolve: `gatsby-plugin-offline`,
-      options: {
-        cacheId: `dreadlabs-offline`
-      }
-    },
+    offlineCache(),
   ],
 };
