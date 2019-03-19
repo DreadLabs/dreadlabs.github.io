@@ -10,7 +10,7 @@ export default() => (
 
     <div className="mdc-layout-grid">
       <div className="mdc-layout-grid__inner">
-        <div className={`${Styles.resume__toggleAlignedRight} resume-tags-toggle mdc-layout-grid__cell mdc-layout-grid__cell--span-12 mdc-menu-surface--anchor`}>
+        <div className={`resume-tags-toggle mdc-layout-grid__cell mdc-layout-grid__cell--span-12 mdc-menu-surface--anchor`}>
 
           <button id="resume-tags-toggle__button" className="mdc-icon-button">
             <i className="material-icons">more_vert</i>
