@@ -49,22 +49,26 @@ class Index extends React.Component {
           </ul>
         </Story>
 
-        <Centered id="network" additionalClasses="section__network mdc-layout-grid">
+        <Centered additionalClasses="section__network mdc-layout-grid">
           <h4 className="mdc-typography--headline5 mdc-layout-grid__cell mdc-layout-grid__cell--span-12">Berufserfahrung</h4>
         </Centered>
 
         <Resume/>
 
-        <Centered id="contact" additionalClasses="mdc-layout-grid">
+        <Centered additionalClasses="mdc-layout-grid">
           <div className="mdc-layout-grid__inner">
-            <h2 className="mdc-typography--headline3 mdc-layout-grid__cell mdc-layout-grid__cell--span-12">Kontakt</h2>
+            <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+              <h2 id="contact" className="mdc-typography--headline3">Kontakt</h2>
+            </div>
 
             <Contact/>
           </div>
         </Centered>
 
-        <Centered id="network" additionalClasses="section__network mdc-layout-grid">
-          <h2 className="mdc-typography--headline3 mdc-layout-grid__cell mdc-layout-grid__cell--span-12">Netzwerk</h2>
+        <Centered additionalClasses="section__network mdc-layout-grid">
+          <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+            <h2 id="network" className="mdc-typography--headline3">Netzwerk</h2>
+          </div>
         </Centered>
 
         <Network/>

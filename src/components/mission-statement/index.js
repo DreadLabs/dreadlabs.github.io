@@ -1,14 +1,13 @@
 import React from "react"
 
 import {Centered} from "../sections"
-import moduleStyles from "./index.module.scss"
+import Styles from "./index.module.scss"
 
 export default () => (
-  <Centered id="mission-statement"
-            additionalClasses={`${moduleStyles.missionStatement} mdc-layout-grid mdc-elevation--z4`}>
+  <Centered additionalClasses={`${Styles.missionStatement} mdc-layout-grid mdc-elevation--z4`}>
     <div className="mdc-layout-grid__inner">
       <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-        <h2 className="mdc-typography--headline3">Leitbild</h2>
+        <h2 id="mission-statement" className="mdc-typography--headline3">Leitbild</h2>
 
         <p>Ich entwickle <strong>Software nach Ihren Wünschen</strong> mit hohen
           Anforderungen an <strong>Qualität, Sicherheit und Zuverlässigkeit</strong>,
