@@ -39,20 +39,12 @@
   padding-left: 0;
 }
 
-@media screen and (min-width:480px) {
-  .title {
-    &__link {
-      width: auto;
-      display: inline;
-    }
-  }
-}
-
 @media screen and (min-width:1024px) {
   .title {
-    left: auto;
-    top: auto;
-    transform: none;
     position: relative;
+    top: auto;
+    left: auto;
+
+    transform: none;
   }
 }
