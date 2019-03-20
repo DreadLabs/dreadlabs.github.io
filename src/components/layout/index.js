@@ -69,16 +69,16 @@ class Layout extends React.Component {
                 </div>
 
                 <div className={`${Styles.footer__sectionAlignEnd} mdc-layout-grid__cell--span-4-phone mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-3-desktop`}>
-                  <a className="mdc-icon-button" href="#top" title="nach oben">
+                  <a className={`${Styles.footer__iconButton} mdc-icon-button`} href="#top" title="nach oben">
                     <i className={`${Styles.footer__icon} fa fa-angle-up`}></i>
                   </a>
-                  <a className="mdc-icon-button" href="https://www.xing.com/profile/Thomas_Juhnke" title="Xing">
+                  <a className={`${Styles.footer__iconButton} mdc-icon-button`} href="https://www.xing.com/profile/Thomas_Juhnke" title="Xing">
                     <i className={`${Styles.footer__icon} fa fa-xing`}></i>
                   </a>
-                  <a className="mdc-icon-button" href="https://github.com/DreadLabs" title="GitHub">
+                  <a className={`${Styles.footer__iconButton} mdc-icon-button`} href="https://github.com/DreadLabs" title="GitHub">
                     <i className={`${Styles.footer__icon} fa fa-github`}></i>
                   </a>
-                  <a className="mdc-icon-button" href="https://twitter.com/dreadwarrior" title="Twitter">
+                  <a className={`${Styles.footer__iconButton} mdc-icon-button`} href="https://twitter.com/dreadwarrior" title="Twitter">
                     <i className={`${Styles.footer__icon} fa fa-twitter`}></i>
                   </a>
                 </div>
