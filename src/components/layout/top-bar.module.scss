@@ -31,14 +31,12 @@
 
 .title {
   position: absolute;
-  left: 50%;
   top: 0;
+  left: 50%;
+
   transform: translate(-50%, 0);
 
-  &__link {
-    width: 44px;
-    display: block;
-  }
+  padding-left: 0;
 }
 
 @media screen and (min-width:480px) {

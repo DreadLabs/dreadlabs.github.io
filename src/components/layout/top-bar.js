@@ -18,9 +18,7 @@ export default () => (
         <button className={`${Styles.elevated__button} material-icons mdc-top-app-bar__navigation-icon`}>menu</button>
 
         <div className={`${Styles.title} mdc-top-app-bar__title`}>
-          <a className={Styles.title__link} href="/">
-            <Logo context="topBar" />
-          </a>
+          <a href="/"><Logo context="topBar" /></a>
         </div>
       </section>
 
