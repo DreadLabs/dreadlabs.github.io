@@ -1,4 +1,11 @@
+@import "variables";
+
 .title {
   height: 160px;
+  margin-bottom: 20px;
   position: relative;
+}
+
+.content {
+  background-color: $dreadlabs-theme-secondary-contrast;
 }

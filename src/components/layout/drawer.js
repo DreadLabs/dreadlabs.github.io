@@ -20,7 +20,7 @@ export default () => (
         </span>
       </div>
 
-      <div className="mdc-drawer__content">
+      <div className={`${Styles.content} mdc-drawer__content`}>
         <nav className="mdc-list">
 
           <DrawerLink target="mission-statement" title="Leitbild" />
