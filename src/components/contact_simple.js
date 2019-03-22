@@ -5,7 +5,7 @@ export default () => (
     <div className="mdc-layout-grid__inner">
       <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
         <p>
-          <a href="mailto:contact@dreadlabs.de" className="mdc-button mdc-button--raised">{/*mdc-theme--primary-bg mdc-theme--on-primary*/}
+          <a href="mailto:contact@dreadlabs.de" className="mdc-button mdc-button--raised mdc-theme--secondary-bg">
             <i className="mdc-button__icon material-icons">email</i>
             <span className="mdc-button__label">per E-Mail</span>
           </a>
