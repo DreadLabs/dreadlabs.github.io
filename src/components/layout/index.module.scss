@@ -10,7 +10,7 @@
 
   &__icon-button {
     &:before, &:after {
-      background-color: $dreadlabs-theme-on-primary;
+      background-color: var(--mdc-theme-background);
     }
   }
 
