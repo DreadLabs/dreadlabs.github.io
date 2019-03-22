@@ -9,12 +9,11 @@ export default(props) => (
     <div className={Styles.resume__positionContent}>
       <h5 className="mdc-typography--headline6">{props.headline}</h5>
 
-      {props.children}
+      <div className={Styles.resume__positionDate}>
+        {props.date} <i className={`${Styles.resume__positionPlace} material-icons`} aria-hidden="true">place</i> {props.location}
+      </div>
 
-      <span className={Styles.resume__positionDate}>
-        {props.date}<br />
-        <i className={`${Styles.resume__positionPlace} material-icons`} aria-hidden="true">place</i> {props.location}
-      </span>
+      {props.children}
     </div>
   </div>
 )
