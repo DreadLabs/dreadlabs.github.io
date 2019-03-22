@@ -3,10 +3,6 @@
   position: relative;
   padding: 2em 0;
 
-  &__toggle-aligned-right {
-    text-align: right;
-  }
-
   &::before {
     /* this is the vertical line */
     content: '';

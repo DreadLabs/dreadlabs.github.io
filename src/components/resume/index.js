@@ -8,28 +8,6 @@ import Tags from "./tags"
 export default() => (
   <Fullwidth>
 
-    <div className="mdc-layout-grid">
-      <div className="mdc-layout-grid__inner">
-        <div className={`resume-tags-toggle mdc-layout-grid__cell mdc-layout-grid__cell--span-12 mdc-menu-surface--anchor`}>
-
-          <button id="resume-tags-toggle__button" className="mdc-icon-button">
-            <i className="material-icons">more_vert</i>
-          </button>
-
-          <div id="resume-tags-toggle__menu" className="mdc-menu mdc-menu-surface" tabIndex="-1">
-            <ul className="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical">
-              <li className="mdc-list-item">
-                <span className="mdc-list-item__text">
-                  Recruiter-Modus <strong><span className="resume-tags-toggle__state">aktivieren</span></strong>
-                </span>
-              </li>
-            </ul>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
     <Centered additionalClasses="mdc-layout-grid">
       <div className="mdc-layout-grid__inner">
         <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">

@@ -2,12 +2,6 @@
 
 .resume {
   &__position-tags {
-    display: none;
-
-    &--on {
-      display: block;
-    }
-
     &--mdc-chip {
       background-color: $dreadlabs-theme-primary-contrast;
       color: $dreadlabs-theme-on-primary-contrast;
