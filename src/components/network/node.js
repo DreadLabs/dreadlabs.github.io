@@ -26,6 +26,7 @@ export default (props) => (
     <div className={`${Styles.node__actions} mdc-card__actions`}>
       <div className="mdc-card__action--buttons">
         <a className="mdc-button mdc-card__action mdc-card__action--button" href={props.url}>
+          <i className="material-icons mdc-button__icon" aria-hidden="true">person</i>
           <span className="mdc-button__label">
             Mehr über {props.firstname}
           </span>
