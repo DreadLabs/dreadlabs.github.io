@@ -4,7 +4,7 @@ import {Centered} from "../sections"
 import Styles from "./index.module.scss"
 
 export default () => (
-  <Centered additionalClasses={`${Styles.missionStatement} mdc-layout-grid mdc-elevation--z4`}>
+  <Centered additionalClasses={`${Styles.missionStatement} mdc-layout-grid mdc-elevation--z4 mdc-theme--primary-bg mdc-theme--on-primary`}>
     <div className="mdc-layout-grid__inner">
       <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <h2 id="mission-statement" className="mdc-typography--headline3">Leitbild</h2>
