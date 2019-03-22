@@ -1,6 +1,7 @@
 import React from "react"
 
 import {Centered} from "../sections";
+import Styles from "./index.module.scss"
 
 export default (props) => (
   <Centered additionalClasses="mdc-layout-grid">
@@ -8,7 +9,7 @@ export default (props) => (
       <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
         <h3 id={props.id} className="mdc-typography--headline4">{props.title}</h3>
       </div>
-      <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-8">
+      <div className={`${Styles.story__content} mdc-layout-grid__cell mdc-layout-grid__cell--span-8`}>
         {props.children}
       </div>
     </div>
