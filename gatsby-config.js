@@ -63,5 +63,9 @@ module.exports = {
         cacheId: `dreadlabs-offline`
       }
     },
+
+    {
+      resolve: 'gatsby-plugin-zopfli'
+    },
   ],
 };
