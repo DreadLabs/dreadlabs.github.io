@@ -11,7 +11,10 @@ export default(props) => (
 
       {props.children}
 
-      <span className={Styles.resume__positionDate}>{props.date}<br /><i className="fa fa-map-marker"></i> {props.location}</span>
+      <span className={Styles.resume__positionDate}>
+        {props.date}<br />
+        <i className={`${Styles.resume__positionPlace} material-icons`} aria-hidden="true">place</i> {props.location}
+      </span>
     </div>
   </div>
 )
