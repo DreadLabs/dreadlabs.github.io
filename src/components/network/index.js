@@ -28,16 +28,25 @@ export default () => {
       micha396: file(relativePath: { regex: "/network\/michael-gerstmann\\\\.jpg$/" }) {
         ...network396
       }
+      
       christophe480: file(relativePath: { regex: "/network\/christophe-maurice\\\\.jpg$/" }) {
         ...network480
       }
       christophe396: file(relativePath: { regex: "/network\/christophe-maurice\\\\.jpg$/" }) {
         ...network396
       }
+      
       robert480: file(relativePath: { regex: "/network\/robert-schoenthal\\\\.jpg$/" }) {
         ...network480
       }
       robert396: file(relativePath: { regex: "/network\/robert-schoenthal\\\\.jpg$/" }) {
+        ...network396
+      }
+      
+      jana480: file(relativePath: { regex: "/network\/jana-eger\\\\.jpg$/" }) {
+        ...network480
+      }
+      jana396: file(relativePath: { regex: "/network\/jana-eger\\\\.jpg$/" }) {
         ...network396
       }
     }
@@ -80,6 +89,18 @@ export default () => {
               mit Vorliebe zum <strong>tests first</strong> Ansatz. Seine polyglotte Orientierung
               macht ihn zu einem ausgezeichneten Allrounder, der bereits einige große Projekte
               durchgeführt und betreut hat.
+            </>
+          </Node>
+
+          <Node firstname="Jana" lastname="Eger"
+                url="https://jana-eger.com/"
+                image480={data.jana480.childImageSharp.fixed}
+                image396={data.jana396.childImageSharp.fixed}>
+            <>
+              Jana ist Designerin, mit Fokus auf klaren digitalen und analogen Designs von
+              Outline-Icons, Infografiken, Corporate Publishing und Websites. Ihr Anspruch ist nicht
+              nur schöne, sondern gute Projekte umzusetzen – Kommunikation ist ein wichtiger Bestandsteil
+              ihres Workflows.
             </>
           </Node>
 
