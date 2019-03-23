@@ -55,8 +55,8 @@ module.exports = {
         name: `DreadLabs Softwareentwicklung`,
         short_name: `dreadlabs`,
         start_url: `/`,
-        background_color: `#3e4eb8`,
-        theme_color: `#2f3ba2`,
+        background_color: `#ffffff`,
+        theme_color: `#10094c`,
         // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: `standalone`,
