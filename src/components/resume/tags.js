@@ -10,7 +10,7 @@ class Tags extends React.Component {
      const props = this.props
 
      return (
-       <p className={`${Styles.resume__positionTags} mdc-chip-set`}>
+       <p className={`${Styles.resume__positionTags} ${props.even ? Styles.resume__positionTagsRight : ''} mdc-chip-set`}>
          {props.tags.map((tag, index) => {
            return (
              <span key={index} className={`${Styles.resume__positionTagsMdcChip} mdc-chip`}>
