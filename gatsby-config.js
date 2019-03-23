@@ -7,6 +7,15 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-web-font-loader`,
+      options: {
+        google: {
+          families: ['Roboto Slab:400,700', 'Source Sans Pro:400,700', 'Material Icons']
+        }
+      }
+    },
+
+    {
       resolve: `gatsby-plugin-sass`,
       options: {
         includePaths: ['./node_modules/'],
