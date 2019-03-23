@@ -17,7 +17,7 @@ export default (props) => (
       </picture>
     </div>
 
-    <div className={Styles.headerPrimary}>{props.firstname} {props.lastname}</div>
+    <h3 className={`${Styles.headerPrimary} mdc-typography--headline6`}>{props.firstname} {props.lastname}</h3>
 
     <p className={`${Styles.headerSecondary} mdc-typography--body2`}>
       {props.children}

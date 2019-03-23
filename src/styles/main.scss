@@ -16,7 +16,6 @@
 @import "@material/tab-indicator/mdc-tab-indicator";
 @import "@material/tab/mdc-tab";
 @import "@material/top-app-bar/mdc-top-app-bar";
-@import "@material/typography/mdc-typography";
 
 // "element" components
 @import "@material/button/mdc-button";
@@ -29,9 +28,13 @@
 @import "@material/menu/mdc-menu";
 
 html, body {
-  font-family: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Helvetica', 'Arial', sans-serif;
   margin: 0;
   padding: 0;
+}
+
+.wf-active, .wf-active body {
+  font-family: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
 }
 
 p, ul, ol {
