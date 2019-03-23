@@ -14,7 +14,7 @@ export default () => (
           testgetrieben und unter Berücksichtigung Ihrer Geschäftsdomäne in Anlehnung
           an Domain Driven Design-Praktiken.</p>
 
-        <p>Die <strong>Pflege und Weiterentwicklung Ihrer bestehenden Softwarelösungen</strong>
+        <p>Die <strong>Pflege und Weiterentwicklung Ihrer bestehenden Softwarelösungen</strong>{' '}
           sind für mich ebenso bedeutsam wie die Integration von <strong>neuen Technologien,
           wenn es sinnvoll ist</strong> und es die Anforderungen zulassen.</p>
       </div>
