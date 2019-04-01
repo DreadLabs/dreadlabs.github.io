@@ -13,8 +13,7 @@ export default () => (
 
         <p>
           Rüdigerstraße 43<br />
-          10365 Berlin<br />
-          +49 (0) 178 54 56 492
+          10365 Berlin
         </p>
       </div>
 
