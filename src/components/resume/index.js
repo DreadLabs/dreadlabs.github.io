@@ -188,7 +188,7 @@ export default() => (
 
           <section className={Styles.resume}>
             {Positions.map((position, i) =>
-              <Position headline={position.headline} date={position.date} location={position.location} even={i % 2 === 0}>
+              <Position key={i} headline={position.headline} date={position.date} location={position.location} even={i % 2 === 0}>
                 {position.content}
 
                 <Tags tags={position.tags} even={i % 2 === 0}/>
