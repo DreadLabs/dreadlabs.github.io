@@ -1,7 +1,7 @@
 import React from "react"
 
 import {Centered} from "../components/sections"
-import Contact from "../components/contact_simple"
+import Contact from "../components/contact"
 import Layout from "../components/layout"
 import MissionStatement from "../components/mission-statement"
 import Network from "../components/network"
