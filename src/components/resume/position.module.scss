@@ -5,8 +5,9 @@
     position: relative;
     margin: 2em 0;
 
+    // clearfix
     &::after {
-      content: "";
+      content: '';
       display: table;
       clear: both;
     }
@@ -22,6 +23,9 @@
 
       width: 8px;
       height: 8px;
+
+      //position: sticky;
+      //top: 64px;
     }
 
     &-content {
@@ -33,11 +37,14 @@
       padding: 1em;
       box-shadow: 0 3px 3px #e0e0e0;
 
-      &:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
+      // clearfix
+      //&:after {
+      //  content: '';
+      //  display: table;
+      //  clear: both;
+      //}
+
+      // pointer / tail
       &::before {
         content: '';
         position: absolute;
@@ -58,6 +65,25 @@
       }
       ul {
         padding-left: 1.25rem;
+      }
+    }
+
+    &-title {
+
+      // @see https://gedd.ski/post/position-sticky/
+      position: sticky;
+      top: 56px;
+
+      padding-bottom: 1em;
+
+      &--stuck {
+        background: #fff;
+        margin-left: -1em;
+        margin-right: -1em;
+        padding-left: 1em;
+        padding-right: 1em;
+
+        z-index: 1;
       }
     }
 
@@ -102,6 +128,10 @@
           text-align: right;
         }
 
+        &--stuck {
+          background: none;
+        }
+
         h5 {
           margin: 0;
         }
@@ -118,21 +148,23 @@
         width: 40%;
 
         &::before {
-          top: 24px;
-          left: 100%;
           border-color: transparent;
           border-left-color: white;
+
+          left: 100%;
+          top: 24px;
         }
 
         &--right {
           float: right;
 
           &::before {
-            top: 24px;
-            left: auto;
-            right: 100%;
             border-color: transparent;
             border-right-color: white;
+
+            left: auto;
+            right: 100%;
+            top: 24px;
           }
         }
       }

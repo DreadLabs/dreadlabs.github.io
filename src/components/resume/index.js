@@ -2,202 +2,145 @@ import React from "react"
 
 import {Centered, Fullwidth} from "../sections"
 import Position from "./position"
+import Positions from "./positions"
 import Styles from "./index.module.scss"
+import StylesPosition from "./position.module.scss"
 import Tags from "./tags"
 
-const Positions = [
-  {
-    headline: `Postcon Deutsch­land B.V. & Co. KG`,
-    date: `seit 2017`,
-    location: `Berlin`,
-    content: <ul>
-      <li>Implementierung des Hexagonalen Architekturmusters (Ports und Adapter)</li>
-      <li>Dokumentation von Softwarearchitekturen mit dem <a href="https://arc42.de/">arc42 Template</a></li>
-      <li>Enge Zusammenarbeit mit anderen Teammitgliedern für die Planung, das Design und die Entwicklung von robusten Softwarelösungen</li>
-      <li>Datenaustausch und -verarbeitung von SAP Schnittstellendaten</li>
-      <li>Optimierung des Rechnungssystems im firmeneigenen ERP-System gemäß der <abbr title="Grundsätze ordnungsmäßiger Buchführung">GoB</abbr></li>
-      <li>Implementierung von REST APIs, u.a. als Schnittstelle für Frankiermaschinen von Pitney Bowes und Neopost</li>
-      <li>Verwendung des Message queuing service RabbitMQ für den Nachrichtenaustausch</li>
-      <li>Entwicklung in einer verteilten Systemarchitektur</li>
-    </ul>,
-    tags: [
-      "OOP",
-      "OOA & OOD",
-      "TDD",
-      "MQS",
-      "CQRS",
-      "Event Sourcing",
-      "REST",
-      "Scrum",
-      "Event Storming",
-      "PHP",
-      "SQL",
-      "JavaScript",
-      "Symfony 2",
-      "AngularJS",
-      "MariaDB",
-      "MongoDB",
-      "RabbitMQ",
-      "Docker",
-      "Jenkins",
-      "arc42",
-      "Hexagonale Architektur",
-    ]
-  },
-  {
-    headline: `McFIT Global Group GmbH`,
-    date: `2016`,
-    location: `Berlin`,
-    content: <ul>
-      <li>Planung &amp; Design von API-getriebenen, RESTful Webanwendungen</li>
-      <li>Implementierung von CouchDB als API für Frontendanwendungen</li>
-      <li>Koordination &amp; Planung der Hostinginfrastruktur für Webanwendungen</li>
-      <li>Automatisierung der Infrastruktur für Continous Integration und Continuous Delivery mithilfe der Jenkins Job-DSL und automatisierter Verwaltung von Authentifizierungsmerkmalen</li>
-      <li>Implementierung von Docker als Laufzeitumgebung für lokale Entwicklungsumgebungen</li>
-    </ul>,
-    tags: [
-      "OOP",
-      "TDD",
-      "REST",
-      "Scrum",
-      "PHP",
-      "Groovy",
-      "Python",
-      "SQL",
-      "JavaScript",
-      "Symfony 2",
-      "node.js",
-      "Express.js",
-      "MariaDB",
-      "CouchDB",
-      "Ansible",
-      "Docker",
-      "Jenkins",
-    ]
-  },
-  {
-    headline: `bytepark GmbH`,
-    date: `2013 - 2016`,
-    location: `Berlin`,
-    content: <ul>
-      <li>Entwicklung von Content Management Lösungen mit Symfony 2, dem Java Content Repository und TYPO3</li>
-      <li>Projektautomation mit Jenkins CI, Ansible/Phing</li>
-      <li>paketbasierte Auslieferung von Web-Applikationen</li>
-      <li>Requirements Engineering und technische Konzeption</li>
-      <li>Teamleitung und -koordination</li>
-    </ul>,
-    tags: [
-      "OOP",
-      "REST",
-      "JCR",
-      "Kanban",
-      "PHP",
-      "Symfony 2",
-      "Ansible",
-      "MariaDB",
-      "nginx",
-      "Varnish",
-      "Vagrant",
-      "Jenkins",
-    ]
-  },
-  {
-    headline: `K - New Media GmbH & Co. KG`,
-    date: `2012 - 2013`,
-    location: `Berlin`,
-    content: <ul>
-      <li>Wartung und Weiterentwicklung der E-Commerce Plattform MB3</li>
-      <li>Rückportierung von Funktionen des aktuellen TYPO3-Kerns in den archaischen MB3-Kern</li>
-    </ul>,
-    tags: [
-      "OOP",
-      "Kanban",
-      "PHP",
-      "Vagrant",
-      "Jira",
-    ]
-  },
-  {
-    headline: `profi.it internet technology`,
-    date: `2007 - 2012`,
-    location: `Lana, Italien`,
-    content: <ul>
-      <li>Entwicklung eines Baukastensystems für Hotelportale</li>
-      <li>Entwicklung eines firmeninternen CRM-Systems</li>
-      <li>Entwicklung von Webservices (SOAP und REST)</li>
-      <li>Implementierung von Webanwendungen in Content Mangement Systemen</li>
-      <li>Planung und Entwicklung von TYPO3 Extensions</li>
-      <li>Entwicklung und Erweiterung interaktiver Frontendkomponenten</li>
-      <li>Betreuung und Wartung von Root-Servern mit Debian</li>
-      <li>Einführung der Versionsverwaltungssysteme git und svn in den Entwicklungsprozess</li>
-    </ul>,
-    tags: [
-      "OOP",
-      "SOAP",
-      "Kanban",
-      "PHP",
-      "JavaScript",
-      "symfony 1.x",
-      "TYPO3",
-      "Extbase",
-      "Debian",
-    ]
-  },
-  {
-    headline: `Haus Neuer Medien GmbH`,
-    date: `2004 - 2006`,
-    location: `Greifswald`,
-    content: <ul>
-      <li>Implementierung von Webseiten und -anwendungen in TYPO3</li>
-      <li>Unterstützung bei der Betreuung und Wartung von Root-Servern</li>
-      <li>Betreuung eines Schülerprojekts in Zusammenarbeit mit dem Verein „Fit für die Wirtschaft“</li>
-      <li>Entwicklung von Gewinnspiel-, News- und Quizmodulen</li>
-      <li>Entwicklung und Debugging der JavaScript RTE-Komponente für das firmeneigene CMS</li>
-    </ul>,
-    tags: [
-      "OOP",
-      "PHP",
-      "JavaScript",
-      "TYPO3",
-      "Debian",
-    ]
-  },
-  {
-    headline: `Contas GmbH / geist-nord gmbh`,
-    date: `2001`,
-    location: `Greifswald`,
-    content:  <ul>
-      <li>Reportgenerierung mit Crystal Reports</li>
-      <li>Programmierung einer Anwendung zur Berechnung der Wirtschaftlichkeit von Kreditsicherheiten</li>
-    </ul>,
-    tags: [
-      "OOP",
-      "Delphi",
-      "SQL",
-      "Crystal Reports",
-    ]
+class Resume extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.resumeContainerRef = React.createRef();
   }
-]
 
-export default() => (
-  <Fullwidth>
+  componentDidMount() {
+    // @see https://developers.google.com/web/updates/2017/09/sticky-headers
+    document.addEventListener('sticky-change', e => {
+      const title = e.detail.target; // title became sticky or stopped sticking
+      const sticking = e.detail.stuck; // true when title is sticky
 
-    <Centered additionalClasses="mdc-layout-grid">
-      <div className="mdc-layout-grid__inner">
-        <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+      title.classList.toggle(StylesPosition.resume__positionTitleStuck, sticking); // add class when sticking
+    });
 
-          <section className={Styles.resume}>
-            {Positions.map((position, i) =>
-              <Position key={i} headline={position.headline} date={position.date} location={position.location} even={i % 2 === 0}>
-                {position.content}
+    function observeStickyTitleChange(container) {
+      observeHeaders(container);
+      observeFooters(container);
+    }
 
-                <Tags tags={position.tags} even={i % 2 === 0}/>
-              </Position>
-            )}
+    /**
+     * Sets up an intersection observer to notify when elements with the class
+     * `.sticky_sentinel--top` become visible/invisible at the top of the container.
+     * @param {!Element} container
+     */
+    function observeHeaders(container) {
+      const observer = new IntersectionObserver((records, observer) => {
+        for (const record of records) {
+          const targetInfo = record.boundingClientRect;
+          const stickyTarget = record.target.parentElement.querySelector('.' + StylesPosition.resume__positionTitle);
+          const rootBoundsInfo = record.rootBounds;
 
-          </section>
-        </div>
-      </div>
-    </Centered>
-  </Fullwidth>
-)
+          // Started sticking.
+          if (targetInfo.bottom < rootBoundsInfo.top) {
+            fireEvent(true, stickyTarget);
+          }
+
+          // Stopped sticking.
+          if (targetInfo.bottom >= rootBoundsInfo.top &&
+            targetInfo.bottom < rootBoundsInfo.bottom) {
+            fireEvent(false, stickyTarget);
+          }
+        }
+      }, {threshold: [0], root: null});
+
+      // Add the top sentinels to each section and attach an observer.
+      const sentinels = addSentinels(container, Styles.resumePosition__stickySentinelTop);
+      sentinels.forEach(el => observer.observe(el));
+    }
+
+    /**
+     * Sets up an intersection observer to notify when elements with the class
+     * `.sticky_sentinel--bottom` become visible/invisible at the bottom of the
+     * container.
+     * @param {!Element} container
+     */
+    function observeFooters(container) {
+      const observer = new IntersectionObserver((records, observer) => {
+        for (const record of records) {
+          const targetInfo = record.boundingClientRect;
+          const stickyTarget = record.target.parentElement.querySelector('.' + StylesPosition.resume__positionTitle);
+          const rootBoundsInfo = record.rootBounds;
+          const ratio = record.intersectionRatio;
+
+          // Started sticking.
+          if (targetInfo.bottom > rootBoundsInfo.top && ratio === 1) {
+            fireEvent(true, stickyTarget);
+          }
+
+          // Stopped sticking.
+          if (targetInfo.top < rootBoundsInfo.top &&
+            targetInfo.bottom < rootBoundsInfo.bottom) {
+            fireEvent(false, stickyTarget);
+          }
+        }
+      }, {threshold: [1], root: null});
+
+      // Add the bottom sentinels to each section and attach an observer.
+      const sentinels = addSentinels(container, Styles.resumePosition__stickySentinelBottom);
+      sentinels.forEach(el => observer.observe(el));
+    }
+
+    /**
+     * @param {!Element} container
+     * @param {string} className
+     */
+    function addSentinels(container, className) {
+      return Array.from(container.querySelectorAll('.' + StylesPosition.resume__positionTitle)).map(el => {
+        const sentinel = document.createElement('div');
+        sentinel.classList.add(Styles.resumePosition__stickySentinel, className);
+
+        return el.parentElement.appendChild(sentinel);
+      });
+    }
+
+    /**
+     * Dispatches the `sticky-event` custom event on the target element.
+     * @param {boolean} stuck True if `target` is sticky.
+     * @param {!Element} target Element to fire the event on.
+     */
+    function fireEvent(stuck, target) {
+      const e = new CustomEvent('sticky-change', {detail: {stuck, target}});
+      document.dispatchEvent(e);
+    }
+
+    observeStickyTitleChange(this.resumeContainerRef.current);
+  }
+
+  render() {
+    return (
+      <Fullwidth>
+
+        <Centered additionalClasses="mdc-layout-grid">
+          <div className="mdc-layout-grid__inner">
+            <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+
+              <section ref={this.resumeContainerRef} className={Styles.resume}>
+                {Positions.map((position, i) =>
+                  <Position key={i} headline={position.headline} date={position.date} location={position.location} even={i % 2 === 0}>
+                    {position.content}
+
+                    <Tags tags={position.tags} even={i % 2 === 0}/>
+                  </Position>
+                )}
+
+              </section>
+            </div>
+          </div>
+        </Centered>
+      </Fullwidth>
+    )
+  }
+}
+
+export default Resume
