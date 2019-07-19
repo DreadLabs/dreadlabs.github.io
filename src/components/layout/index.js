@@ -1,7 +1,7 @@
 import React from "react"
 import {MDCDrawer} from "@material/drawer";
 import {MDCTopAppBar} from "@material/top-app-bar";
-import Lazyload from "vanilla-lazyload/dist/lazyload.es2015"
+import Lazyload from "vanilla-lazyload/dist/lazyload.min"
 
 import Drawer from "./drawer"
 import SiteMetadata from "./metadata"
