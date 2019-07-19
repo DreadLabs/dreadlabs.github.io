@@ -6,7 +6,7 @@ path: /impressum
 **Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV**<br>
 
 Thomas Juhnke<br>
-Rüdigerstraße 43<br>
+Im Lindenhof 28<br>
 10365 Berlin
 
 Telefon: +49 178 54 56 492<br>

@@ -67,7 +67,7 @@ class ContactSimple extends React.Component {
         <div className="mdc-layout-grid__inner">
           <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
             <p>
-              Rüdigerstraße 43<br />
+              Im Lindenhof 28<br />
               10365 Berlin
             </p>
 
