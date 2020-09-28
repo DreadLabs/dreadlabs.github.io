@@ -2,8 +2,34 @@ import React from "react";
 
 const Positions = [
   {
+    headline: `akquinet tech@spree GmbH`,
+    date: `seit 2020`,
+    location: `Berlin`,
+    content: <ul>
+      <li>Entwicklung von individuellen Softwarelösungen im Scrum-Team</li>
+      <li>Integration bestehender HTTP REST-Schnittstellen in ein Azure API Gateway</li>
+      <li>Implementierung einer Healthcheck- und Monitoringschnittstelle mit express.js</li>
+      <li>Stabilisierung Azure Deploymentprozess einer Tomcat-Umgebung</li>
+    </ul>,
+    tags: [
+      "OOP",
+      "OOA & OOD",
+      "TDD",
+      "REST",
+      "Scrum",
+      "Java",
+      "Kotlin",
+      "Spring Boot",
+      "TypeScript",
+      "express.js",
+      "Angular",
+      "MS SQL Server",
+      "Microsoft Azure",
+    ]
+  },
+  {
     headline: `Postcon Deutsch­land B.V. & Co. KG`,
-    date: `seit 2017`,
+    date: `2017 - 2020`,
     location: `Berlin`,
     content: <ul>
       <li>Implementierung des Hexagonalen Architekturmusters (Ports und Adapter)</li>
