@@ -1,25 +1,122 @@
-# dreadlabs/website
+# dreadlabs.de - Hugo-tailwind edition
 
-## Description
+## Project goals
 
-Contains the sources for my freelance website.
+* rewrite of dreadlabs.de with a non-Node.js static site generator
+* use Tailwind CSS instead of Google Material
 
-## How to build and deploy
+## Requirements
 
-    script/console
-    npm run build
-    <Ctrl+D>
+* Homebrew
+* hugo (v0.97.3)
+* Node.js w/ npm (v14+)
 
-    docker build -t dreadlabs/website:current .
-    docker save -o dreadlabs.website-current.tar.gz dreadlabs/website:current
-    scp dreadlabs.website-current.tar.gz u_deploy@olivia.cloud.deploy:apps/
+### Setup
 
-    ssh u_deploy@olivia.cloud.deploy
-    cd apps
-    docker load -i dreadlabs.website-current.tar.gz
-    cd website
-    docker-compose up -d
+#### macOS
 
-## License
+    brew install hugo
 
-MIT
+### Run
+
+    hugo server -D
+
+### Build
+
+- hugo build
+
+      rm -rf public/*
+      npm install
+      hugo -D
+
+- hugo build (prod)
+
+      rm -rf public/*
+      npm install
+      HUGO_BASEURL=https://dreadlabs.de/ hugo -D
+
+- tailwind build (generated css + asset references etc)
+
+      npx tailwindcss -i ./assets/main.css -o ./public/main.css [--minify]
+
+- run
+
+      docker-compose -f docker-compose.local.yml up
+
+## Decisions
+
+### Decision: Compensation of fixed header navbar height at jump anchors
+
+The following tailwindcss selectors are used at jump anchors:
+
+    target:before:block target:before:content-[''] target:before:h-16 target:before:-mt-16
+
+The header navbar has a height of 64px. The implemented solution was inspired
+by this [answer at StackOverflow](https://stackoverflow.com/a/48594022).
+
+### Decision: Response image generation
+
+In dependency of the context the image is used, the following guide should help
+to generate the best list of images for a responsive user experience:
+
+- observe how much "slot" width for the image will be available in the small (sm),
+  medium (md) and large (lg) breakpoints
+- define a sensible set of images for this ranges; keep an eye upon "lean period"
+  ranges (e.g. up until reaching the medium breakpoint)
+- if specific (grid-) layouts are applied for each breakpoint, specify their
+  approximate view port width in the "sizes" attribute of the `<img />` tag
+- use `min-width` media condition and start with greatest (large) breakpoint
+  from top to bottom
+- default to `100vw` as the very last `sizes` value as the default for mobile
+  targeted environments
+
+Read [this article](https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/), 
+if you feel the need to refresh your knowledge about responsive images.
+
+### Decision: Switch to local build environment for tailwindcss + daisyUI
+
+As the CDN usage for tailwind and daisyUI is not recommended for production usage,
+tailwindcss and daisyUI will be used via local dev env installation.
+These are the steps performed to migrate from CDN:
+
+    > npm install -D tailwindcss
+    > du -sh node_modules/
+    < 10M    node_modules/
+    > npx tailwindcss init
+    # ...configuration...
+    > npm i -D daisyui
+    > du -sh node_modules/
+    < 11M    node_modules/
+
+### Decision: daisyUI overrides `neutral` colors of tailwindcss v3.0+
+
+This [GitHub issue](https://github.com/saadeghi/daisyui/issues/683) explains,
+why the `neutral` color palette entry of tailwindcss is not available if daisyUI
+is in use.
+
+Therefore, the following daisyUI color palette replacements where chosen:
+(tailwindcss -> daisyUi)
+
+* `neutral-100` -> `base-200`
+* `neutral-400` -> `base-300`
+
+This issue was determined, when building the production CSS assets and the
+tailwindcss `*-neutral-*` styles weren't applied.
+
+### Decision: Close daisyUI drawer when clicked on a jump-to anchor
+
+The following inline event handler is added to all links in the drawer menu which
+point to anchors on the same page:
+
+    onclick="document.getElementById('my-drawer').click()"
+
+As the daisyUI drawer does not have any API to accomplish this, this approach
+seems to be the most pragmatic one.
+
+## TODOs
+
+- [ ] integrate ServiceWorker (see https://developers.google.com/web/tools/workbox)
+- [ ] re-add `.webmanifest`
+- [ ] use [Web Font Loader](https://github.com/typekit/webfontloader)
+- [ ] use zopfli / gzip compression on assets
+- [ ] implement blurred / placeholder and lazy loading for images (above the fold)

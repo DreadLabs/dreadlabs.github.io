@@ -1,54 +1,15 @@
 {
-  "name": "thomas-juhnke-softwareentwickler",
+  "name": "dreadlabs.de-hugo",
   "version": "1.0.0",
-  "private": true,
-  "description": "Thomas Juhnke – Softwareentwickler",
-  "author": "Thomas Juhnke\n",
-  "keywords": [
-    "gatsby"
-  ],
+  "description": "## Project goals",
+  "main": "index.js",
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "@material/button": "^11.0.0",
-    "@material/card": "^11.0.0",
-    "@material/chips": "^11.0.0",
-    "@material/drawer": "^11.0.0",
-    "@material/elevation": "^11.0.0",
-    "@material/fab": "^11.0.0",
-    "@material/floating-label": "^11.0.0",
-    "@material/icon-button": "^11.0.0",
-    "@material/layout-grid": "^11.0.0",
-    "@material/menu": "^11.0.0",
-    "@material/snackbar": "^11.0.0",
-    "@material/tab-bar": "^11.0.0",
-    "@material/theme": "^11.0.0",
-    "@material/top-app-bar": "^11.0.0",
-    "@material/typography": "^11.0.0",
-    "font-awesome": "^4.7.0",
-    "gatsby": "^3.6.2",
-    "gatsby-plugin-image": "^1.7.1",
-    "gatsby-plugin-manifest": "^3.7.1",
-    "gatsby-plugin-offline": "^4.7.1",
-    "gatsby-plugin-react-helmet": "^4.7.1",
-    "gatsby-plugin-sass": "^4.7.1",
-    "gatsby-plugin-sharp": "^3.7.1",
-    "gatsby-plugin-web-font-loader": "^1.0.4",
-    "gatsby-plugin-zopfli": "^2.0.0",
-    "gatsby-source-filesystem": "^3.7.1",
-    "gatsby-transformer-remark": "^4.4.1",
-    "gatsby-transformer-sharp": "^3.7.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0",
-    "sass": "^1.35.1"
-  },
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "http-server": "^0.12.3"
+    "daisyui": "^2.15.0",
+    "tailwindcss": "^3.0.24"
   }
 }

@@ -1,0 +1,8 @@
+services:
+
+  app:
+    image: nginx:1.21.6
+    ports:
+      - 8080:80
+    volumes:
+      - ./public:/usr/share/nginx/html

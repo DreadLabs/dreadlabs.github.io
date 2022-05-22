@@ -1,0 +1,51 @@
+<!--
+    The md: and lg: prefixes of the node's elements are targeting the nested
+    grid display mode of the network node items and control the display variant
+    on the respective breakpoints.s
+-->
+{{ $image := resources.GetMatch .avatar }}
+
+{{/*
+{{ $image256webp := ($image.Resize "256x256 webp").Filter (images.Text "256x256 webp!" (dict
+"color" "#ffffff"
+"size" 60
+"linespacing" 2
+"x" 10
+"y" 20
+)) }}
+
+list of breakpoints-to-image widths for a network node avatar image:
+
+- sm(all): min-width: 640 -> 0 - 768
+- m(e)d(ium): min-width: 768 -> 245 - 330
+- l(ar)g(e): min-width: 1024 -> 230 -> 344+ (use sm)
+*/}}
+
+{{ $image256webp := ($image.Resize "256x256 webp") }}
+{{ $image512webp := ($image.Resize "512x512 webp") }}
+{{ $image960webp := ($image.Resize "960x960 webp") }}
+
+<div class="col-span-4 md:col-span-4 lg:col-span-12">
+    <img loading="lazy"
+         src="{{ $image256webp.RelPermalink }}"
+         srcset="{{ $image256webp.RelPermalink }} 256w,
+                {{ $image512webp.RelPermalink }} 512w,
+                {{ $image960webp.RelPermalink }} 960w"
+            sizes="(min-width: 1024px) 25vw,
+                (min-width: 768px) 33vw,
+                100vw"
+         alt="Porträt: {{ .firstName }} {{ .lastName }}">
+</div>
+
+<div class="p-4 col-span-8 md:col-span-8 lg:col-span-12">
+    <h3 class="font-['Roboto_Slab'] text-xl mb-8">{{ .firstName }} {{ .lastName }}</h3>
+
+    <p class="lg:pb-12 antialiased">
+        {{ .description | markdownify }}
+    </p>
+
+    <a class="inline-block uppercase pt-4 lg:pb-4 lg:absolute lg:bottom-0 antialiased" href="{{ .url }}">
+        <i class="bi-person-fill" aria-hidden="true"></i>
+        Mehr über {{ .firstName }}
+    </a>
+</div>

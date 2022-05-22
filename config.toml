@@ -1,0 +1,36 @@
+baseURL = 'http://localhost:8080/'
+languageCode = 'de'
+title = 'Thomas Juhnke — Softwareentwickler'
+
+# empty taxonomies will *NOT* generate "categories" or "tags" taxonomy pages
+[taxonomies]
+
+[params]
+    description = 'Individuelle Softwareentwicklung, Qualitätssicherung und Beratung für kleine bis mittelgroße Softwareprojekte.'
+
+[params.vcard]
+    portrait = 'Thomas-Juhnke_portrait-business.jpg'
+    firstName = 'Thomas'
+    lastName = 'Juhnke'
+    position = 'Software­entwickler'
+
+[params.footer.auxiliaryLinks.0]
+    icon = 'bi-linkedin'
+    # TODO: check, update and open up LinkedIn profile
+    url = 'https://www.xing.com/profile/Thomas_Juhnke'
+    title = 'Xing Profil'
+
+[params.footer.auxiliaryLinks.1]
+    icon = 'bi-github'
+    url = 'https://github.com/dreadwarrior'
+    title = 'GitHub Profil'
+
+[params.footer.auxiliaryLinks.2]
+    icon = 'bi-twitter'
+    url = 'https://twitter.com/dreadwarrior'
+    title = 'Twitter Profils'
+
+#[markup]
+#    [markup.goldmark]
+#        [markup.goldmark.renderer]
+#            unsafe = true

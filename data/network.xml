@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<nodes>
+    <node>
+        <firstName>Jana</firstName>
+        <lastName>Eger</lastName>
+        <description>
+            Jana ist Designerin mit Fokus auf klaren digitalen und analogen
+            Designs von Outline-Icons, Infografiken, Corporate Publishing und
+            Websites. Ihr Anspruch ist nicht nur schöne, sondern gute Projekte
+            umzusetzen – Kommunikation ist ein wichtiger Bestandteil ihres
+            Workflows.
+        </description>
+        <url>https://jana-eger.com/</url>
+        <avatar>images/network/jana-eger.jpg</avatar>
+    </node>
+    <node>
+        <firstName>Michael</firstName>
+        <lastName>Gerstmann</lastName>
+        <description>
+            Michael ist Spezialist für Webanwendungen mit HTML5, CSS3 und
+            JavaScript. Seine Expertise erstreckt sich von Mobile-First
+            Responsive Webdesigns über Suchmaschinenoptimierung bis hin zur
+            Entwicklung von Content Management Systemen.
+        </description>
+        <url>http://micha.seiler-gerstmann.de/</url>
+        <avatar>images/network/michael-gerstmann.jpg</avatar>
+    </node>
+    <node>
+        <firstName>Christophe</firstName>
+        <lastName>Maurice</lastName>
+        <description>
+            Christophe ist ein Produktstratege und Unternehmensberater. Er hilft
+            Unternehmen klare Strategien für erfolgreiche Produkte zu gestalten,
+            sowie die passenden digitalen Teams und Prozesse dafür aufzubauen.
+            Seine internationale Erfahrung reicht von Start-ups bis hin zu Blue
+            Chips.
+        </description>
+        <url>https://www.linkedin.com/in/christophe-maurice/</url>
+        <avatar>images/network/christophe-maurice.jpg</avatar>
+    </node>
+    <node>
+        <firstName>Robert</firstName>
+        <lastName>Schönthal</lastName>
+        <description>
+            Robert ist ein erfahrener und qualitätsbewusster Softwareentwickler
+            &amp; -architect mit Vorliebe zum **tests first** Ansatz. Seine
+            polyglotte Orientierung macht ihn zu einem ausgezeichneten
+            Allrounder, der bereits einige große Projekte durchgeführt und
+            betreut hat.
+        </description>
+        <url>https://digitalkaoz.net/</url>
+        <avatar>images/network/robert-schoenthal.jpg</avatar>
+    </node>
+</nodes>

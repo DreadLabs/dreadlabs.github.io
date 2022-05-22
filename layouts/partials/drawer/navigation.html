@@ -1,0 +1,37 @@
+<aside class="w-64 bg-base-200">
+    {{ $image := resources.GetMatch "images/logo/Logo-Thomas-Juhnke-Softwareentwickler.png" }}
+    <div class="bg-white font-['Roboto_Slab'] antialiased text-xl uppercase p-4 bg-[url('{{ $image.RelPermalink }}')] bg-[length:160px_160px] bg-no-repeat"><!-- header -->
+        <p class="mt-[160px]">Thomas Juhnke</p>
+        <p class="text-sm font-thin text-black/[.6]">Softwareentwickler</p>
+    </div>
+    <nav class="flex flex-col text-black/[.6] text-sm">
+        <a href="/#mission-statement" class="flex flex-row items-center p-4" onclick="document.getElementById('my-drawer').click()">
+            <i class="bi-fingerprint text-xl w-6 mr-4"></i>
+            <span>Leitbild</span>
+        </a>
+        <a href="/#about-me" class="flex flex-row items-center p-4" onclick="document.getElementById('my-drawer').click()">
+            <i class="bi-person-circle text-xl w-6 mr-4"></i>
+            <span>Über mich</span>
+        </a>
+        <a href="/#skills" class="flex flex-row items-center p-4" onclick="document.getElementById('my-drawer').click()">
+            <i class="bi-compass-fill text-xl w-6 mr-4"></i>
+            <span>Kompetenzen</span>
+        </a>
+        <a href="/#resume" class="flex flex-row items-center p-4" onclick="document.getElementById('my-drawer').click()">
+            <i class="bi-star-fill text-xl w-6 mr-4"></i>
+            <span>Berufserfahrung</span>
+        </a>
+        <a href="/#contact" class="flex flex-row items-center p-4" onclick="document.getElementById('my-drawer').click()">
+            <i class="bi-chat-dots-fill text-xl w-6 mr-4"></i>
+            <span>Kontakt</span>
+        </a>
+        <a href="/#network" class="flex flex-row items-center p-4 border-b-2" onclick="document.getElementById('my-drawer').click()">
+            <i class="bi-people-fill text-xl w-6 mr-4"></i>
+            <span>Netzwerk</span>
+        </a>
+        <a href="/impressum/" class="flex flex-row items-center p-4">
+            <i class="bi-shield-fill-check text-xl w-6 mr-4"></i>
+            <span>Impressum</span>
+        </a>
+    </nav>
+</aside>

@@ -1,0 +1,12 @@
+<footer class="font-['Roboto'] px-8 py-4 bg-zinc-700 text-base-300 uppercase text-sm tracking-wider font-thin grid grid-cols-12 antialiased">
+  <nav class="col-span-12 md:col-span-6 flex flex-row m-4" aria-label="Leitseiten">
+    <a class="basis-1/2 md:basis-1/3 lg:flex-none text-center py-1 lg:pr-8" href="{{ $.Site.BaseURL }}">Startseite</a>
+    <a class="basis-1/2 md:basis-1/3 lg:flex-none text-center py-1 lg:pr-8" href="/impressum/">Impressum</a>
+  </nav>
+  <nav class="col-span-12 md:col-span-6 flex flex-row m-4 md:justify-end md:gap-4 text-xl" aria-label="Netzwerke">
+    <a class="basis-1/4 md:basis-1 text-center" href="#top"><i class="bi-chevron-up" title="nach oben" aria-hidden="true"></i></a>
+    {{ range $.Site.Params.Footer.AuxiliaryLinks }}
+      <a class="basis-1/4 md:basis-1 text-center" href="{{ .url }}" title="{{ .title }}"><i class="{{ .icon }}"></i></a>
+    {{ end }}
+  </nav>
+</footer>

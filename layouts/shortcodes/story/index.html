@@ -1,0 +1,8 @@
+<div class="max-w-[892px] mx-auto p-4 md:grid md:grid-cols-12">
+    <div class="md:col-span-4">
+        <h3 id="{{ .Get "id" }}" class="font-['Roboto_Slab'] text-4xl mt-4 mb-4 target:before:block target:before:content-[''] target:before:h-16 target:before:-mt-16">{{ .Get "title" }}</h3>
+    </div>
+    <div class="md:col-span-8">
+        {{ .Inner }}
+    </div>
+</div>

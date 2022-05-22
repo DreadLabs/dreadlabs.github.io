@@ -1,0 +1,9 @@
+{{ define "title" }}
+    {{ .Title }} | {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+    <div class="max-w-[892px] mx-auto p-8">
+        {{ .Content }}
+    </div>
+{{ end }}

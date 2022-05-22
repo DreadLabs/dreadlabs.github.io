@@ -1,0 +1,22 @@
+<div class="max-w-[892px] mx-auto grid grid-cols-12 gap-4 p-4">
+    <div class="self-center col-span-12 md:col-span-4 text-center">
+        {{ $src := .Site.Params.Vcard.Portrait }}
+        {{ $image := .Page.Resources.GetMatch $src }}
+
+        {{ $image384webp := $image.Resize "384x384 webp" }}
+        {{ $image512webp := $image.Resize "512x512 webp" }}
+        {{ $image768webp := $image.Resize "768x768 webp" }}
+
+        <img srcset="{{ $image384webp.RelPermalink }} 384w,
+                {{ $image512webp.RelPermalink }} 512w,
+                {{ $image768webp.RelPermalink }} 768w"
+             sizes="(min-width: 768px) 100vw, (min-width: 640px) 50vw, 75vw"
+             src="{{ $image384webp.RelPermalink }}"
+             alt="{{ .Site.Params.Vcard.FirstName}} {{ .Site.Params.Vcard.LastName }} – Porträtbild"
+             class="inline-block rounded-[50%]">
+    </div>
+    <div class="self-center col-span-12 md:col-span-8 font-['Roboto_Slab'] uppercase">
+        <h1 class="text-5xl mb-4"><small>{{ .Site.Params.Vcard.FirstName }}</small><br/>{{ .Site.Params.Vcard.LastName }}</h1>
+        <h2 class="text-3xl mb-4">{{ .Site.Params.Vcard.Position }}</h2>
+    </div>
+</div>
