@@ -6,23 +6,30 @@ const Positions = [
     date: `seit 2020`,
     location: `Berlin`,
     content: <ul>
-      <li>Entwicklung von individuellen Softwarelösungen im Scrum-Team</li>
+      <li>Fullstack-Entwicklung von individuellen Softwarelösungen im Scrum-Team</li>
+      <li>Durchführung von Lasttests; sowie Analyse, Dokumentation &amp; Durchführung von Performanceoptimierungen</li>
+      <li>Konzeption, Planung und Dokumentation von Systemarchitekturen nach <a href="https://arc42.de/">arc42</a> und ISO 9000</li>
+      <li>Mentoring, Pair-Programming &amp; Mitarbeit an internen Projektinitiativen</li>
       <li>Integration bestehender HTTP REST-Schnittstellen in ein Azure API Gateway</li>
-      <li>Implementierung einer Healthcheck- und Monitoringschnittstelle mit express.js</li>
-      <li>Stabilisierung Azure Deploymentprozess einer Tomcat-Umgebung</li>
+      <li>Implementierung einer Healthcheck- &amp; Monitoringschnittstelle mit express.js</li>
+      <li>CI/CD mit Azure DevOps</li>
+      <li><abbr title="Infrastructure-as-Code">IaC</abbr> mit Bicep für die Microsoft Azure Cloud Plattform</li>
     </ul>,
     tags: [
       "OOP",
       "OOA & OOD",
+      "Functional Programming",
       "TDD",
       "REST",
       "Scrum",
-      "Java",
-      "Kotlin",
+      "Java 8+",
+      "Kotlin 1.4+",
       "Spring Boot",
+      "JPA, Hibernate",
+      "Gatling",
       "TypeScript",
       "express.js",
-      "Angular",
+      "Angular 6-11",
       "MS SQL Server",
       "Microsoft Azure",
     ]

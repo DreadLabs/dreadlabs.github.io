@@ -1,43 +1,18 @@
 import React from "react"
-import {useStaticQuery, graphql} from "gatsby"
 
-import Styles from "./portrait.module.scss"
+import * as Styles from "./portrait.module.scss"
+import {StaticImage} from "gatsby-plugin-image";
 
-export default () => {
-  const data = useStaticQuery(graphql`
-    query PortraitQuery {
-      site {
-        siteMetadata {
-          portraitStyle
-        }
-      }
-      portrait271: file(relativePath: { regex: "/portrait\/Thomas-Juhnke_portrait-business\\\\.jpg$/" }) {
-        childImageSharp {
-          fixed(width: 271, height: 271) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-      portrait185: file(relativePath: { regex: "/portrait\/Thomas-Juhnke_portrait-business\\\\.jpg$/" }) {
-        childImageSharp {
-          fixed(width: 185, height: 185) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-  `)
-
-  return (
-    <picture>
-      <source media="(min-width: 840px)"
-              srcSet={data.portrait271.childImageSharp.fixed.srcSet}/>
-      <source media="(min-width: 480px)"
-              srcSet={data.portrait185.childImageSharp.fixed.srcSet}/>
-      <img className={Styles.vcard__avatar}
-           src={data.portrait271.childImageSharp.fixed.src}
-           srcSet={data.portrait271.childImageSharp.fixed.srcSet}
-           alt="Thomas Juhnke Softwareentwickler"/>
-    </picture>
-  )
+const Portrait = () => {
+    return (
+        <StaticImage src="../../images/portrait/Thomas-Juhnke_portrait-business.jpg"
+                     alt="Thomas Juhnke Softwareentwickler"
+                     className={Styles.vcard__avatar}
+                     placeholder="blurred"
+                     width={303}
+                     height={303}
+                     />
+    )
 }
+
+export default Portrait

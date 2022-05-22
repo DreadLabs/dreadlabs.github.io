@@ -1,9 +1,21 @@
 @import "variables";
 
+.header {
+  height: 227px;
+  text-transform: uppercase;
+  background: url("../../images/logo/Logo-Thomas-Juhnke-Softwareentwickler.png") no-repeat left top / 160px 160px;
+}
+
 .title {
-  height: 160px;
-  margin-bottom: 20px;
-  position: relative;
+  margin-top: 160px;
+}
+
+.subtitle {
+  font-family: 'Roboto Slab', serif;
+}
+
+.list-item {
+  font-family: 'Source Sans Pro', sans-serif !important;
 }
 
 .content {

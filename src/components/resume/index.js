@@ -3,8 +3,8 @@ import React from "react"
 import {Centered, Fullwidth} from "../sections"
 import Position from "./position"
 import Positions from "./positions"
-import Styles from "./index.module.scss"
-import StylesPosition from "./position.module.scss"
+import * as Styles from "./index.module.scss"
+import * as StylesPosition from "./position.module.scss"
 import Tags from "./tags"
 
 class Resume extends React.Component {
@@ -119,26 +119,32 @@ class Resume extends React.Component {
 
   render() {
     return (
-      <Fullwidth>
-
-        <Centered additionalClasses="mdc-layout-grid">
-          <div className="mdc-layout-grid__inner">
-            <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-
-              <section ref={this.resumeContainerRef} className={Styles.resume}>
-                {Positions.map((position, i) =>
-                  <Position key={i} headline={position.headline} date={position.date} location={position.location} even={i % 2 === 0}>
-                    {position.content}
-
-                    <Tags tags={position.tags} even={i % 2 === 0}/>
-                  </Position>
-                )}
-
-              </section>
-            </div>
-          </div>
+      <>
+        <Centered additionalClasses="section__network mdc-layout-grid">
+          <h3 id="professional-expirience" className="mdc-typography--headline4 mdc-layout-grid__cell mdc-layout-grid__cell--span-12">Berufserfahrung</h3>
         </Centered>
-      </Fullwidth>
+
+        <Fullwidth>
+
+          <Centered additionalClasses="mdc-layout-grid">
+            <div className="mdc-layout-grid__inner">
+              <div className="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+
+                <section ref={this.resumeContainerRef} className={Styles.resume}>
+                  {Positions.map((position, i) =>
+                      <Position key={i} headline={position.headline} date={position.date} location={position.location} even={i % 2 === 0}>
+                        {position.content}
+
+                        <Tags tags={position.tags} even={i % 2 === 0}/>
+                      </Position>
+                  )}
+
+                </section>
+              </div>
+            </div>
+          </Centered>
+        </Fullwidth>
+      </>
     )
   }
 }

@@ -1,5 +1,5 @@
 ---
-path: /impressum
+slug: /impressum
 ---
 ## Impressum
 
@@ -11,13 +11,6 @@ Im Lindenhof 28<br>
 
 Telefon: +49 178 54 56 492<br>
 E-Mail: [contact@dreadlabs.de](mailto:contact@dreadlabs.de)
-
-USt-IdNr.: DE310513755
-
-**Rechtliches**
-
-Aufgrund des Kleinunternehmerstatus gem. § 19 UStG erhebe ich keine Umsatzsteuer 
-und weise diese daher auch nicht aus.
 
 ## Haftungsausschluss
 

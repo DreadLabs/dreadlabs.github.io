@@ -1,3 +1,4 @@
+@import "variables";
 @import "@material/top-app-bar/mdc-top-app-bar";
 
 .elevated {
@@ -8,6 +9,7 @@
     color: var(--mdc-theme-text-primary-on-light) !important;
   }
 
+  /*
   &__toolbar {
     display: none;
 
@@ -15,8 +17,10 @@
       justify-content: right;
     }
   }
+  */
 }
 
+/*
 @media screen and (min-width: 1024px) {
   .elevated {
     &__button {
@@ -28,23 +32,11 @@
     }
   }
 }
+*/
 
 .title {
-  position: absolute;
-  top: 0;
-  left: 50%;
-
-  transform: translate(-50%, 0);
-
-  padding-left: 0;
-}
-
-@media screen and (min-width:1024px) {
-  .title {
-    position: relative;
-    top: auto;
-    left: auto;
-
-    transform: none;
-  }
+  flex: 0.5 1 0;
+  display: inline-flex;
+  justify-content: flex-end;
+  padding: 0;
 }

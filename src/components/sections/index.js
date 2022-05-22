@@ -1,6 +1,6 @@
 import React from "react"
 
-import Styles from "./index.module.scss"
+import * as Styles from "./index.module.scss"
 
 function Fullwidth({children}) {
   return (
