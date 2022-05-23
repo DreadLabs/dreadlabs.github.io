@@ -1,0 +1,14 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+  Thomas Juhnke -- Owner -- @dreadwarrior
+
+# THANKS
+
+  Michael Gerstmann
+
+# TECHNOLOGY COLOPHON
+
+  HTML5, CSS3, Hugo, tailwindcss, daisyUI
