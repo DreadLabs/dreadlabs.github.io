@@ -1,8 +1,10 @@
-# dreadlabs.de - Hugo-tailwind edition
+# dreadlabs.de
+
+A personal portfolio / resume website.
 
 ## Project goals
 
-* rewrite of dreadlabs.de with a non-Node.js static site generator
+* rewrite with a non-Node.js static site generator
 * use Tailwind CSS instead of Google Material
 
 ## Requirements
