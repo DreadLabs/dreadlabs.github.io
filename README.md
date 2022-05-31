@@ -11,7 +11,7 @@ A personal portfolio / resume website.
 
 * Homebrew
 * hugo (v0.97.3)
-* Node.js w/ npm (v14+)
+* Node.js w/ npm (v14+) :frowning:
 
 ### Setup
 
