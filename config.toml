@@ -16,9 +16,8 @@ title = 'Thomas Juhnke — Softwareentwickler'
 
 [params.footer.auxiliaryLinks.0]
     icon = 'bi-linkedin'
-    # TODO: check, update and open up LinkedIn profile
-    url = 'https://www.xing.com/profile/Thomas_Juhnke'
-    title = 'Xing Profil'
+    url = 'https://www.linkedin.com/in/thomas-juhnke'
+    title = 'LinkedIn Profil'
 
 [params.footer.auxiliaryLinks.1]
     icon = 'bi-github'
