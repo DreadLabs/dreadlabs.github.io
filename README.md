@@ -12,6 +12,7 @@ A personal portfolio / resume website.
 * Homebrew
 * hugo (v0.97.3)
 * Node.js w/ npm (v14+) :frowning:
+* Google Fonts [Roboto, Roboto Slab, Source Sans Pro](https://google-webfonts-helper.herokuapp.com/fonts)
 
 ### Setup
 
@@ -114,6 +115,18 @@ point to anchors on the same page:
 
 As the daisyUI drawer does not have any API to accomplish this, this approach
 seems to be the most pragmatic one.
+
+### Decision: Use self-hosted Google Fonts
+
+Currently, a wave of cease-and-desist letters is rolling over Germany. This may
+affect website providers when loading Google Fonts from Google servers. To be
+spared from this, the fonts and stylesheets were compiled and generated using 
+[google-webfonts-helper](https://google-webfonts-helper.herokuapp.com/fonts) and
+are included in the VCS of this project.
+
+The font packages are compiled by using the _latin_ charset only. The used 
+styles are constrained to the _regular_, _italic_, _700_ and _700italic_ if
+available. For CSS generation the "Best Support" option was used.
 
 ## TODOs
 
