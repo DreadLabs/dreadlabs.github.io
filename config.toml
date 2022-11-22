@@ -25,9 +25,9 @@ title = 'Thomas Juhnke — Softwareentwickler'
     title = 'GitHub Profil'
 
 [params.footer.auxiliaryLinks.2]
-    icon = 'bi-twitter'
-    url = 'https://twitter.com/dreadwarrior'
-    title = 'Twitter Profils'
+    icon = 'bi-mastodon'
+    url = 'https://chaos.social/@dreadwarrior'
+    title = 'Mastodon Profil'
 
 #[markup]
 #    [markup.goldmark]
