@@ -18,33 +18,45 @@ A personal portfolio / resume website.
 
 #### macOS
 
-    brew install hugo
+```shell
+brew install hugo
+```
 
 ### Run
 
-    hugo server -D
+```shell
+hugo server -D
+```
 
 ### Build
 
 - hugo build
 
-      rm -rf public/*
-      npm install
-      hugo -D
+```shell
+rm -rf public/*
+npm install
+hugo -D
+```
 
 - hugo build (prod)
 
-      rm -rf public/*
-      npm install
-      HUGO_BASEURL=https://dreadlabs.de/ hugo -D
+```shell
+rm -rf public/*
+npm install
+HUGO_BASEURL=https://dreadlabs.de/ hugo -D
+```
 
 - tailwind build (generated css + asset references etc)
 
-      npx tailwindcss -i ./assets/main.css -o ./public/main.css [--minify]
+```shell
+npx tailwindcss -i ./assets/main.css -o ./public/main.css [--minify]
+```
 
 - run
 
-      docker-compose -f docker-compose.local.yml up
+```shell
+docker-compose -f docker-compose.local.yml up
+```
 
 ## Decisions
 
