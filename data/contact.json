@@ -6,11 +6,6 @@
       "icon": "bi-envelope-fill"
     },
     {
-      "label": "Twitter",
-      "value": "@dreadwarrior",
-      "icon": "bi-twitter"
-    },
-    {
       "label": "GitHub",
       "value": "@dreadwarrior",
       "icon": "bi-github"
