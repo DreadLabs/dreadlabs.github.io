@@ -1,8 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <positions>
     <position>
+        <title>Spread Group</title>
+        <date>seit 2022</date>
+        <location>Leipzig (remote)</location>
+        <tags>
+            <tag>Digital Image Processing</tag>
+            <tag>TDD</tag>
+            <tag>Scrum</tag>
+            <tag>Java 11+</tag>
+            <tag>Kotlin 1.4+</tag>
+            <tag>Spring Boot</tag>
+            <tag>Testcontainers</tag>
+            <tag>MySQL</tag>
+            <tag>Kubernetes</tag>
+        </tags>
+        <tasks>
+            <task>Dokumentation und Visualisierung von Softwareprozessen (z.B. mit UML, C4)</task>
+            <task>Design, Entwicklung und Pflege von Softwarelösungen mit Java/Kotlin &amp; Spring Boot</task>
+            <task>Teilnahme und Durchführung von Code Reviews, Optimierung der bestehenden Codebasis</task>
+            <task>Steuerung von Deployment Prozessen, Gewährleistung nahtloser und sicherer Deployment Pipelines sowie der Stabilität der Softwarelösungen</task>
+            <task>Zusammenarbeit mit dem Team und mit anderen Kollegen in Projekten und Initiativen</task>
+        </tasks>
+    </position>
+    <position>
+        <title>immomio GmbH</title>
+        <date>2021 - 2022</date>
+        <location>Hamburg (remote)</location>
+        <tags>
+            <tag>TDD</tag>
+            <tag>GraphQL</tag>
+            <tag>Scrum</tag>
+            <tag>Java 11+</tag>
+            <tag>Spring Boot</tag>
+            <tag>Testcontainers</tag>
+            <tag>MapStruct</tag>
+            <tag>Lombok</tag>
+            <tag>Postgres</tag>
+            <tag>On-Premise Cloud</tag>
+        </tags>
+        <tasks>
+            <task>Entwicklung von HTTP REST- und GraphQL-Schnittstellen mit Java/Kotlin und Spring Boot und Netflix DGS</task>
+            <task>CI/CD mit GitLab</task>
+            <task>Betrieb von Anwendungen mit der CloudFoundry Cloud-Plattform</task>
+            <task>Implementierung von Integrations- und Unittests, Plattformstabilisierung</task>
+        </tasks>
+    </position>
+    <position>
         <title>akquinet tech@spree GmbH</title>
-        <date>seit 2020</date>
+        <date>2020 - 2021</date>
         <location>Berlin</location>
         <tags>
             <tag>OOP</tag>
