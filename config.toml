@@ -18,18 +18,3 @@ title = 'Thomas Juhnke — Softwareentwickler'
     icon = 'bi-linkedin'
     url = 'https://www.linkedin.com/in/thomas-juhnke'
     title = 'LinkedIn Profil'
-
-[params.footer.auxiliaryLinks.1]
-    icon = 'bi-github'
-    url = 'https://github.com/dreadwarrior'
-    title = 'GitHub Profil'
-
-[params.footer.auxiliaryLinks.2]
-    icon = 'bi-mastodon'
-    url = 'https://chaos.social/@dreadwarrior'
-    title = 'Mastodon Profil'
-
-#[markup]
-#    [markup.goldmark]
-#        [markup.goldmark.renderer]
-#            unsafe = true

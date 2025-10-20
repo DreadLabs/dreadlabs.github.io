@@ -6,12 +6,4 @@
     {{ partial "vcard.html" . }}
 
     {{ .Content }}
-
-    {{ partial "resume.html" . }}
-
-    {{ range $.Site.Data.contact }}
-        {{ partial "contact.html" . }}
-    {{ end }}
-
-    {{ partial "network.html" . }}
 {{ end }}
